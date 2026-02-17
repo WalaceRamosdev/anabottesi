@@ -1,5 +1,7 @@
 ---
-
+import { Image } from "astro:assets";
+import anaAbout from "../assets/profissional/anaBottesi2.svg";
+import officeImg from "../assets/profissional/anaBottesi3.svg";
 ---
 
 <section id="sobre" class="bg-white py-24 overflow-hidden">
@@ -16,9 +18,9 @@
                     <div
                         class="h-64 bg-slate-100 rounded-2xl overflow-hidden shadow-lg"
                     >
-                        <img
-                            src="https://images.unsplash.com/photo-1544717305-27a734ef1904?auto=format&fit=crop&q=80&w=400"
-                            alt="Consultório"
+                        <Image
+                            src={officeImg}
+                            alt="Detalhe do consultório"
                             class="w-full h-full object-cover"
                         />
                     </div>
@@ -40,9 +42,9 @@
                     <div
                         class="h-64 bg-slate-100 rounded-2xl overflow-hidden shadow-lg"
                     >
-                        <img
-                            src="https://images.unsplash.com/photo-1516534775068-ba3e84529519?auto=format&fit=crop&q=80&w=400"
-                            alt="Elementos naturais"
+                        <Image
+                            src={anaAbout}
+                            alt="Ana Bottesi"
                             class="w-full h-full object-cover"
                         />
                     </div>
