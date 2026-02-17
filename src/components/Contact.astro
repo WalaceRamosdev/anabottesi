@@ -40,7 +40,7 @@
                             <span class="text-xl">📍</span>
                         </div>
                         <span class="text-brand-text/80 font-medium"
-                            >Atendimento Online para todo o mundo</span
+                            >Atendimento Online para todo o Brasil</span
                         >
                     </div>
                     <div class="flex items-center gap-4 group">
@@ -72,7 +72,7 @@
                                 type="text"
                                 id="name"
                                 name="name"
-                                placeholder="Como deseja ser chamada?"
+                                placeholder="Como se chama?"
                                 class="w-full bg-white border border-transparent focus:border-brand-primary/30 rounded-2xl px-6 py-4 outline-none transition-all shadow-sm focus:shadow-lg"
                                 required
                             />
@@ -282,9 +282,15 @@
             e.preventDefault();
 
             const btn = form.querySelector("button");
+            const formData = new FormData(form);
+            const name = formData.get("name");
+            const email = formData.get("email");
+            const subject = formData.get("subject");
+            const message = formData.get("message");
+
             if (btn) btn.disabled = true;
 
-            status.textContent = "🦋 Enviando sua mensagem...";
+            status.textContent = "🦋 Redirecionando para o WhatsApp...";
             status.classList.remove(
                 "hidden",
                 "bg-red-100",
@@ -294,10 +300,15 @@
             );
             status.classList.add("bg-brand-secondary/10", "text-brand-primary");
 
-            // Simulação de envio
+            // Formatação da mensagem para o WhatsApp
+            const text = `Olá Ana! 👋%0A%0AMeu nome é *${name}*%0AMeu e-mail: ${email}%0AAssunto: *${subject}*%0A%0A*Mensagem:*%0A${message}`;
+            const whatsappUrl = `https://wa.me/5511973454557?text=${text}`;
+
+            // Pequeno delay para efeito visual
             setTimeout(() => {
+                window.open(whatsappUrl, "_blank");
                 status.textContent =
-                    "Mensagem enviada com sucesso! Em breve entrarei em contato.";
+                    "Você foi redirecionada para o WhatsApp. Obrigado!";
                 status.classList.remove(
                     "bg-brand-secondary/10",
                     "text-brand-primary",
@@ -305,7 +316,7 @@
                 status.classList.add("bg-green-100", "text-green-700");
                 form.reset();
                 if (btn) btn.disabled = false;
-            }, 2000);
+            }, 1500);
         });
     };
 
