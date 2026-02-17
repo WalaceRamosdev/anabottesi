@@ -97,12 +97,20 @@ import anaPortrait from "../assets/profissional/anaBottesi1.svg";
             <div
                 class="relative bg-white aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-8 border-white"
             >
-                <Image
-                    src={anaPortrait}
-                    alt="Ana Bottesi"
-                    class="w-full h-full object-cover"
-                    loading="eager"
-                />
+                <!-- Zoom e enquadramento para remover a logo da imagem original (posicionada na base) -->
+                <div class="absolute inset-0 scale-125 translate-y-2">
+                    <Image
+                        src={anaPortrait}
+                        alt="Ana Bottesi"
+                        class="w-full h-full object-cover"
+                        loading="eager"
+                    />
+                </div>
+                <!-- Overlay sutil para garantir acabamento premium na base -->
+                <div
+                    class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-white/10 to-transparent"
+                >
+                </div>
             </div>
 
             <!-- Card Flutuante de Destaque -->
@@ -124,8 +132,7 @@ import anaPortrait from "../assets/profissional/anaBottesi1.svg";
 <script>
     import { gsap } from "gsap";
 
-    // Animações de entrada do Hero
-    window.addEventListener("load", () => {
+    const initHeroAnimation = () => {
         const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
         tl.from("#hero-content > *", {
@@ -152,5 +159,7 @@ import anaPortrait from "../assets/profissional/anaBottesi1.svg";
                 },
                 "-=0.5",
             );
-    });
+    };
+
+    window.addEventListener("load", initHeroAnimation);
 </script>

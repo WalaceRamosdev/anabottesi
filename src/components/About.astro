@@ -17,15 +17,22 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
             <!-- Grid de Imagens com Estética Premium -->
             <div class="grid grid-cols-2 gap-6">
                 <div class="space-y-6 pt-12">
-                    <!-- Imagem 1: Consultório (Sem cortes no rosto pois é detalhe) -->
+                    <!-- Imagem 1: Consultório (Escondendo logo da base) -->
                     <div
-                        class="h-64 bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-white transition-transform duration-500 hover:scale-[1.02]"
+                        class="h-64 bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-white transition-transform duration-500 hover:scale-[1.02] relative"
                     >
-                        <Image
-                            src={officeImg}
-                            alt="Consultório Ana Bottesi"
-                            class="w-full h-full object-cover"
-                        />
+                        <div class="absolute inset-0 z-0">
+                            <Image
+                                src={officeImg}
+                                alt="Consultório Ana Bottesi"
+                                class="w-full h-full object-cover scale-110 translate-y-4"
+                            />
+                        </div>
+                        <!-- Overlay para certificar que a logo na base da foto original não apareça -->
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-12 bg-white/10 backdrop-blur-sm pointer-events-none"
+                        >
+                        </div>
                     </div>
 
                     <!-- Card de Citação Centralizado -->
@@ -47,13 +54,13 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
                 <div class="space-y-6">
                     <!-- Card da Borboleta Animada (Visual Premium) -->
                     <div
-                        class="h-56 bg-brand-secondary/5 rounded-3xl flex flex-col items-center justify-center p-6 border border-brand-secondary/20 shadow-inner group"
+                        class="h-56 bg-brand-secondary/5 rounded-3xl flex flex-col items-center justify-center p-6 border border-brand-secondary/20 shadow-inner group relative"
                     >
                         <div
                             class="relative w-32 h-32 flex items-center justify-center"
                         >
                             <!-- Borboleta Animada via CSS para ser ultra-premium e leve -->
-                            <div class="butterfly-container scale-125">
+                            <div class="butterfly-container scale-150">
                                 <div class="butterfly">
                                     <div class="wing left"></div>
                                     <div class="wing right"></div>
@@ -71,15 +78,22 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
                         >
                     </div>
 
-                    <!-- Imagem 2: Profissional (Ajustada para não cortar o rosto) -->
+                    <!-- Imagem 2: Profissional (Zoom e Offset para esconder logo e focar no rosto) -->
                     <div
-                        class="h-80 bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-white transition-transform duration-500 hover:scale-[1.02]"
+                        class="h-80 bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-white transition-transform duration-500 hover:scale-[1.02] relative"
                     >
-                        <Image
-                            src={anaAbout}
-                            alt="Ana Bottesi Psicanalista"
-                            class="w-full h-full object-cover object-top"
-                        />
+                        <div class="absolute inset-0">
+                            <Image
+                                src={anaAbout}
+                                alt="Ana Bottesi Psicanalista"
+                                class="w-full h-full object-cover object-top scale-125 -translate-y-4"
+                            />
+                        </div>
+                        <!-- Overlay sutil se necessário para esconder info na base -->
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/5 to-transparent pointer-events-none"
+                        >
+                        </div>
                     </div>
                 </div>
             </div>
@@ -179,7 +193,6 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
         }
     }
 
-    /* Patterns for the butterfly wings to look premium */
     .wing::before {
         content: "";
         position: absolute;
@@ -198,7 +211,7 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
 
     gsap.registerPlugin(ScrollTrigger);
 
-    window.addEventListener("load", () => {
+    const initAboutAnimation = () => {
         gsap.from("#about-text > *", {
             scrollTrigger: {
                 trigger: "#about-text",
@@ -209,5 +222,8 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
             stagger: 0.1,
             duration: 1,
         });
-    });
+    };
+
+    initAboutAnimation();
+    document.addEventListener("astro:after-swap", initAboutAnimation);
 </script>

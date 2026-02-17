@@ -7,7 +7,8 @@
     --color-brand-primary: #8C7355;
     --color-brand-secondary: #A3B18A;
     --color-brand-accent: #6B705C;
-    --color-brand-bg: #FDFBF7;
+    --color-brand-bg: #F5EFEB;
+    /* Fundo mais escuro/cremoso para melhor contraste */
     --color-brand-text: #2D2D2D;
 
     --font-serif: "Playfair Display", serif;
