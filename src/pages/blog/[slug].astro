@@ -1,0 +1,104 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+// Gera os caminhos estáticos para cada post
+export async function getStaticPaths() {
+    const posts = await getCollection("posts");
+    return posts.map((post) => ({
+        params: { slug: post.slug },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout
+    title={`${post.data.title} | Ana Bottesi`}
+    description={post.data.description}
+>
+    <Header />
+    <main class="pt-32 pb-24 bg-white min-h-screen">
+        <article class="max-w-4xl mx-auto px-4 md:px-8">
+            <header class="mb-12 text-center">
+                <div
+                    class="inline-block bg-brand-secondary/20 text-brand-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
+                >
+                    {post.data.publishDate.toLocaleDateString("pt-BR")}
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+                    {post.data.title}
+                </h1>
+                <p
+                    class="text-xl text-brand-text/60 italic max-w-2xl mx-auto leading-relaxed"
+                >
+                    {post.data.description}
+                </p>
+            </header>
+
+            {
+                post.data.image && (
+                    <div class="rounded-3xl overflow-hidden mb-16 aspect-video shadow-2xl">
+                        <img
+                            src={post.data.image}
+                            alt={post.data.title}
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                )
+            }
+
+            <div
+                class="prose prose-brand max-w-none prose-headings:font-serif prose-headings:text-brand-primary prose-p:text-brand-text/80 prose-p:text-lg prose-p:leading-relaxed prose-img:rounded-2xl prose-a:text-brand-primary prose-a:font-bold prose-strong:text-brand-text"
+            >
+                <Content />
+            </div>
+
+            <!-- Seção de CTA final do Artigo -->
+            <div
+                class="mt-20 p-12 bg-brand-bg rounded-3xl border border-brand-primary/10 text-center"
+            >
+                <span class="text-4xl mb-6 block">🦋</span>
+                <h3 class="text-3xl font-bold mb-4">Gostou do conteúdo?</h3>
+                <p class="text-brand-text/70 mb-8 max-w-lg mx-auto">
+                    Saiba que você não precisa passar pela sua transformação
+                    sozinha. A psicanálise pode ser a chave para sua liberdade.
+                </p>
+                <a
+                    href="https://linktr.ee/apbottesi"
+                    target="_blank"
+                    class="btn-primary"
+                >
+                    Agende uma sessão
+                </a>
+            </div>
+        </article>
+    </main>
+    <Footer />
+</Layout>
+
+<style is:global>
+    /* Estilos básicos de tipografia (prose) caso não usem o plugin oficial */
+    .prose h2 {
+        @apply text-3xl font-bold mt-12 mb-6;
+    }
+    .prose h3 {
+        @apply text-2xl font-bold mt-8 mb-4;
+    }
+    .prose p {
+        @apply mb-6;
+    }
+    .prose ul {
+        @apply list-disc pl-6 mb-6 space-y-2;
+    }
+    .prose ol {
+        @apply list-decimal pl-6 mb-6 space-y-2;
+    }
+    .prose blockquote {
+        @apply border-l-4 border-brand-primary pl-6 italic text-brand-text/70 mb-8;
+    }
+</style>

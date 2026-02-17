@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+const sortedPosts = allPosts.sort(
+    (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+---
+
+<Layout title="Blog | Ana Bottesi - Insights para sua transformação">
+    <Header />
+    <main class="pt-32 bg-brand-bg min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-16">
+            <div class="max-w-3xl mb-16">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Blog</h1>
+                <p class="text-xl text-brand-text/70">
+                    Reflexões e insights sobre psicanálise, o universo feminino
+                    e a jornada de transformação.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                {
+                    sortedPosts.map((post) => (
+                        <article class="flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-brand-primary/10 shadow-sm hover:shadow-xl transition-all group">
+                            <a
+                                href={`/blog/${post.slug}`}
+                                class="block aspect-video overflow-hidden"
+                            >
+                                {post.data.image ? (
+                                    <img
+                                        src={post.data.image}
+                                        alt={post.data.title}
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                ) : (
+                                    <div class="w-full h-full flex items-center justify-center text-brand-primary/20 bg-brand-primary/5">
+                                        <span class="text-6xl">🦋</span>
+                                    </div>
+                                )}
+                            </a>
+                            <div class="p-8 flex flex-col flex-grow">
+                                <div class="flex items-center gap-2 mb-4 text-xs font-bold text-brand-primary uppercase">
+                                    <span>
+                                        {post.data.publishDate.toLocaleDateString(
+                                            "pt-BR",
+                                        )}
+                                    </span>
+                                </div>
+                                <h2 class="text-2xl font-bold mb-4 group-hover:text-brand-primary transition-colors">
+                                    <a href={`/blog/${post.slug}`}>
+                                        {post.data.title}
+                                    </a>
+                                </h2>
+                                <p class="text-brand-text/70 mb-8 line-clamp-3">
+                                    {post.data.description}
+                                </p>
+                                <div class="mt-auto">
+                                    <a
+                                        href={`/blog/${post.slug}`}
+                                        class="btn-secondary w-full block"
+                                    >
+                                        Ver artigo completo
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>

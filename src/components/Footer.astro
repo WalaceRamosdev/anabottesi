@@ -1,0 +1,133 @@
+---
+const today = new Date();
+---
+
+<footer class="bg-brand-bg pt-20 pb-10 border-t border-brand-primary/10">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-2">
+                <a
+                    href="/"
+                    class="text-2xl font-serif font-bold text-brand-primary mb-6 block"
+                >
+                    Ana Bottesi <span class="text-brand-text/50 font-light mx-2"
+                        >|</span
+                    >
+                    <span class="font-sans text-sm tracking-widest uppercase"
+                        >Psicanalista</span
+                    >
+                </a>
+                <p class="text-brand-text/70 max-w-sm mb-8 leading-relaxed">
+                    Transformando exaustão em liberdade através da escuta
+                    clínica e do acolhimento psicanalítico para mulheres.
+                </p>
+                <div class="flex gap-4">
+                    <a
+                        href="https://instagram.com/anabottesi.psicanalista"
+                        target="_blank"
+                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm hover:bg-brand-primary hover:text-white transition-all"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><rect
+                                x="2"
+                                y="2"
+                                width="20"
+                                height="20"
+                                rx="5"
+                                ry="5"></rect><path
+                                d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                            ></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"
+                            ></line></svg
+                        >
+                    </a>
+                    <a
+                        href="https://linktr.ee/apbottesi"
+                        target="_blank"
+                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm hover:bg-brand-primary hover:text-white transition-all font-bold text-sm"
+                    >
+                        🔗
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h5
+                    class="font-bold mb-6 text-brand-primary uppercase tracking-widest text-sm"
+                >
+                    Menu
+                </h5>
+                <ul class="space-y-4 text-brand-text/70">
+                    <li>
+                        <a
+                            href="/"
+                            class="hover:text-brand-primary transition-colors"
+                            >Home</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/#sobre"
+                            class="hover:text-brand-primary transition-colors"
+                            >Sobre</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/#especialidades"
+                            class="hover:text-brand-primary transition-colors"
+                            >Especialidades</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/blog"
+                            class="hover:text-brand-primary transition-colors"
+                            >Blog</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h5
+                    class="font-bold mb-6 text-brand-primary uppercase tracking-widest text-sm"
+                >
+                    Contato
+                </h5>
+                <ul class="space-y-4 text-brand-text/70">
+                    <li class="flex items-center gap-3 italic">
+                        Atendimento Online
+                    </li>
+                    <li>
+                        <a
+                            href="https://linktr.ee/apbottesi"
+                            target="_blank"
+                            class="hover:text-brand-primary transition-colors"
+                            >🔗 linktr.ee/apbottesi</a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://instagram.com/anabottesi.psicanalista"
+                            target="_blank"
+                            class="hover:text-brand-primary transition-colors"
+                            >@anabottesi.psicanalista</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="border-t border-brand-primary/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-brand-text/50"
+        >
+            <p>
+                &copy; {today.getFullYear()} Ana Bottesi. Todos os direitos reservados.
+            </p>
+            <p>Desenvolvido com 🦋 para sua transformação.</p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "@tailwindcss/typography";
+
+/* Configuração de Tema e Variáveis Customizadas (Tailwind 4) */
+@theme {
+    --color-brand-primary: #8C7355;
+    --color-brand-secondary: #A3B18A;
+    --color-brand-accent: #6B705C;
+    --color-brand-bg: #FDFBF7;
+    --color-brand-text: #2D2D2D;
+
+    --font-serif: "Playfair Display", serif;
+    --font-sans: "Inter", system-ui, sans-serif;
+}
+
+/* Estilos de Base */
+@layer base {
+    body {
+        @apply bg-brand-bg text-brand-text font-sans selection:bg-brand-secondary selection:text-white;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-serif;
+    }
+}
+
+/* Utilitários Customizados */
+.glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.section-padding {
+    @apply py-20 px-4 md:px-8 max-w-7xl mx-auto;
+}
+
+.btn-primary {
+    @apply bg-brand-primary text-white px-8 py-3 rounded-full hover:bg-brand-primary/90 transition-all duration-300 font-medium text-center;
+}
+
+.btn-secondary {
+    @apply border-2 border-brand-primary text-brand-primary px-8 py-3 rounded-full hover:bg-brand-primary hover:text-white transition-all duration-300 font-medium text-center;
+}

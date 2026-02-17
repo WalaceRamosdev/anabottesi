@@ -1,0 +1,76 @@
+---
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+const latestPosts = allPosts
+    .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+    .slice(0, 3);
+---
+
+<section class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+        >
+            <div class="max-w-2xl">
+                <h2
+                    class="text-brand-primary text-sm font-bold uppercase tracking-widest mb-4"
+                >
+                    Blog
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-bold">
+                    Insights para sua transformação
+                </h3>
+            </div>
+            <a href="/blog" class="btn-secondary whitespace-nowrap">
+                Ver todos os artigos
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            {
+                latestPosts.map((post) => (
+                    <article class="group">
+                        <a
+                            href={`/blog/${post.slug}`}
+                            class="block overflow-hidden rounded-2xl mb-6 aspect-video bg-slate-100"
+                        >
+                            {post.data.image ? (
+                                <img
+                                    src={post.data.image}
+                                    alt={post.data.title}
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                />
+                            ) : (
+                                <div class="w-full h-full flex items-center justify-center text-brand-primary/20 bg-brand-primary/5">
+                                    <span class="text-4xl">🦋</span>
+                                </div>
+                            )}
+                        </a>
+                        <div class="flex items-center gap-3 mb-4 text-xs font-bold text-brand-primary uppercase tracking-widest">
+                            <span>
+                                {post.data.publishDate.toLocaleDateString(
+                                    "pt-BR",
+                                )}
+                            </span>
+                            <span class="w-1 h-1 bg-brand-primary rounded-full" />
+                            <span>Leitura de 5 min</span>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 group-hover:text-brand-primary transition-colors">
+                            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+                        </h4>
+                        <p class="text-brand-text/70 line-clamp-2 mb-6">
+                            {post.data.description}
+                        </p>
+                        <a
+                            href={`/blog/${post.slug}`}
+                            class="text-brand-primary font-bold inline-flex items-center gap-2 hover:gap-3 transition-all"
+                        >
+                            Continuar lendo <span>→</span>
+                        </a>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>

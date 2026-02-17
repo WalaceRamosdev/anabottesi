@@ -1,0 +1,169 @@
+---
+
+---
+
+<header
+    class="fixed w-full z-50 transition-all duration-300 px-4 py-4"
+    id="main-header"
+>
+    <nav
+        class="max-w-7xl mx-auto flex justify-between items-center glass rounded-full px-6 py-3 shadow-sm"
+    >
+        <a
+            href="/"
+            class="text-xl md:text-2xl font-serif font-bold text-brand-primary"
+        >
+            Ana <span class="text-brand-text/80">Bottesi</span>
+            <span class="hidden md:inline text-brand-text/30 font-light mx-1"
+                >|</span
+            >
+            <span
+                class="hidden md:inline font-sans text-[10px] tracking-[0.2em] uppercase text-brand-text/60"
+                >Psicanalista</span
+            >
+        </a>
+
+        <div class="flex items-center gap-4 md:gap-8">
+            <ul class="hidden md:flex gap-6 text-sm font-medium">
+                <li>
+                    <a
+                        href="/#sobre"
+                        class="hover:text-brand-primary transition-colors"
+                        >Sobre</a>
+                </li>
+                <li>
+                    <a
+                        href="/#especialidades"
+                        class="hover:text-brand-primary transition-colors"
+                        >Especialidades</a>
+                </li>
+                <li>
+                    <a
+                        href="/blog"
+                        class="hover:text-brand-primary transition-colors"
+                        >Blog</a>
+                </li>
+            </ul>
+
+            <a
+                href="https://linktr.ee/apbottesi"
+                target="_blank"
+                class="hidden sm:block bg-brand-primary text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand-primary/90 transition-all shadow-md"
+            >
+                ATENDIMENTO ONLINE
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button
+                id="mobile-menu-btn"
+                class="md:hidden text-brand-primary p-2 focus:outline-none"
+                aria-label="Abrir menu"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><line x1="3" y1="12" x2="21" y2="12"></line><line
+                        x1="3"
+                        y1="6"
+                        x2="21"
+                        y2="6"></line><line x1="3" y1="18" x2="21" y2="18"
+                    ></line></svg
+                >
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-brand-primary z-[100] translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center justify-center lg:hidden"
+    >
+        <button
+            id="close-menu-btn"
+            class="absolute top-8 right-8 text-white p-2 focus:outline-none"
+            aria-label="Fechar menu"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                ><line x1="18" y1="6" x2="6" y2="18"></line><line
+                    x1="6"
+                    y1="6"
+                    x2="18"
+                    y2="18"></line></svg
+            >
+        </button>
+        <ul class="text-white text-3xl font-serif space-y-8 text-center">
+            <li>
+                <a
+                    href="/#sobre"
+                    class="mobile-nav-link hover:text-brand-secondary transition-colors"
+                    >Sobre</a>
+            </li>
+            <li>
+                <a
+                    href="/#especialidades"
+                    class="mobile-nav-link hover:text-brand-secondary transition-colors"
+                    >Especialidades</a>
+            </li>
+            <li>
+                <a
+                    href="/blog"
+                    class="mobile-nav-link hover:text-brand-secondary transition-colors"
+                    >Blog</a>
+            </li>
+            <li>
+                <a
+                    href="https://linktr.ee/apbottesi"
+                    target="_blank"
+                    class="mobile-nav-link text-brand-secondary font-bold"
+                    >Atendimento Online</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<script>
+    const header = document.getElementById("main-header");
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const closeMenuBtn = document.getElementById("close-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header?.classList.add("py-2");
+        } else {
+            header?.classList.remove("py-2");
+        }
+    });
+
+    mobileMenuBtn?.addEventListener("click", () => {
+        mobileMenu?.classList.remove("translate-x-full");
+        document.body.style.overflow = "hidden";
+    });
+
+    const closeMenu = () => {
+        mobileMenu?.classList.add("translate-x-full");
+        document.body.style.overflow = "";
+    };
+
+    closeMenuBtn?.addEventListener("click", closeMenu);
+    mobileLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+</script>

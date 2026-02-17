@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Specialties from "../components/Specialties.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import BlogPreview from "../components/BlogPreview.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Ana Bottesi | Psicanalista - Te ajudo a sair do casulo 🦋">
+	<Header />
+	<main>
+		<!-- As seções são carregadas em ordem de funil de vendas -->
+		<Hero />
+		<About />
+		<Specialties />
+		<HowItWorks />
+		<BlogPreview />
+	</main>
+	<Footer />
+</Layout>

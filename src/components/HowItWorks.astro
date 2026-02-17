@@ -1,0 +1,71 @@
+---
+const steps = [
+    {
+        number: "01",
+        title: "Contato Inicial",
+        description:
+            "Você entra em contato via WhatsApp para conversarmos brevemente sobre suas necessidades.",
+    },
+    {
+        number: "02",
+        title: "Primeiro Acolhimento",
+        description:
+            "Marcamos uma primeira sessão para você conhecer meu método e se sentir segura.",
+    },
+    {
+        number: "03",
+        title: "Sessões Contínuas",
+        description:
+            "Iniciamos o processo de análise com sessões regulares focadas na sua transformação.",
+    },
+];
+---
+
+<section class="bg-brand-accent text-white py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2
+                    class="text-brand-secondary text-sm font-bold uppercase tracking-widest mb-4"
+                >
+                    Metodologia
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-bold mb-8 italic">
+                    Como funciona o atendimento online?
+                </h3>
+                <p class="text-white/80 text-lg leading-relaxed mb-8">
+                    O atendimento online oferece a mesma profundidade e ética do
+                    presencial, com a conveniência de ser realizado no conforto
+                    e privacidade da sua casa.
+                </p>
+                <div
+                    class="inline-block bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10"
+                >
+                    <p class="text-sm italic">
+                        "A análise é um compromisso com a sua própria verdade."
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-12">
+                {
+                    steps.map((step) => (
+                        <div class="flex gap-6 items-start group">
+                            <span class="text-5xl font-serif text-white/20 font-bold group-hover:text-brand-secondary transition-colors duration-500">
+                                {step.number}
+                            </span>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 text-brand-secondary">
+                                    {step.title}
+                                </h4>
+                                <p class="text-white/70 leading-relaxed">
+                                    {step.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>
