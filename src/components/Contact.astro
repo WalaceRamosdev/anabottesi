@@ -1,0 +1,322 @@
+---
+
+---
+
+<section id="contato" class="bg-white py-24 relative overflow-hidden">
+    <!-- Efeito de Borboletas Voando (Background) -->
+    <div
+        class="absolute inset-0 pointer-events-none overflow-hidden"
+        id="butterfly-particle-container"
+    >
+        <!-- As borboletas serão injetadas via JS para melhor controle de performance e variação -->
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Texto e Informações -->
+            <div>
+                <h2
+                    class="text-brand-primary text-sm font-bold uppercase tracking-[0.3em] mb-4"
+                >
+                    Entre em contato
+                </h2>
+                <h3 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+                    Dê o primeiro passo para sua <span
+                        class="text-brand-primary italic">metamorfose</span
+                    >
+                </h3>
+                <p
+                    class="text-xl text-brand-text/70 mb-12 max-w-lg leading-relaxed"
+                >
+                    Sinta-se à vontade para enviar uma mensagem. Minha escuta
+                    está aberta para acolher sua jornada e suas transformações.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 group">
+                        <div
+                            class="w-12 h-12 bg-brand-secondary/10 rounded-full flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-300"
+                        >
+                            <span class="text-xl">📍</span>
+                        </div>
+                        <span class="text-brand-text/80 font-medium"
+                            >Atendimento Online para todo o mundo</span
+                        >
+                    </div>
+                    <div class="flex items-center gap-4 group">
+                        <div
+                            class="w-12 h-12 bg-brand-secondary/10 rounded-full flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white transition-all duration-300"
+                        >
+                            <span class="text-xl">📧</span>
+                        </div>
+                        <span class="text-brand-text/80 font-medium"
+                            >contato@anabottesi.com.br</span
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário Premium -->
+            <div
+                class="bg-brand-bg p-8 md:p-12 rounded-[40px] border border-brand-primary/10 shadow-2xl relative"
+            >
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label
+                                for="name"
+                                class="text-xs font-bold uppercase tracking-widest text-brand-text/40 ml-1"
+                                >Nome Completo</label
+                            >
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Como deseja ser chamada?"
+                                class="w-full bg-white border border-transparent focus:border-brand-primary/30 rounded-2xl px-6 py-4 outline-none transition-all shadow-sm focus:shadow-lg"
+                                required
+                            />
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                for="email"
+                                class="text-xs font-bold uppercase tracking-widest text-brand-text/40 ml-1"
+                                >E-mail</label
+                            >
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Seu melhor e-mail"
+                                class="w-full bg-white border border-transparent focus:border-brand-primary/30 rounded-2xl px-6 py-4 outline-none transition-all shadow-sm focus:shadow-lg"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label
+                            for="subject"
+                            class="text-xs font-bold uppercase tracking-widest text-brand-text/40 ml-1"
+                            >Assunto</label
+                        >
+                        <select
+                            id="subject"
+                            name="subject"
+                            class="w-full bg-white border border-transparent focus:border-brand-primary/30 rounded-2xl px-6 py-4 outline-none transition-all shadow-sm focus:shadow-lg appearance-none"
+                            required
+                        >
+                            <option value="" disabled selected
+                                >O que você busca?</option
+                            >
+                            <option value="psicanalise"
+                                >Psicanálise clínica</option
+                            >
+                            <option value="workshop"
+                                >Workshops e palestras</option
+                            >
+                            <option value="outro">Outros assuntos</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label
+                            for="message"
+                            class="text-xs font-bold uppercase tracking-widest text-brand-text/40 ml-1"
+                            >Mensagem</label
+                        >
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Conte-me um pouco sobre o que te trouxe aqui..."
+                            class="w-full bg-white border border-transparent focus:border-brand-primary/30 rounded-2xl px-6 py-4 outline-none transition-all shadow-sm focus:shadow-lg resize-none"
+                            required></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn-primary w-full py-5 rounded-2xl flex items-center justify-center gap-3 group relative overflow-hidden"
+                    >
+                        <span
+                            class="relative z-10 transition-transform group-hover:-translate-x-1"
+                            >Enviar minha mensagem</span
+                        >
+                        <span
+                            class="text-xl relative z-10 group-hover:translate-x-1 transition-transform"
+                            >🦋</span
+                        >
+                        <div
+                            class="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+                        >
+                        </div>
+                    </button>
+
+                    <!-- Status do Form -->
+                    <div
+                        id="form-status"
+                        class="hidden text-center p-4 rounded-xl text-sm font-medium"
+                    >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Estilos para as borboletas de fundo */
+    :global(.floating-butterfly) {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.15;
+    }
+
+    :global(.butterfly-wing) {
+        position: absolute;
+        width: 15px;
+        height: 20px;
+        background-color: var(--color-brand-primary);
+        border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    }
+
+    :global(.butterfly-wing.left) {
+        left: 0;
+        transform-origin: right center;
+        animation: flap-left 0.4s ease-in-out infinite alternate;
+    }
+
+    :global(.butterfly-wing.right) {
+        right: 0;
+        transform-origin: left center;
+        animation: flap-right 0.4s ease-in-out infinite alternate;
+    }
+
+    @keyframes flap-left {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(70deg);
+        }
+    }
+
+    @keyframes flap-right {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(-70deg);
+        }
+    }
+</style>
+
+<script>
+    import { gsap } from "gsap";
+
+    // Injeção de borboletas voadoras de fundo
+    const createButterflies = () => {
+        const container = document.getElementById(
+            "butterfly-particle-container",
+        );
+        if (!container) return;
+
+        const count = 12; // Número de borboletas
+
+        for (let i = 0; i < count; i++) {
+            const butterfly = document.createElement("div");
+            butterfly.className = "floating-butterfly";
+            butterfly.innerHTML = `
+                <div class="butterfly-wing left"></div>
+                <div class="butterfly-wing right"></div>
+            `;
+
+            // Posição inicial randômica
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * window.innerHeight;
+
+            gsap.set(butterfly, {
+                x: startX,
+                y: startY,
+                scale: 0.5 + Math.random(),
+                rotation: Math.random() * 360,
+            });
+
+            container.appendChild(butterfly);
+
+            // Animação de vôo errático
+            animateButterfly(butterfly);
+        }
+    };
+
+    const animateButterfly = (el: HTMLElement) => {
+        gsap.to(el, {
+            x: `+=${Math.random() * 400 - 200}`,
+            y: `+=${Math.random() * 400 - 200}`,
+            rotation: `+=${Math.random() * 90 - 45}`,
+            duration: 5 + Math.random() * 5,
+            ease: "sine.inOut",
+            onComplete: () => animateButterfly(el),
+        });
+
+        // Loop infinito através da tela
+        gsap.to(el, {
+            opacity: 0.15,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+        });
+    };
+
+    // Lógica do Formulário
+    const setupForm = () => {
+        const form = document.getElementById("contact-form") as HTMLFormElement;
+        const status = document.getElementById("form-status");
+
+        if (!form || !status) return;
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const btn = form.querySelector("button");
+            if (btn) btn.disabled = true;
+
+            status.textContent = "🦋 Enviando sua mensagem...";
+            status.classList.remove(
+                "hidden",
+                "bg-red-100",
+                "text-red-700",
+                "bg-green-100",
+                "text-green-700",
+            );
+            status.classList.add("bg-brand-secondary/10", "text-brand-primary");
+
+            // Simulação de envio
+            setTimeout(() => {
+                status.textContent =
+                    "Mensagem enviada com sucesso! Em breve entrarei em contato.";
+                status.classList.remove(
+                    "bg-brand-secondary/10",
+                    "text-brand-primary",
+                );
+                status.classList.add("bg-green-100", "text-green-700");
+                form.reset();
+                if (btn) btn.disabled = false;
+            }, 2000);
+        });
+    };
+
+    // Inicialização
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => {
+            createButterflies();
+            setupForm();
+        });
+    } else {
+        createButterflies();
+        setupForm();
+    }
+</script>
