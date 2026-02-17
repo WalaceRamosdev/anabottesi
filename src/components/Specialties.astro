@@ -5,21 +5,18 @@ const specialties = [
         description:
             "Liberte-se da necessidade constante de validação externa e construa uma relação saudável consigo mesma.",
         icon: "🤝",
-        delay: 0,
     },
     {
         title: "Exaustão Mental",
         description:
             "Aprenda a lidar com o burnout emocional e a exaustão que vem de tentar dar conta de tudo sozinha.",
         icon: "🧘‍♀️",
-        delay: 0.2,
     },
     {
         title: "Relacionamentos Abusivos",
         description:
             "Identifique padrões prejudiciais, reconstrua sua autoestima e encontre o caminho de volta para sua liberdade.",
         icon: "🔒",
-        delay: 0.4,
     },
 ];
 ---
@@ -35,23 +32,25 @@ const specialties = [
             <h3 class="text-4xl md:text-5xl font-bold">Especialidades</h3>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-8 items-stretch">
             {
                 specialties.map((item) => (
-                    <div class="spec-card group bg-white p-10 rounded-3xl shadow-sm border border-brand-primary/10 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                        <div class="w-16 h-16 bg-brand-secondary/20 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-500">
+                    <div class="spec-card group bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-brand-primary/10 hover:shadow-xl transition-all duration-500 flex flex-col h-full opacity-0">
+                        <div class="w-16 h-16 bg-brand-secondary/10 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-brand-primary group-hover:text-white transition-all duration-500 shrink-0">
                             {item.icon}
                         </div>
-                        <h4 class="text-24 font-bold mb-4">{item.title}</h4>
-                        <p class="text-brand-text/70 leading-relaxed mb-8">
+                        <h4 class="text-xl font-bold mb-4 text-brand-text group-hover:text-brand-primary transition-colors">
+                            {item.title}
+                        </h4>
+                        <p class="text-brand-text/70 leading-relaxed mb-8 flex-grow">
                             {item.description}
                         </p>
                         <a
                             href="https://linktr.ee/apbottesi"
                             target="_blank"
-                            class="inline-flex items-center gap-2 text-brand-primary font-bold text-sm tracking-wide uppercase hover:gap-3 transition-all"
+                            class="inline-flex items-center gap-2 text-brand-primary font-bold text-sm tracking-wide uppercase group-hover:gap-3 transition-all shrink-0"
                         >
-                            Entender como tratar <span>→</span>
+                            Entender como tratar <span class="text-lg">→</span>
                         </a>
                     </div>
                 ))
@@ -66,15 +65,33 @@ const specialties = [
 
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from(".spec-card", {
-        scrollTrigger: {
-            trigger: "#especialidades",
-            start: "top 80%",
-        },
-        y: 60,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 1,
-        ease: "power3.out",
-    });
+    // Garantir que a animação execute após o carregamento inicial do DOM
+    const initAnimation = () => {
+        gsap.to(".spec-card", {
+            scrollTrigger: {
+                trigger: "#especialidades",
+                start: "top 80%",
+                toggleActions: "play none none none",
+            },
+            y: 0,
+            opacity: 1,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "power2.out",
+            clearProps: "all", // Remove estilos inline após animar para não interferir no hover
+        });
+    };
+
+    // Inicializa imediatamente
+    initAnimation();
+
+    // Suporte para Astro View Transitions se habilitado no futuro
+    document.addEventListener("astro:page-load", initAnimation);
 </script>
+
+<style>
+    .spec-card {
+        transform: translateY(30px);
+        will-change: transform, opacity;
+    }
+</style>
