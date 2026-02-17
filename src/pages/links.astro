@@ -1,0 +1,109 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { Image } from "astro:assets";
+import anaPortrait from "../../assets/profissional/anaBottesi1.svg";
+
+const links = [
+    {
+        title: "Agendar Sessão via WhatsApp",
+        url: "https://wa.me/5511999999999",
+        icon: "💬",
+        primary: true,
+    },
+    {
+        title: "Blog: Artigos e Reflexões",
+        url: "/blog",
+        icon: "📖",
+    },
+    {
+        title: "Perfil no Instagram",
+        url: "https://instagram.com/anabottesi.psicanalista",
+        icon: "📸",
+    },
+    {
+        title: "E-book Gratuito: O Despertar da Mulher",
+        url: "#",
+        icon: "🎁",
+    },
+];
+---
+
+<Layout
+    title="Links Úteis | Ana Bottesi"
+    description="Acesse todos os canais de atendimento e conteúdos de Ana Bottesi em um só lugar."
+>
+    <main
+        class="min-h-screen bg-brand-bg py-20 px-4 flex flex-col items-center"
+    >
+        <!-- Header do Perfil -->
+        <div class="text-center mb-12">
+            <div
+                class="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl mx-auto mb-6"
+            >
+                <Image
+                    src={anaPortrait}
+                    alt="Ana Bottesi"
+                    class="w-full h-full object-cover scale-150 origin-top"
+                />
+            </div>
+            <h1 class="text-3xl font-bold text-brand-text mb-2">Ana Bottesi</h1>
+            <p
+                class="text-brand-primary font-medium tracking-widest uppercase text-xs"
+            >
+                Psicanalista Clínica para Mulheres
+            </p>
+        </div>
+
+        <!-- Lista de Links -->
+        <div class="w-full max-w-md space-y-4">
+            {
+                links.map((link) => (
+                    <a
+                        href={link.url}
+                        target={
+                            link.url.startsWith("http") ? "_blank" : "_self"
+                        }
+                        class={`flex items-center p-4 rounded-2xl transition-all duration-300 group shadow-sm hover:shadow-md border-2 ${
+                            link.primary
+                                ? "bg-brand-primary border-brand-primary text-white hover:scale-[1.02]"
+                                : "bg-white border-white hover:border-brand-primary/20 text-brand-text hover:scale-[1.02]"
+                        }`}
+                    >
+                        <span class="text-2xl mr-4 group-hover:scale-125 transition-transform">
+                            {link.icon}
+                        </span>
+                        <span class="font-bold flex-grow">{link.title}</span>
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity">
+                            →
+                        </span>
+                    </a>
+                ))
+            }
+        </div>
+
+        <!-- Footer do Linketree -->
+        <div class="mt-16 text-center">
+            <a
+                href="/"
+                class="text-brand-text/40 hover:text-brand-primary transition-colors text-sm font-medium"
+            >
+                ← Voltar para o site oficial
+            </a>
+            <div class="mt-8">
+                <span
+                    class="text-[10px] text-brand-text/30 uppercase tracking-[0.3em] block mb-2"
+                    >Desenvolvido por</span
+                >
+                <a
+                    href="https://sitesalphacode.com.br"
+                    target="_blank"
+                    class="text-brand-primary/50 hover:text-brand-primary transition-all font-bold text-xs uppercase tracking-widest"
+                >
+                    Alpha Code
+                </a>
+            </div>
+        </div>
+    </main>
+</Layout>
