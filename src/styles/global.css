@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@import "@tailwindcss/typography";
+@plugin "@tailwindcss/typography";
+
 
 /* Configuração de Tema e Variáveis Customizadas (Tailwind 4) */
 @theme {
