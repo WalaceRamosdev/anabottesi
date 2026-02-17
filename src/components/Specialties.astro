@@ -35,7 +35,7 @@ const specialties = [
         <div class="grid md:grid-cols-3 gap-8 items-stretch">
             {
                 specialties.map((item) => (
-                    <div class="spec-card group bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-brand-primary/10 hover:shadow-xl transition-all duration-500 flex flex-col h-full opacity-0">
+                    <div class="spec-card group bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-brand-primary/10 hover:shadow-xl transition-all duration-500 flex flex-col h-full">
                         <div class="w-16 h-16 bg-brand-secondary/10 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-brand-primary group-hover:text-white transition-all duration-500 shrink-0">
                             {item.icon}
                         </div>
@@ -65,33 +65,39 @@ const specialties = [
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // Garantir que a animação execute após o carregamento inicial do DOM
-    const initAnimation = () => {
-        gsap.to(".spec-card", {
+    const animateCards = () => {
+        // Reset any previous animations to avoid conflicts
+        gsap.set(".spec-card", { opacity: 1, y: 0 });
+
+        // Se houver suporte a JS, fazemos a animação de entrada
+        gsap.from(".spec-card", {
             scrollTrigger: {
                 trigger: "#especialidades",
-                start: "top 80%",
+                start: "top 85%",
                 toggleActions: "play none none none",
             },
-            y: 0,
-            opacity: 1,
-            stagger: 0.15,
-            duration: 0.8,
+            y: 40,
+            opacity: 0,
+            stagger: 0.2,
+            duration: 1,
             ease: "power2.out",
-            clearProps: "all", // Remove estilos inline após animar para não interferir no hover
+            // Garante que o estado final seja limpo para não quebrar o hover do CSS
+            onComplete: function () {
+                gsap.set(this.targets(), { clearProps: "all" });
+            },
         });
     };
 
-    // Inicializa imediatamente
-    initAnimation();
-
-    // Suporte para Astro View Transitions se habilitado no futuro
-    document.addEventListener("astro:page-load", initAnimation);
-</script>
-
-<style>
-    .spec-card {
-        transform: translateY(30px);
-        will-change: transform, opacity;
+    // Inicializa quando o DOM estiver pronto
+    if (
+        document.readyState === "complete" ||
+        document.readyState === "interactive"
+    ) {
+        animateCards();
+    } else {
+        document.addEventListener("DOMContentLoaded", animateCards);
     }
-</style>
+
+    // Suporte para navegação do Astro (se usar View Transitions)
+    document.addEventListener("astro:after-swap", animateCards);
+</script>
