@@ -13,39 +13,72 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
                 class="absolute -top-10 -left-10 w-40 h-40 bg-brand-secondary/10 rounded-full blur-2xl"
             >
             </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="space-y-4 pt-8">
+
+            <!-- Grid de Imagens com Estética Premium -->
+            <div class="grid grid-cols-2 gap-6">
+                <div class="space-y-6 pt-12">
+                    <!-- Imagem 1: Consultório (Sem cortes no rosto pois é detalhe) -->
                     <div
-                        class="h-64 bg-slate-100 rounded-2xl overflow-hidden shadow-lg"
+                        class="h-64 bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-white transition-transform duration-500 hover:scale-[1.02]"
                     >
                         <Image
                             src={officeImg}
-                            alt="Detalhe do consultório"
+                            alt="Consultório Ana Bottesi"
                             class="w-full h-full object-cover"
                         />
                     </div>
+
+                    <!-- Card de Citação Centralizado -->
                     <div
-                        class="h-48 bg-brand-primary/20 rounded-2xl p-6 flex flex-col justify-end"
+                        class="h-56 bg-brand-bg rounded-3xl p-8 flex items-center justify-center text-center border border-brand-primary/10 shadow-sm relative overflow-hidden group"
                     >
-                        <span
-                            class="text-brand-primary font-bold text-lg leading-tight italic"
-                            >"A análise é um reencaminhamento."</span
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-brand-primary/20"
                         >
+                        </div>
+                        <p
+                            class="text-brand-primary font-serif text-xl md:text-2xl leading-relaxed italic relative z-10 transition-colors duration-300 group-hover:text-brand-accent"
+                        >
+                            "A análise é um reencaminhamento."
+                        </p>
                     </div>
                 </div>
-                <div class="space-y-4">
+
+                <div class="space-y-6">
+                    <!-- Card da Borboleta Animada (Visual Premium) -->
                     <div
-                        class="h-48 bg-brand-secondary/20 rounded-2xl p-6 flex items-start"
+                        class="h-56 bg-brand-secondary/5 rounded-3xl flex flex-col items-center justify-center p-6 border border-brand-secondary/20 shadow-inner group"
                     >
-                        <span class="text-4xl">🦋</span>
+                        <div
+                            class="relative w-32 h-32 flex items-center justify-center"
+                        >
+                            <!-- Borboleta Animada via CSS para ser ultra-premium e leve -->
+                            <div class="butterfly-container scale-125">
+                                <div class="butterfly">
+                                    <div class="wing left"></div>
+                                    <div class="wing right"></div>
+                                </div>
+                            </div>
+                            <!-- Brilho suave ao redor -->
+                            <div
+                                class="absolute inset-0 bg-brand-primary/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                            >
+                            </div>
+                        </div>
+                        <span
+                            class="text-[10px] uppercase tracking-[0.3em] text-brand-primary/40 mt-4 font-bold"
+                            >Metamorfose</span
+                        >
                     </div>
+
+                    <!-- Imagem 2: Profissional (Ajustada para não cortar o rosto) -->
                     <div
-                        class="h-64 bg-slate-100 rounded-2xl overflow-hidden shadow-lg"
+                        class="h-80 bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-white transition-transform duration-500 hover:scale-[1.02]"
                     >
                         <Image
                             src={anaAbout}
-                            alt="Ana Bottesi"
-                            class="w-full h-full object-cover"
+                            alt="Ana Bottesi Psicanalista"
+                            class="w-full h-full object-cover object-top"
                         />
                     </div>
                 </div>
@@ -88,14 +121,76 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
                 <a
                     href="https://linktr.ee/apbottesi"
                     target="_blank"
-                    class="inline-flex items-center gap-2 text-brand-primary font-bold hover:gap-4 transition-all"
+                    class="btn-primary inline-block"
                 >
-                    Agendar primeiro contato <span>→</span>
+                    Agendar primeiro contato
                 </a>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    /* Butterfly Illustration Animation (Premium & High Performance) */
+    .butterfly-container {
+        perspective: 500px;
+        filter: drop-shadow(0 10px 15px rgba(140, 115, 85, 0.2));
+    }
+
+    .butterfly {
+        width: 60px;
+        height: 50px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(20deg) rotateY(-20deg);
+    }
+
+    .wing {
+        position: absolute;
+        width: 30px;
+        height: 50px;
+        background: linear-gradient(135deg, #8c7355, #a3b18a);
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        transform-origin: right center;
+        animation: flap-left 0.8s ease-in-out infinite alternate;
+    }
+
+    .wing.right {
+        left: 30px;
+        transform-origin: left center;
+        animation: flap-right 0.8s ease-in-out infinite alternate;
+    }
+
+    @keyframes flap-left {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(70deg);
+        }
+    }
+
+    @keyframes flap-right {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(-70deg);
+        }
+    }
+
+    /* Patterns for the butterfly wings to look premium */
+    .wing::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: inherit;
+    }
+</style>
 
 <script>
     import { gsap } from "gsap";
