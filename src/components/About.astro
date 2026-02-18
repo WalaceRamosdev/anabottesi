@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import anaAbout from "../assets/profissional/anaBottesi2.svg";
 import officeImg from "../assets/profissional/anaBottesi3.svg";
+import abstractImg from "../assets/abstract-psychology.svg";
 ---
 
 <section id="sobre" class="bg-white py-24 overflow-hidden">
@@ -15,11 +16,11 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
             </div>
 
             <!-- Grid de Imagens com Estética Premium -->
-            <div class="grid grid-cols-2 gap-6">
-                <div class="space-y-6 pt-12">
+            <div class="grid grid-cols-2 gap-3 md:gap-6">
+                <div class="space-y-3 md:space-y-6 pt-8 md:pt-12">
                     <!-- Imagem 1: Consultório (Escondendo logo da base) -->
                     <div
-                        class="h-64 bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-white transition-transform duration-500 hover:scale-[1.02] relative"
+                        class="h-40 md:h-64 bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-white transition-transform duration-500 hover:scale-[1.02] relative"
                     >
                         <div class="absolute inset-0 z-0">
                             <Image
@@ -33,27 +34,27 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
 
                     <!-- Card de Citação Centralizado -->
                     <div
-                        class="h-56 bg-brand-bg rounded-3xl p-8 flex items-center justify-center text-center border border-brand-primary/10 shadow-sm relative overflow-hidden group"
+                        class="h-40 md:h-56 bg-brand-bg rounded-3xl p-4 md:p-8 flex items-center justify-center text-center border border-brand-primary/10 shadow-sm relative overflow-hidden group"
                     >
                         <div
                             class="absolute top-0 left-0 w-full h-1 bg-brand-primary/20"
                         >
                         </div>
                         <p
-                            class="text-brand-primary font-serif text-xl md:text-2xl leading-relaxed italic relative z-10 transition-colors duration-300 group-hover:text-brand-accent"
+                            class="text-brand-primary font-serif text-base md:text-2xl leading-tight md:leading-relaxed italic relative z-10 transition-colors duration-300 group-hover:text-brand-accent break-words hyphens-auto"
                         >
                             "A análise é um reencaminhamento."
                         </p>
                     </div>
                 </div>
 
-                <div class="space-y-6">
+                <div class="space-y-3 md:space-y-6">
                     <!-- Card da Borboleta Animada (Visual Premium) -->
                     <div
-                        class="h-56 bg-brand-secondary/5 rounded-3xl flex flex-col items-center justify-center p-6 border border-brand-secondary/20 shadow-inner group relative"
+                        class="h-40 md:h-56 bg-brand-secondary/5 rounded-3xl flex flex-col items-center justify-center p-4 md:p-6 border border-brand-secondary/20 shadow-inner group relative"
                     >
                         <div
-                            class="relative w-32 h-32 flex items-center justify-center"
+                            class="relative w-24 h-24 md:w-32 md:h-32 flex items-center justify-center"
                         >
                             <!-- Borboleta Animada via CSS para ser ultra-premium e leve -->
                             <div class="butterfly-container scale-150">
@@ -74,18 +75,26 @@ import officeImg from "../assets/profissional/anaBottesi3.svg";
                         >
                     </div>
 
-                    <!-- Imagem 2: Profissional (Zoom e Offset para esconder logo e focar no rosto) -->
+                    <!-- Imagem 2: Profissional (Ajuste para nao cortar e adicionar abstrato) -->
                     <div
-                        class="h-80 bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-white transition-transform duration-500 hover:scale-[1.02] relative"
+                        class="relative w-full rounded-3xl overflow-hidden shadow-xl border-4 border-white transition-transform duration-500 hover:scale-[1.02]"
                     >
-                        <div class="absolute inset-0">
+                        <Image
+                            src={anaAbout}
+                            alt="Ana Bottesi Psicanalista"
+                            class="w-full h-auto object-contain rounded-3xl"
+                        />
+
+                        <!-- Elemento Abstrato Sobreposto (Relacionado ao Blog) -->
+                        <div
+                            class="absolute -bottom-10 -right-10 w-48 h-48 opacity-60 mix-blend-multiply pointer-events-none rotate-12"
+                        >
                             <Image
-                                src={anaAbout}
-                                alt="Ana Bottesi Psicanalista"
-                                class="w-full h-full object-cover rounded-3xl"
+                                src={abstractImg}
+                                alt="Arte Abstrata Psicologia"
+                                class="w-full h-full object-contain"
                             />
                         </div>
-                        <!-- Overlay sutil se necessário para esconder info na base -->
                     </div>
                 </div>
             </div>

@@ -5,9 +5,11 @@ const allPosts = await getCollection("posts");
 const latestPosts = allPosts
     .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
     .slice(0, 3);
+
+import abstractImg from "../assets/abstract-psychology.svg";
 ---
 
-<section class="bg-white py-24">
+<section class="bg-white py-24 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
         <div
             class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
@@ -22,9 +24,23 @@ const latestPosts = allPosts
                     Insights para sua transformação
                 </h3>
             </div>
-            <a href="/blog" class="btn-secondary whitespace-nowrap">
+            <a
+                href="/blog"
+                class="btn-secondary whitespace-nowrap z-10 relative"
+            >
                 Ver todos os artigos
             </a>
+
+            <!-- Elemento Decorativo Abstrato -->
+            <div
+                class="absolute top-0 right-0 w-64 h-64 opacity-5 pointer-events-none -z-0"
+            >
+                <img
+                    src={abstractImg.src}
+                    alt=""
+                    class="w-full h-full object-contain"
+                />
+            </div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
