@@ -16,6 +16,13 @@ import anaPortrait from "../assets/profissional/anaBottesi1.svg";
     >
     </div>
 
+    <!-- Efeito de Borboletas no Hero -->
+    <div
+        class="absolute inset-0 pointer-events-none overflow-hidden"
+        id="hero-butterfly-container"
+    >
+    </div>
+
     <div
         class="section-padding relative z-10 grid md:grid-cols-2 gap-12 items-center"
     >
@@ -123,6 +130,56 @@ import anaPortrait from "../assets/profissional/anaBottesi1.svg";
     </div>
 </section>
 
+<style>
+    /* Estilos para as borboletas voadoras */
+    :global(.hero-butterfly) {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        pointer-events: none;
+        z-index: 5;
+        opacity: 0.15;
+    }
+
+    :global(.butterfly-wing) {
+        position: absolute;
+        width: 50%;
+        height: 80%;
+        background-color: var(--color-brand-primary);
+        border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    }
+
+    :global(.butterfly-wing.left) {
+        left: 0;
+        transform-origin: right center;
+        animation: flap-left 0.4s ease-in-out infinite alternate;
+    }
+
+    :global(.butterfly-wing.right) {
+        right: 0;
+        transform-origin: left center;
+        animation: flap-right 0.4s ease-in-out infinite alternate;
+    }
+
+    @keyframes flap-left {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(70deg);
+        }
+    }
+
+    @keyframes flap-right {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(-70deg);
+        }
+    }
+</style>
+
 <script>
     import { gsap } from "gsap";
 
@@ -153,6 +210,55 @@ import anaPortrait from "../assets/profissional/anaBottesi1.svg";
                 },
                 "-=0.5",
             );
+
+        // Inicia efeito de borboletas
+        createButterflies();
+    };
+
+    const createButterflies = () => {
+        const container = document.getElementById("hero-butterfly-container");
+        if (!container) return;
+
+        const count = 10;
+        for (let i = 0; i < count; i++) {
+            const butterfly = document.createElement("div");
+            butterfly.className = "hero-butterfly";
+            butterfly.innerHTML = `
+                <div class="butterfly-wing left"></div>
+                <div class="butterfly-wing right"></div>
+            `;
+
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * window.innerHeight;
+
+            gsap.set(butterfly, {
+                x: startX,
+                y: startY,
+                scale: 0.4 + Math.random() * 0.6,
+                rotation: Math.random() * 360,
+            });
+
+            container.appendChild(butterfly);
+            animateButterfly(butterfly);
+        }
+    };
+
+    const animateButterfly = (el: HTMLElement) => {
+        gsap.to(el, {
+            x: `+=${Math.random() * 400 - 200}`,
+            y: `+=${Math.random() * 400 - 200}`,
+            rotation: `+=${Math.random() * 90 - 45}`,
+            duration: 6 + Math.random() * 6,
+            ease: "sine.inOut",
+            onComplete: () => animateButterfly(el),
+        });
+
+        gsap.to(el, {
+            opacity: 0.2,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+        });
     };
 
     window.addEventListener("load", initHeroAnimation);

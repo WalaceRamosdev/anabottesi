@@ -6,13 +6,6 @@
     class="fixed w-full z-50 transition-all duration-300 px-4 py-4"
     id="main-header"
 >
-    <!-- Container para Borboletas no Header -->
-    <div
-        class="absolute inset-0 pointer-events-none overflow-hidden"
-        id="header-butterfly-container"
-    >
-    </div>
-
     <nav
         class="max-w-7xl mx-auto flex justify-between items-center glass rounded-full px-6 py-3 shadow-sm relative z-10"
     >
@@ -176,14 +169,6 @@
 
 <style>
     /* Estilos das borboletas (reutilizados) */
-    :global(.header-butterfly) {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        pointer-events: none;
-        z-index: 5;
-        opacity: 0.1;
-    }
 
     :global(.menu-butterfly) {
         position: absolute;
@@ -201,11 +186,6 @@
         height: 80%;
         background-color: inherit;
         border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-    }
-
-    /* Versão colorida para o header */
-    :global(.header-butterfly .butterfly-wing) {
-        background-color: var(--color-brand-primary);
     }
 
     :global(.butterfly-wing.left) {
@@ -291,7 +271,7 @@
         });
 
         gsap.to(el, {
-            opacity: el.classList.contains("menu-butterfly") ? 0.4 : 0.15,
+            opacity: 0.4,
             duration: 2,
             repeat: -1,
             yoyo: true,
@@ -300,7 +280,6 @@
 
     // Inicialização
     const init = () => {
-        createButterflies("header-butterfly-container", 5, "header-butterfly");
         createButterflies("mobile-butterfly-container", 15, "menu-butterfly");
 
         window.addEventListener("scroll", () => {
