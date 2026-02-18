@@ -29,6 +29,12 @@ const links = [
         icon: "📸",
         description: "Doses diárias de insights",
     },
+    {
+        title: "Enviar E-mail",
+        url: "mailto:contatoanabottesi@gmail.com",
+        icon: "✉️",
+        description: "contatoanabottesi@gmail.com",
+    },
 ];
 ---
 
@@ -164,43 +170,31 @@ const links = [
             <div class="mt-12 text-center">
                 <div class="flex justify-center gap-4 mb-8">
                     <a
-                        href="mailto:ana.bottesi@gmail.com"
-                        class="p-2 text-brand-text/40 hover:text-brand-primary transition-colors hover:bg-brand-primary/5 rounded-full"
-                        aria-label="Email"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><rect x="2" y="4" width="20" height="16" rx="2"
+                        ></rect><path
+                            d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+                        ></path></a
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            ><rect x="2" y="4" width="20" height="16" rx="2"
-                            ></rect><path
-                                d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
-                            ></path></svg
-                        >
-                    </a>
                 </div>
-                <div class="text-[10px] text-brand-text/60">
-                    <span class="uppercase tracking-[0.2em] block mb-2"
-                        >Desenvolvido por</span
+            </div>
+            <div class="text-[10px] text-brand-text/60">
+                <span class="uppercase tracking-[0.2em] block mb-2"
+                    >Desenvolvido por</span
+                >
+                <a
+                    href="https://sitesalphacode.com.br"
+                    target="_blank"
+                    class="text-brand-primary hover:text-brand-accent transition-all font-bold uppercase tracking-widest inline-flex items-center gap-1 group"
+                >
+                    Alpha Code
+                    <span
+                        class="opacity-0 group-hover:opacity-100 transition-opacity -ml-2 group-hover:ml-0"
+                        >⚡</span
                     >
-                    <a
-                        href="https://sitesalphacode.com.br"
-                        target="_blank"
-                        class="text-brand-primary hover:text-brand-accent transition-all font-bold uppercase tracking-widest inline-flex items-center gap-1 group"
-                    >
-                        Alpha Code
-                        <span
-                            class="opacity-0 group-hover:opacity-100 transition-opacity -ml-2 group-hover:ml-0"
-                            >⚡</span
-                        >
-                    </a>
-                </div>
+                </a>
             </div>
         </div>
     </main>
