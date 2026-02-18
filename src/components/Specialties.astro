@@ -52,9 +52,9 @@ const specialties = [
                             {item.description}
                         </p>
                         <a
-                            href={`https://wa.me/5511973454557?text=Olá Ana, gostaria de saber mais sobre o tratamento para ${item.title}.`}
-                            target="_blank"
-                            class="inline-flex items-center gap-2 text-brand-primary font-bold text-sm tracking-wide uppercase group-hover:gap-3 transition-all shrink-0"
+                            href="#contato"
+                            data-topic={item.title}
+                            class="contact-trigger inline-flex items-center gap-2 text-brand-primary font-bold text-sm tracking-wide uppercase group-hover:gap-3 transition-all shrink-0"
                         >
                             Entender como tratar <span class="text-lg">→</span>
                         </a>
@@ -175,9 +175,54 @@ const specialties = [
         });
     };
 
+    const setupContactTriggers = () => {
+        const triggers = document.querySelectorAll(".contact-trigger");
+        const messageInput = document.getElementById(
+            "message",
+        ) as HTMLTextAreaElement;
+        const subjectInput = document.getElementById(
+            "subject",
+        ) as HTMLSelectElement;
+
+        // Se não encontrar os inputs (pode acontecer se o componente de contato não estiver na pagina), sai
+        if (!messageInput || !subjectInput) return;
+
+        triggers.forEach((trigger) => {
+            trigger.addEventListener("click", (e) => {
+                // Deixa o comportamento padrão do link de âncora (#contato) rolar até a seção,
+                // mas intercepta para preencher os dados antes.
+
+                const topic = trigger.getAttribute("data-topic");
+                if (topic) {
+                    // Preenche o assunto como Psicanálise
+                    subjectInput.value = "psicanalise";
+
+                    // Preenche a mensagem personalizada
+                    messageInput.value = `Olá Ana, gostaria de saber mais sobre o tratamento para ${topic}.`;
+
+                    // Dá um foco visual no campo de mensagem para orientar o usuário
+                    setTimeout(() => {
+                        messageInput.focus();
+                        messageInput.classList.add(
+                            "ring-2",
+                            "ring-brand-primary",
+                        );
+                        setTimeout(() => {
+                            messageInput.classList.remove(
+                                "ring-2",
+                                "ring-brand-primary",
+                            );
+                        }, 2000);
+                    }, 800); // Pequeno delay para esperar o scroll terminar
+                }
+            });
+        });
+    };
+
     const init = () => {
         animateCards();
         createButterflies();
+        setupContactTriggers();
     };
 
     // Inicializa quando o DOM estiver pronto
