@@ -1,0 +1,434 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/profissional/logo.svg";
+---
+
+<Layout
+    title="Manual do Site | Ana Bottesi"
+    description="Documentação e guia de uso do site institucional."
+>
+    <main class="bg-slate-50 min-h-screen py-20 relative overflow-hidden">
+        <!-- Borboletas do Manual -->
+        <div
+            class="absolute inset-0 pointer-events-none"
+            id="manual-butterfly-container"
+        >
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Cabeçalho do Manual -->
+            <div
+                class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+            >
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16">
+                        <Image
+                            src={logo}
+                            alt="Logo Ana Bottesi"
+                            class="w-full h-full object-contain"
+                        />
+                    </div>
+                    <div>
+                        <h1
+                            class="text-3xl md:text-4xl font-serif font-bold text-brand-text"
+                        >
+                            Manual do Site
+                        </h1>
+                        <p class="text-brand-text/60 mt-1">
+                            Guia administrativo e técnico - Ana Bottesi
+                            Psicanalista
+                        </p>
+                    </div>
+                </div>
+                <div class="prose prose-slate max-w-none text-brand-text/80">
+                    <p class="lead text-lg">
+                        Olá, Ana! Este é o manual oficial do seu novo site. Aqui
+                        você encontra todas as informações sobre como ele
+                        funciona, como seus pacientes interagem com ele e dados
+                        técnicos importantes para a manutenção futura.
+                    </p>
+                    <p
+                        class="text-sm bg-blue-50 text-blue-800 p-4 rounded-xl border border-blue-100"
+                    >
+                        <strong>Dica:</strong> Salve este link nos seus favoritos
+                        para consultar sempre que precisar. Esta página é oculta e
+                        não aparece no menu principal do site.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Como o Site Funciona -->
+            <div
+                class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+            >
+                <h2
+                    class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                >
+                    <span
+                        class="w-8 h-8 rounded-full bg-brand-secondary/20 flex items-center justify-center text-sm"
+                        >1</span
+                    >
+                    A Experiência do Paciente
+                </h2>
+                <div class="space-y-6 text-brand-text/70">
+                    <div>
+                        <h3 class="font-bold text-brand-text text-lg mb-2">
+                            📌 Objetivo Principal
+                        </h3>
+                        <p>
+                            Seu site funciona como um <span
+                                class="font-semibold text-brand-accent"
+                                >Funil de Conversão</span
+                            >. Ele foi desenhado não apenas para ser bonito, mas
+                            para guiar o visitante em uma jornada emocional:
+                        </p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>
+                                <strong>Topo (Hero/Sobre):</strong> Cria conexão e
+                                empatia ("Eu entendo sua dor").
+                            </li>
+                            <li>
+                                <strong>Meio (Especialidades/Blog):</strong> Mostra
+                                autoridade e solução ("Eu sei como te ajudar").
+                            </li>
+                            <li>
+                                <strong>Fundo (Contato):</strong> Facilita a ação
+                                ("Vamos conversar").
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="border-t border-slate-100 pt-6"></div>
+
+                    <div>
+                        <h3 class="font-bold text-brand-text text-lg mb-2">
+                            💬 O "Botão Mágico" do WhatsApp
+                        </h3>
+                        <p>
+                            Você notará que em várias partes do site
+                            (especialmente nas Especialidades), quando a pessoa
+                            clica em "Entender como tratar", ela não vai direto
+                            para o WhatsApp perdida.
+                        </p>
+                        <p class="mt-2">O site faz duas coisas:</p>
+                        <ol class="list-decimal pl-5 mt-2 space-y-1">
+                            <li>
+                                Rola suavemente até o formulário de contato.
+                            </li>
+                            <li>
+                                <strong>Preenche automaticamente</strong> o assunto
+                                ("Psicanálise") e a mensagem ("Gostaria de saber sobre...").
+                            </li>
+                        </ol>
+                        <p class="mt-2 text-sm italic">
+                            Isso aumenta a chance da pessoa realmente enviar a
+                            mensagem, pois reduz o esforço dela de ter que
+                            pensar no que escrever.
+                        </p>
+                    </div>
+
+                    <div class="border-t border-slate-100 pt-6"></div>
+
+                    <div>
+                        <h3 class="font-bold text-brand-text text-lg mb-2">
+                            📝 Formulário Inteligente
+                        </h3>
+                        <p>
+                            Quando alguém preenche o formulário no final da
+                            página:
+                        </p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>O site monta uma mensagem organizada.</li>
+                            <li>Abre o WhatsApp da pessoa (web ou app).</li>
+                            <li>Envia tudo pronto para o seu número.</li>
+                        </ul>
+                        <p class="mt-2">
+                            Você receberá: Nome, E-mail, Assunto e a Mensagem,
+                            tudo estruturado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coletando Avaliações (NOVO) -->
+            <div
+                class="bg-brand-primary/5 rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/20 relative overflow-hidden"
+            >
+                <div class="relative z-10">
+                    <h2
+                        class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                    >
+                        <span
+                            class="w-8 h-8 rounded-full bg-brand-primary text-white flex items-center justify-center text-sm"
+                            >2</span
+                        >
+                        Aumentando sua Autoridade
+                    </h2>
+                    <div class="space-y-6 text-brand-text/80">
+                        <div>
+                            <h3 class="font-bold text-brand-text text-lg mb-2">
+                                ⭐ Avaliações no Google
+                            </h3>
+                            <p class="mb-4">
+                                Avaliações positivas são fundamentais para
+                                passar confiança a novos pacientes. Criei um
+                                link direto para facilitar esse processo.
+                            </p>
+                            <p class="mb-6">
+                                Sempre que finalizar um processo de análise ou
+                                receber um feedback positivo, envie este link
+                                para o paciente e peça gentilmente uma
+                                avaliação:
+                            </p>
+
+                            <div
+                                class="bg-white p-6 rounded-2xl border border-brand-primary/10 shadow-sm flex flex-col md:flex-row gap-4 items-center justify-between"
+                            >
+                                <div
+                                    class="flex-grow break-all font-mono text-sm text-brand-primary"
+                                >
+                                    https://g.page/r/CZzg4B41VhRREAE/review
+                                </div>
+                                <a
+                                    href="https://g.page/r/CZzg4B41VhRREAE/review"
+                                    target="_blank"
+                                    class="whitespace-nowrap px-6 py-3 bg-brand-primary text-white font-bold rounded-xl hover:bg-brand-secondary transition-colors shadow-md flex items-center gap-2"
+                                >
+                                    Testar Link <span>↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dados Técnicos -->
+            <div
+                class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+            >
+                <h2
+                    class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                >
+                    <span
+                        class="w-8 h-8 rounded-full bg-brand-secondary/20 flex items-center justify-center text-sm"
+                        >3</span
+                    >
+                    Área Técnica (Para Desenvolvedores)
+                </h2>
+                <div class="space-y-6 text-brand-text/70">
+                    <p>
+                        Caso no futuro você precise contratar outro profissional
+                        para dar manutenção ou expandir o site, entregue estas
+                        informações a ele:
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div
+                            class="bg-slate-50 p-4 rounded-xl border border-slate-200"
+                        >
+                            <h4
+                                class="font-bold text-brand-text text-sm uppercase tracking-wider mb-2"
+                            >
+                                Repositório de Código
+                            </h4>
+                            <p class="text-sm mb-3">
+                                Onde "mora" o código-fonte do seu site.
+                            </p>
+                            <a
+                                href="https://github.com/WalaceRamosdev/anabottesi"
+                                target="_blank"
+                                class="text-brand-primary font-bold hover:underline break-all text-sm"
+                            >
+                                github.com/WalaceRamosdev/anabottesi
+                            </a>
+                        </div>
+
+                        <div
+                            class="bg-slate-50 p-4 rounded-xl border border-slate-200"
+                        >
+                            <h4
+                                class="font-bold text-brand-text text-sm uppercase tracking-wider mb-2"
+                            >
+                                Tecnologias
+                            </h4>
+                            <ul class="text-sm space-y-1">
+                                <li>
+                                    <strong>Framework:</strong> Astro (Alta performance)
+                                </li>
+                                <li><strong>Estilos:</strong> Tailwind CSS</li>
+                                <li><strong>Animações:</strong> GSAP</li>
+                                <li><strong>Hospedagem:</strong> Vercel</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-amber-50 p-4 rounded-xl border border-amber-100 text-amber-900 text-sm"
+                    >
+                        <strong>Nota sobre o Blog:</strong> Atualmente, os artigos
+                        do blog são estáticos (arquivos no código). Para adicionar
+                        novos textos, é necessário solicitar ao desenvolvedor ou editar
+                        os arquivos na pasta <code>src/content/posts</code>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suporte -->
+            <div
+                class="bg-brand-primary text-white rounded-3xl shadow-lg p-8 md:p-12 text-center"
+            >
+                <h2 class="text-2xl font-bold mb-4 font-serif">
+                    Precisa de Ajuda?
+                </h2>
+                <p class="text-white/80 mb-8 max-w-lg mx-auto">
+                    Se tiver dúvidas sobre o site, precisar alterar alguma
+                    informação ou quiser criar novas funcionalidades, entre em
+                    contato com a equipe de desenvolvimento.
+                </p>
+                <div class="inline-flex flex-col sm:flex-row gap-4">
+                    <a
+                        href="https://sitesalphacode.com.br"
+                        target="_blank"
+                        class="px-6 py-3 bg-white text-brand-primary font-bold rounded-full hover:bg-brand-secondary hover:text-white transition-all shadow-md"
+                    >
+                        Falar com Alpha Code
+                    </a>
+                    <a
+                        href="/"
+                        class="px-6 py-3 bg-transparent border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
+                    >
+                        Voltar para o Site
+                    </a>
+                </div>
+            </div>
+
+            <footer class="mt-12 text-center text-brand-text/40 text-sm">
+                <p>
+                    &copy; {new Date().getFullYear()} Documentação Interna - Ana Bottesi.
+                </p>
+            </footer>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    /* Estilos reutilizados para as borboletas */
+    :global(.manual-butterfly) {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.15;
+    }
+
+    :global(.butterfly-wing) {
+        position: absolute;
+        width: 50%;
+        height: 80%;
+        background-color: var(--color-brand-primary);
+        border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    }
+
+    :global(.butterfly-wing.left) {
+        left: 0;
+        transform-origin: right center;
+        animation: flap-left 0.4s ease-in-out infinite alternate;
+    }
+
+    :global(.butterfly-wing.right) {
+        right: 0;
+        transform-origin: left center;
+        animation: flap-right 0.4s ease-in-out infinite alternate;
+    }
+
+    @keyframes flap-left {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(70deg);
+        }
+    }
+
+    @keyframes flap-right {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(-70deg);
+        }
+    }
+</style>
+
+<script>
+    import { gsap } from "gsap";
+
+    // Função para criar borboletas
+    const createButterflies = () => {
+        const container = document.getElementById("manual-butterfly-container");
+        if (!container) return;
+
+        // Se já tiver filhas, não recria
+        if (container.children.length > 0) return;
+
+        const count = 10;
+        for (let i = 0; i < count; i++) {
+            const butterfly = document.createElement("div");
+            butterfly.className = "manual-butterfly";
+            butterfly.innerHTML = `
+                <div class="butterfly-wing left"></div>
+                <div class="butterfly-wing right"></div>
+            `;
+
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * window.innerHeight;
+
+            gsap.set(butterfly, {
+                x: startX,
+                y: startY,
+                scale: 0.5 + Math.random() * 0.5,
+                rotation: Math.random() * 360,
+            });
+
+            container.appendChild(butterfly);
+            animateButterfly(butterfly);
+        }
+    };
+
+    const animateButterfly = (el: HTMLElement) => {
+        gsap.to(el, {
+            x: `+=${Math.random() * 300 - 150}`,
+            y: `+=${Math.random() * 300 - 150}`,
+            rotation: `+=${Math.random() * 90 - 45}`,
+            duration: 8 + Math.random() * 8,
+            ease: "sine.inOut",
+            onComplete: () => animateButterfly(el),
+        });
+
+        gsap.to(el, {
+            opacity: 0.15,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+        });
+    };
+
+    const init = () => {
+        createButterflies();
+    };
+
+    // Inicializa quando o DOM estiver pronto
+    if (
+        document.readyState === "complete" ||
+        document.readyState === "interactive"
+    ) {
+        init();
+    } else {
+        document.addEventListener("DOMContentLoaded", init);
+    }
+
+    // Suporte para navegação do Astro
+    document.addEventListener("astro:after-swap", init);
+</script>

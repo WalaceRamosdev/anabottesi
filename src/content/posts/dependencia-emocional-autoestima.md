@@ -2,7 +2,7 @@
 title: "Dependência Emocional: O Caminho para o Resgate da Autoestima"
 description: "Entenda por que buscamos validação externa e como a psicanálise ajuda a reconstruir sua força interna."
 publishDate: 2024-05-20
-image: "/images/blog/default-post.svg"
+image: "/images/blog/dependencia.svg"
 tags: ["dependência emocional", "autoestima", "relacionamentos"]
 ---
 

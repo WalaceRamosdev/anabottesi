@@ -2,7 +2,7 @@
 title: "O Peso do Silencioso: A Exaustão Emocional na Mulher Moderna"
 description: "Por que nos sentimos tão cansadas mesmo quando não fizemos força física? Entenda o burnout emocional feminino."
 publishDate: 2024-05-15
-image: "/images/blog/default-post.svg"
+image: "/images/blog/exaustao.svg"
 tags: ["exaustão", "saúde mental", "mulher"]
 ---
 

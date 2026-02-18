@@ -2,7 +2,7 @@
 title: "A importância do autoconhecimento na jornada feminina"
 description: "Como a psicanálise pode ajudar mulheres a se redescobrirem e saírem do casulo."
 publishDate: 2024-05-10
-image: "/images/blog/default-post.svg"
+image: "/images/blog/autoconhecimento.svg"
 tags: ["autoconhecimento", "feminino", "psicanálise"]
 ---
 

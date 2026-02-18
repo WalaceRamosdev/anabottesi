@@ -46,10 +46,10 @@ import abstractImg from "../assets/abstract-psychology.svg";
         <div class="grid md:grid-cols-3 gap-8">
             {
                 latestPosts.map((post) => (
-                    <article class="group">
+                    <article class="group flex flex-col h-full">
                         <a
                             href={`/blog/${post.slug}`}
-                            class="block overflow-hidden rounded-2xl mb-6 aspect-video bg-slate-100"
+                            class="block overflow-hidden rounded-2xl mb-6 aspect-video bg-slate-100 shrink-0"
                         >
                             {post.data.image ? (
                                 <img
@@ -63,7 +63,7 @@ import abstractImg from "../assets/abstract-psychology.svg";
                                 </div>
                             )}
                         </a>
-                        <div class="flex items-center gap-3 mb-4 text-xs font-bold text-brand-primary uppercase tracking-widest">
+                        <div class="flex items-center gap-3 mb-4 text-xs font-bold text-brand-primary uppercase tracking-widest shrink-0">
                             <span>
                                 {post.data.publishDate.toLocaleDateString(
                                     "pt-BR",
@@ -72,18 +72,20 @@ import abstractImg from "../assets/abstract-psychology.svg";
                             <span class="w-1 h-1 bg-brand-primary rounded-full" />
                             <span>Leitura de 5 min</span>
                         </div>
-                        <h4 class="text-2xl font-bold mb-4 group-hover:text-brand-primary transition-colors">
+                        <h4 class="text-2xl font-bold mb-4 group-hover:text-brand-primary transition-colors shrink-0">
                             <a href={`/blog/${post.slug}`}>{post.data.title}</a>
                         </h4>
-                        <p class="text-brand-text/70 line-clamp-2 mb-6">
+                        <p class="text-brand-text/70 line-clamp-3 mb-6 flex-grow">
                             {post.data.description}
                         </p>
-                        <a
-                            href={`/blog/${post.slug}`}
-                            class="text-brand-primary font-bold inline-flex items-center gap-2 hover:gap-3 transition-all"
-                        >
-                            Continuar lendo <span>→</span>
-                        </a>
+                        <div class="mt-auto pt-2">
+                            <a
+                                href={`/blog/${post.slug}`}
+                                class="text-brand-primary font-bold inline-flex items-center gap-2 hover:gap-3 transition-all"
+                            >
+                                Continuar lendo <span>→</span>
+                            </a>
+                        </div>
                     </article>
                 ))
             }
