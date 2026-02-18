@@ -93,7 +93,7 @@
     <!-- Mobile Menu Overlay -->
     <div
         id="mobile-menu"
-        class="fixed inset-0 bg-brand-primary z-[100] translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center justify-center lg:hidden overflow-hidden"
+        class="fixed inset-0 bg-brand-primary z-[100] translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center justify-center lg:hidden overflow-y-auto"
     >
         <!-- Borboletas exclusivas do menu mobile -->
         <div
@@ -176,8 +176,12 @@
         height: 30px;
         pointer-events: none;
         z-index: 5;
-        background-color: white; /* Borboletas brancas no menu */
+        background-color: transparent; /* Fundo transparente para remover o quadrado */
         opacity: 0.3;
+    }
+
+    :global(.menu-butterfly .butterfly-wing) {
+        background-color: white; /* Apenas as asas são brancas */
     }
 
     :global(.butterfly-wing) {
