@@ -259,31 +259,46 @@ const links = [
 <script>
     import { gsap } from "gsap";
 
-    // Animação de Entrada
+    // Animação de Entrada Robusta
     const initLinksAnimation = () => {
-        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        // Garante que tudo esteja visível por padrão caso a animação falhe ou seja rápida demais
+        gsap.set(".w-32, h1, p, .link-card", { visibility: "visible" });
 
-        tl.from(".w-32", {
-            scale: 0,
-            opacity: 0,
-            duration: 1,
-            ease: "back.out(1.7)",
-        })
-            .from(
+        const tl = gsap.timeline({
+            defaults: { ease: "power3.out" },
+            // Garante limpeza após terminar para evitar bugs de estado
+            onComplete: () => {
+                gsap.set(".w-32, h1, p, .link-card", { clearProps: "all" });
+            },
+        });
+
+        tl.fromTo(
+            ".w-32",
+            { scale: 0, opacity: 0 },
+            {
+                scale: 1,
+                opacity: 1,
+                duration: 1,
+                ease: "back.out(1.7)",
+            },
+        )
+            .fromTo(
                 "h1, p",
+                { y: 20, opacity: 0 },
                 {
-                    y: 20,
-                    opacity: 0,
+                    y: 0,
+                    opacity: 1,
                     duration: 0.8,
                     stagger: 0.1,
                 },
                 "-=0.5",
             )
-            .from(
+            .fromTo(
                 ".link-card",
+                { y: 30, opacity: 0 },
                 {
-                    y: 30,
-                    opacity: 0,
+                    y: 0,
+                    opacity: 1,
                     duration: 0.8,
                     stagger: 0.1,
                 },
