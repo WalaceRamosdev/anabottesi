@@ -107,7 +107,7 @@ const links = [
                             target={
                                 link.url.startsWith("http") ? "_blank" : "_self"
                             }
-                            class={`block p-1 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group ${
+                            class={`link-card block p-1 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group ${
                                 link.primary
                                     ? "bg-gradient-to-r from-brand-primary to-[#9e8568]"
                                     : "bg-white hover:bg-white/80"
@@ -280,7 +280,7 @@ const links = [
                 "-=0.5",
             )
             .from(
-                "#links-content a",
+                ".link-card",
                 {
                     y: 30,
                     opacity: 0,
