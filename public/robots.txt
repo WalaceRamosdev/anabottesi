@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anabottesi.com.br/sitemap-index.xml
