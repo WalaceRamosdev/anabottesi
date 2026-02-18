@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  ESTE É UM MODELO DE SITEMAP ALVO (MOCKUP) PARA VISUALIZAÇÃO DA ESTRATÉGIA.
+  O sitemap real para o Google Search Console deve conter APENAS páginas existentes (que não dão erro 404).
+  O sitemap técnico real será gerado automaticamente em /sitemap-index.xml após o build.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- PÁGINAS INSTITUCIONAIS (Nível 1 - Alta Prioridade) -->
+  <url>
+    <loc>https://anabottesi.com.br/</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/sobre</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/especialidades</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/contato</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/psicanalise-funciona</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- PÁGINAS REGIONAIS (Nível 2 - SEO Local e Expansão) -->
+  <url>
+    <loc>https://anabottesi.com.br/atendimento/sao-paulo</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/atendimento/sao-paulo/capital</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/atendimento/sao-paulo/campinas</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/atendimento/sao-paulo/sao-jose-dos-campos</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/atendimento/sao-paulo/ribeirao-preto</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/atendimento/sao-paulo/santos</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/atendimento/online</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- BLOG E CONTEÚDO (Nível 3 - Cauda Longa) -->
+  <url>
+    <loc>https://anabottesi.com.br/blog</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/blog/ansiedade-e-emocoes</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/blog/autoconhecimento</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/blog/relacionamentos</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- CONFIANÇA E LEGAL (Nível 4) -->
+  <url>
+    <loc>https://anabottesi.com.br/faq</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/depoimentos</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://anabottesi.com.br/politica-de-privacidade</loc>
+    <lastmod>2024-05-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
