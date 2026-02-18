@@ -2,13 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import logo from "../assets/profissional/logo.svg";
+import abstractBg from "../assets/profissional/banner02.svg";
 ---
 
 <Layout
     title="Manual do Site | Ana Bottesi"
     description="Documentação e guia de uso do site institucional."
 >
-    <main class="bg-slate-50 min-h-screen py-20 relative overflow-hidden">
+    <main
+        class="min-h-screen py-20 relative overflow-hidden bg-slate-50"
+        style={`background-image: url(${abstractBg.src}); background-size: cover; background-position: center; background-attachment: fixed;`}
+    >
+        <!-- Overlay suave para legibilidade -->
+        <div class="absolute inset-0 bg-slate-50/90 pointer-events-none"></div>
         <!-- Borboletas do Manual -->
         <div
             class="absolute inset-0 pointer-events-none"
@@ -752,6 +758,26 @@ import logo from "../assets/profissional/logo.svg";
                                         class="text-green-400 bg-green-400/10 rounded-full p-0.5"
                                         >✓</span
                                     > Blog Integrado
+                                </li>
+                                <li
+                                    class="flex items-center gap-3 text-sm text-slate-300"
+                                >
+                                    <span
+                                        class="text-green-400 bg-green-400/10 rounded-full p-0.5"
+                                        >✓</span
+                                    > Página de Links (Linktree)
+                                </li>
+                                <li
+                                    class="flex items-center gap-3 text-sm text-slate-300"
+                                >
+                                    <span
+                                        class="text-green-400 bg-green-400/10 rounded-full p-0.5"
+                                        >✓</span
+                                    > 1 Ano de Hospedagem Grátis
+                                    <span
+                                        class="text-[10px] text-slate-500 bg-slate-800 px-1.5 py-0.5 rounded ml-auto"
+                                        >Depois: R$ 70,00/ano</span
+                                    >
                                 </li>
                             </ul>
                             <div class="mt-auto border-t border-white/10 pt-4">
