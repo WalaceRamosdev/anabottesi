@@ -3,7 +3,13 @@ import { Image } from "astro:assets";
 import bannerImg from "../assets/profissional/banner.svg";
 ---
 
-<section class="bg-brand-bg py-12">
+<section class="bg-brand-bg py-12 relative overflow-hidden">
+    <!-- Efeito de Borboletas no Banner -->
+    <div
+        class="absolute inset-0 pointer-events-none overflow-hidden"
+        id="banner-butterfly-container"
+    >
+    </div>
     <div class="max-w-7xl mx-auto px-4 md:px-8">
         <div
             class="rounded-3xl overflow-hidden shadow-xl border-4 border-white"
@@ -16,3 +22,106 @@ import bannerImg from "../assets/profissional/banner.svg";
         </div>
     </div>
 </section>
+
+<style>
+    /* Estilos reutilizados para manter consistência */
+    :global(.banner-butterfly) {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        pointer-events: none;
+        z-index: 5;
+        opacity: 0.1;
+    }
+
+    :global(.butterfly-wing) {
+        position: absolute;
+        width: 50%;
+        height: 80%;
+        background-color: var(--color-brand-primary);
+        border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    }
+
+    :global(.butterfly-wing.left) {
+        left: 0;
+        transform-origin: right center;
+        animation: flap-left 0.4s ease-in-out infinite alternate;
+    }
+
+    :global(.butterfly-wing.right) {
+        right: 0;
+        transform-origin: left center;
+        animation: flap-right 0.4s ease-in-out infinite alternate;
+    }
+</style>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const createButterflies = () => {
+        const container = document.getElementById("banner-butterfly-container");
+        if (!container) return;
+
+        // Criar borboletas apenas se ainda não existirem
+        if (container.children.length > 0) return;
+
+        const count = 6;
+        for (let i = 0; i < count; i++) {
+            const butterfly = document.createElement("div");
+            butterfly.className = "banner-butterfly";
+            butterfly.innerHTML = `
+                <div class="butterfly-wing left"></div>
+                <div class="butterfly-wing right"></div>
+            `;
+
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * 200; // Altura limitada ao banner
+
+            gsap.set(butterfly, {
+                x: startX,
+                y: startY,
+                scale: 0.3 + Math.random() * 0.4,
+                rotation: Math.random() * 360,
+            });
+
+            container.appendChild(butterfly);
+            animateButterfly(butterfly);
+        }
+    };
+
+    const animateButterfly = (el: HTMLElement) => {
+        gsap.to(el, {
+            x: `+=${Math.random() * 300 - 150}`,
+            y: `+=${Math.random() * 100 - 50}`,
+            rotation: `+=${Math.random() * 60 - 30}`,
+            duration: 5 + Math.random() * 5,
+            ease: "sine.inOut",
+            onComplete: () => animateButterfly(el),
+        });
+
+        gsap.to(el, {
+            opacity: 0.3,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+        });
+    };
+
+    const initBannerAnimation = () => {
+        ScrollTrigger.create({
+            trigger: "#banner-butterfly-container",
+            start: "top bottom",
+            onEnter: createButterflies,
+        });
+    };
+
+    // Inicialização
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initBannerAnimation);
+    } else {
+        initBannerAnimation();
+    }
+</script>

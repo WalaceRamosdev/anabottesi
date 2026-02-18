@@ -22,6 +22,12 @@ const specialties = [
 ---
 
 <section id="especialidades" class="bg-brand-bg py-24 relative overflow-hidden">
+    <!-- Efeito de Borboletas nas Especialidades -->
+    <div
+        class="absolute inset-0 pointer-events-none overflow-hidden"
+        id="specialties-butterfly-container"
+    >
+    </div>
     <div class="max-w-7xl mx-auto px-4 md:px-8">
         <div class="text-center mb-16">
             <h2
@@ -59,6 +65,38 @@ const specialties = [
     </div>
 </section>
 
+<style>
+    /* Estilos reutilizados para as borboletas */
+    :global(.spec-butterfly) {
+        position: absolute;
+        width: 15px; /* Um pouco menores nas especialidades */
+        height: 15px;
+        pointer-events: none;
+        z-index: 0; /* Atrás dos cards */
+        opacity: 0.1;
+    }
+
+    :global(.butterfly-wing) {
+        position: absolute;
+        width: 50%;
+        height: 80%;
+        background-color: var(--color-brand-primary);
+        border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    }
+
+    :global(.butterfly-wing.left) {
+        left: 0;
+        transform-origin: right center;
+        animation: flap-left 0.4s ease-in-out infinite alternate;
+    }
+
+    :global(.butterfly-wing.right) {
+        right: 0;
+        transform-origin: left center;
+        animation: flap-right 0.4s ease-in-out infinite alternate;
+    }
+</style>
+
 <script>
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -66,10 +104,9 @@ const specialties = [
     gsap.registerPlugin(ScrollTrigger);
 
     const animateCards = () => {
-        // Reset any previous animations to avoid conflicts
+        // ... (código existente da animação dos cards) ...
         gsap.set(".spec-card", { opacity: 1, y: 0 });
 
-        // Se houver suporte a JS, fazemos a animação de entrada
         gsap.from(".spec-card", {
             scrollTrigger: {
                 trigger: "#especialidades",
@@ -81,11 +118,66 @@ const specialties = [
             stagger: 0.2,
             duration: 1,
             ease: "power2.out",
-            // Garante que o estado final seja limpo para não quebrar o hover do CSS
             onComplete: function () {
                 gsap.set(this.targets(), { clearProps: "all" });
             },
         });
+    };
+
+    // Função para criar borboletas
+    const createButterflies = () => {
+        const container = document.getElementById(
+            "specialties-butterfly-container",
+        );
+        if (!container) return;
+
+        if (container.children.length > 0) return;
+
+        const count = 8;
+        for (let i = 0; i < count; i++) {
+            const butterfly = document.createElement("div");
+            butterfly.className = "spec-butterfly";
+            butterfly.innerHTML = `
+                <div class="butterfly-wing left"></div>
+                <div class="butterfly-wing right"></div>
+            `;
+
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * window.innerHeight;
+
+            gsap.set(butterfly, {
+                x: startX,
+                y: startY,
+                scale: 0.3 + Math.random() * 0.4,
+                rotation: Math.random() * 360,
+            });
+
+            container.appendChild(butterfly);
+            animateButterfly(butterfly);
+        }
+    };
+
+    const animateButterfly = (el: HTMLElement) => {
+        gsap.to(el, {
+            x: `+=${Math.random() * 200 - 100}`,
+            y: `+=${Math.random() * 200 - 100}`,
+            rotation: `+=${Math.random() * 60 - 30}`,
+            duration: 6 + Math.random() * 6,
+            ease: "sine.inOut",
+            onComplete: () => animateButterfly(el),
+        });
+
+        gsap.to(el, {
+            opacity: 0.2,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+        });
+    };
+
+    const init = () => {
+        animateCards();
+        createButterflies();
     };
 
     // Inicializa quando o DOM estiver pronto
@@ -93,11 +185,11 @@ const specialties = [
         document.readyState === "complete" ||
         document.readyState === "interactive"
     ) {
-        animateCards();
+        init();
     } else {
-        document.addEventListener("DOMContentLoaded", animateCards);
+        document.addEventListener("DOMContentLoaded", init);
     }
 
     // Suporte para navegação do Astro (se usar View Transitions)
-    document.addEventListener("astro:after-swap", animateCards);
+    document.addEventListener("astro:after-swap", init);
 </script>
