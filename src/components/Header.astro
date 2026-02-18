@@ -6,8 +6,15 @@
     class="fixed w-full z-50 transition-all duration-300 px-4 py-4"
     id="main-header"
 >
+    <!-- Container para Borboletas no Header -->
+    <div
+        class="absolute inset-0 pointer-events-none overflow-hidden"
+        id="header-butterfly-container"
+    >
+    </div>
+
     <nav
-        class="max-w-7xl mx-auto flex justify-between items-center glass rounded-full px-6 py-3 shadow-sm"
+        class="max-w-7xl mx-auto flex justify-between items-center glass rounded-full px-6 py-3 shadow-sm relative z-10"
     >
         <a
             href="/"
@@ -93,11 +100,18 @@
     <!-- Mobile Menu Overlay -->
     <div
         id="mobile-menu"
-        class="fixed inset-0 bg-brand-primary z-[100] translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center justify-center lg:hidden"
+        class="fixed inset-0 bg-brand-primary z-[100] translate-x-full transition-transform duration-500 ease-in-out flex flex-col items-center justify-center lg:hidden overflow-hidden"
     >
+        <!-- Borboletas exclusivas do menu mobile -->
+        <div
+            class="absolute inset-0 pointer-events-none opacity-20"
+            id="mobile-butterfly-container"
+        >
+        </div>
+
         <button
             id="close-menu-btn"
-            class="absolute top-8 right-8 text-white p-2 focus:outline-none"
+            class="absolute top-8 right-8 text-white p-2 focus:outline-none z-[110]"
             aria-label="Fechar menu"
         >
             <svg
@@ -117,7 +131,9 @@
                     y2="18"></line></svg
             >
         </button>
-        <ul class="text-white text-3xl font-serif space-y-8 text-center">
+        <ul
+            class="text-white text-3xl font-serif space-y-8 text-center relative z-[110]"
+        >
             <li>
                 <a
                     href="/#sobre"
@@ -158,33 +174,162 @@
     </div>
 </header>
 
+<style>
+    /* Estilos das borboletas (reutilizados) */
+    :global(.header-butterfly) {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        pointer-events: none;
+        z-index: 5;
+        opacity: 0.1;
+    }
+
+    :global(.menu-butterfly) {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        pointer-events: none;
+        z-index: 5;
+        background-color: white; /* Borboletas brancas no menu */
+        opacity: 0.3;
+    }
+
+    :global(.butterfly-wing) {
+        position: absolute;
+        width: 50%;
+        height: 80%;
+        background-color: inherit;
+        border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    }
+
+    /* Versão colorida para o header */
+    :global(.header-butterfly .butterfly-wing) {
+        background-color: var(--color-brand-primary);
+    }
+
+    :global(.butterfly-wing.left) {
+        left: 0;
+        transform-origin: right center;
+        animation: flap-left 0.4s ease-in-out infinite alternate;
+    }
+
+    :global(.butterfly-wing.right) {
+        right: 0;
+        transform-origin: left center;
+        animation: flap-right 0.4s ease-in-out infinite alternate;
+    }
+
+    @keyframes flap-left {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(70deg);
+        }
+    }
+
+    @keyframes flap-right {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(-70deg);
+        }
+    }
+</style>
+
 <script>
+    import { gsap } from "gsap";
+
     const header = document.getElementById("main-header");
     const mobileMenuBtn = document.getElementById("mobile-menu-btn");
     const closeMenuBtn = document.getElementById("close-menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
     const mobileLinks = document.querySelectorAll(".mobile-nav-link");
 
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            header?.classList.add("py-2");
-        } else {
-            header?.classList.remove("py-2");
+    // Borboletas
+    const createButterflies = (
+        containerId: string,
+        count: number,
+        className: string,
+    ) => {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        for (let i = 0; i < count; i++) {
+            const butterfly = document.createElement("div");
+            butterfly.className = className;
+            butterfly.innerHTML = `
+                <div class="butterfly-wing left"></div>
+                <div class="butterfly-wing right"></div>
+            `;
+
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * 100;
+
+            gsap.set(butterfly, {
+                x: startX,
+                y: startY,
+                scale: 0.3 + Math.random() * 0.4,
+                rotation: Math.random() * 360,
+            });
+
+            container.appendChild(butterfly);
+            animateButterfly(butterfly);
         }
-    });
-
-    mobileMenuBtn?.addEventListener("click", () => {
-        mobileMenu?.classList.remove("translate-x-full");
-        document.body.style.overflow = "hidden";
-    });
-
-    const closeMenu = () => {
-        mobileMenu?.classList.add("translate-x-full");
-        document.body.style.overflow = "";
     };
 
-    closeMenuBtn?.addEventListener("click", closeMenu);
-    mobileLinks.forEach((link) => {
-        link.addEventListener("click", closeMenu);
-    });
+    const animateButterfly = (el: HTMLElement) => {
+        gsap.to(el, {
+            x: `+=${Math.random() * 200 - 100}`,
+            y: `+=${Math.random() * 100 - 50}`,
+            rotation: `+=${Math.random() * 60 - 30}`,
+            duration: 4 + Math.random() * 4,
+            ease: "sine.inOut",
+            onComplete: () => animateButterfly(el),
+        });
+
+        gsap.to(el, {
+            opacity: el.classList.contains("menu-butterfly") ? 0.4 : 0.15,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+        });
+    };
+
+    // Inicialização
+    const init = () => {
+        createButterflies("header-butterfly-container", 5, "header-butterfly");
+        createButterflies("mobile-butterfly-container", 15, "menu-butterfly");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                header?.classList.add("py-2");
+            } else {
+                header?.classList.remove("py-2");
+            }
+        });
+
+        mobileMenuBtn?.addEventListener("click", () => {
+            mobileMenu?.classList.remove("translate-x-full");
+            document.body.style.overflow = "hidden";
+        });
+
+        const closeMenu = () => {
+            mobileMenu?.classList.add("translate-x-full");
+            document.body.style.overflow = "";
+        };
+
+        closeMenuBtn?.addEventListener("click", closeMenu);
+        mobileLinks.forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
+    };
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+    } else {
+        init();
+    }
 </script>
