@@ -1,15 +1,60 @@
 ---
 import "../styles/global.css";
+import StickyCTA from "../components/StickyCTA.astro";
 
 interface Props {
 	title: string;
 	description?: string;
+	canonicalURL?: string;
+	ogImage?: string;
 }
 
 const {
 	title,
-	description = "Ana Bottesi | Psicanalista em São Paulo - Psicanálise para mulheres, autoconhecimento e transformação emocional.",
+	description = "Psicanalista online em São Paulo especializada em terapia para mulheres. Atendimento online para ansiedade, autoestima e relacionamentos. Agende sua sessão.",
+	canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+	ogImage = "/og-image.jpg",
 } = Astro.props;
+
+const schemaData = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Person",
+			"@id": "https://anabottesi.com.br/#person",
+			name: "Ana Bottesi",
+			jobTitle: "Psicanalista",
+			url: "https://anabottesi.com.br",
+			sameAs: ["https://www.instagram.com/ana.bottesi.psicanalista/"],
+			description:
+				"Psicanalista online especializada no atendimento de mulheres, com foco em ansiedade, autoestima e relacionamentos.",
+		},
+		{
+			"@type": "LocalBusiness",
+			"@id": "https://anabottesi.com.br/#organization",
+			name: "Ana Bottesi - Psicanálise Online",
+			image: "https://anabottesi.com.br/og-image.jpg",
+			url: "https://anabottesi.com.br",
+			telephone: "+5511973454557",
+			address: {
+				"@type": "PostalAddress",
+				addressLocality: "São Paulo",
+				addressRegion: "SP",
+				addressCountry: "BR",
+			},
+			geo: {
+				"@type": "GeoCoordinates",
+				latitude: -23.5505,
+				longitude: -46.6333,
+			},
+			areaServed: {
+				"@type": "State",
+				name: "São Paulo",
+			},
+			priceRange: "$$",
+		},
+	],
+};
 ---
 
 <!doctype html>
@@ -30,7 +75,6 @@ const {
 			gtag("config", "G-8JWTVQTKBY");
 		</script>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -38,7 +82,7 @@ const {
 
 		<!-- SEO e Meta Tags -->
 		<meta name="description" content={description} />
-		<link rel="canonical" href="https://anabottesi.com.br" />
+		<link rel="canonical" href={canonicalURL} />
 		<meta
 			name="google-site-verification"
 			content="6SyPFZnpHwRZmFyM8rWx3Y6BP3Z63uTw16_Adtu7mow"
@@ -46,17 +90,23 @@ const {
 
 		<!-- Open Graph / Redes Sociais -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://anabottesi.com.br/" />
+		<meta property="og:url" content={canonicalURL} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content="/og-image.jpg" />
+		<meta property="og:image" content={new URL(ogImage, Astro.site)} />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://anabottesi.com.br/" />
+		<meta property="twitter:url" content={canonicalURL} />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content="/og-image.jpg" />
+		<meta property="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+		<!-- Schema.org JSON-LD -->
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify(schemaData)}
+		/>
 
 		<!-- Fontes do Google -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,6 +119,7 @@ const {
 
 	<body>
 		<slot />
+		<StickyCTA />
 
 		<script>
 			import { gsap } from "gsap";

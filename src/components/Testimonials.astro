@@ -20,7 +20,7 @@
                 id="titulo-depoimentos"
                 class="text-brand-primary text-sm font-bold uppercase tracking-widest mb-4 testimonial-reveal"
             >
-                Depoimento em Destaque
+                Depoimentos
             </h2>
             <h3
                 class="text-4xl md:text-6xl font-bold mb-6 leading-tight testimonial-reveal font-serif"
@@ -306,4 +306,26 @@
         ScrollTrigger.refresh();
         initTestimonialsAnimation();
     });
+</script>
+
+<script type="application/ld+json" is:inline>
+    {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": {
+            "@type": "LocalBusiness",
+            "name": "Ana Bottesi - Psicanalise Online",
+            "image": "https://anabottesi.com.br/og-image.jpg"
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "L.S."
+        },
+        "reviewBody": "O trabalho da Ana salvou minha vida. Cheguei ao consultório no meu limite, sem conseguir enxergar uma saída para a exaustão e a ansiedade que me consumiam."
+    }
 </script>
