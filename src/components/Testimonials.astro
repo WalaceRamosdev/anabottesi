@@ -1,0 +1,309 @@
+---
+
+---
+
+<section
+    id="depoimentos"
+    aria-labelledby="titulo-depoimentos"
+    class="bg-brand-bg/50 py-24 md:py-40 overflow-hidden relative"
+>
+    <!-- Efeito de Borboletas Intenso (Espinha Dorsal do Site) -->
+    <div
+        class="absolute inset-0 pointer-events-none overflow-hidden"
+        id="testimonials-butterfly-container"
+    >
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 md:px-8 relative z-10">
+        <div class="text-center mb-16 md:mb-20">
+            <h2
+                id="titulo-depoimentos"
+                class="text-brand-primary text-sm font-bold uppercase tracking-widest mb-4 testimonial-reveal"
+            >
+                Depoimento em Destaque
+            </h2>
+            <h3
+                class="text-4xl md:text-6xl font-bold mb-6 leading-tight testimonial-reveal font-serif"
+            >
+                "O trabalho da Ana <span class="text-brand-accent italic"
+                    >salvou minha vida</span
+                >"
+            </h3>
+            <p
+                class="text-lg md:text-xl text-brand-text/60 italic testimonial-reveal"
+            >
+                Uma jornada de metamorfose real, contada por quem a viveu.
+            </p>
+        </div>
+
+        <div class="testimonial-main-container">
+            <!-- Depoimento Pilar (Single/Principal) -->
+            <blockquote
+                class="testimonial-pilar bg-white p-10 md:p-20 rounded-[32px] border border-brand-primary/10 shadow-2xl relative group overflow-hidden"
+            >
+                <!-- Aspas Gigantes Decorativas -->
+                <div
+                    class="absolute -top-6 -left-2 text-[200px] font-serif text-brand-primary/5 leading-none select-none pointer-events-none"
+                >
+                    “
+                </div>
+
+                <div class="space-y-6 md:space-y-8 relative z-10">
+                    <p
+                        class="text-brand-text/90 text-xl md:text-3xl leading-[1.6] md:leading-[1.5] font-medium"
+                    >
+                        "Poderia começar dizendo tantas coisas, mas o resumo é
+                        simples: o trabalho da Ana salvou a minha vida."
+                    </p>
+                    <p
+                        class="text-brand-text/80 text-lg md:text-2xl leading-[1.6]"
+                    >
+                        Hoje sou uma mulher feliz, com autonomia, e nunca estive
+                        tão bem.
+                    </p>
+                    <p
+                        class="text-brand-text/80 text-lg md:text-2xl leading-[1.6]"
+                    >
+                        A Ana é gentil, profissional, agradável e, acima de
+                        tudo, <span class="text-brand-primary font-bold"
+                            >humana</span
+                        >.
+                    </p>
+                    <p
+                        class="text-brand-text/90 text-xl md:text-2xl font-bold italic pt-4"
+                    >
+                        "Não troco o trabalho dela por absolutamente nada."
+                    </p>
+                </div>
+
+                <footer
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-brand-primary/10 mt-12 pt-8 relative z-10"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-brand-secondary/20 rounded-full flex items-center justify-center text-2xl"
+                        >
+                            🦋
+                        </div>
+                        <div>
+                            <span
+                                class="author font-serif text-brand-primary font-bold text-xl block"
+                                >L.S.</span
+                            >
+                            <span
+                                class="text-xs text-brand-text/40 uppercase tracking-widest"
+                                >Paciente Acompanhada</span
+                            >
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 text-yellow-500">
+                        <span>★</span><span>★</span><span>★</span><span>★</span
+                        ><span>★</span>
+                        <span class="text-xs text-brand-text/40 ml-2 uppercase"
+                            >Google Review</span
+                        >
+                    </div>
+                </footer>
+
+                <!-- Elemento de brilho sutil ao fundo -->
+                <div
+                    class="absolute -bottom-20 -right-20 w-64 h-64 bg-brand-secondary/5 rounded-full blur-3xl group-hover:bg-brand-secondary/10 transition-colors duration-1000"
+                >
+                </div>
+            </blockquote>
+        </div>
+
+        <div class="mt-20 text-center testimonial-reveal">
+            <div
+                class="max-w-2xl mx-auto mb-10 text-brand-text/70 leading-relaxed text-lg"
+            >
+                <p>
+                    Assim como a L.S., muitas mulheres chegam ao consultório
+                    sentindo que perderam o controle de suas próprias
+                    narrativas. A análise não é apenas sobre falar, é sobre <span
+                        class="font-bold text-brand-primary">se encontrar</span
+                    > no meio do ruído.
+                </p>
+            </div>
+
+            <p class="text-2xl text-brand-primary mb-8 font-serif italic">
+                Você também pode viver essa transformação.
+            </p>
+            <a
+                href="https://wa.me/5511973454557?text=Olá Ana! Vi o depoimento da L.S. e gostaria de entender como funciona o processo de análise."
+                target="_blank"
+                class="btn-primary inline-block px-12 py-5 text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+            >
+                Iniciar minha metamorfose
+            </a>
+            <p
+                class="mt-6 text-xs text-brand-text/30 uppercase tracking-tighter"
+            >
+                Depoimento autorizado pela paciente.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    #depoimentos {
+        background: radial-gradient(
+            circle at center,
+            rgba(245, 239, 235, 1) 0%,
+            rgba(245, 239, 235, 0.5) 100%
+        );
+    }
+
+    .testimonial-pilar {
+        max-width: 900px;
+        margin: 0 auto;
+        /* Removido 'all' para evitar conflito com GSAP */
+        transition:
+            transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+            box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+            background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform, opacity;
+    }
+
+    .testimonial-pilar:hover {
+        transform: scale(1.02) !important;
+        box-shadow: 0 40px 80px -20px rgba(140, 115, 85, 0.15);
+    }
+
+    :global(.testimonial-butterfly) {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0;
+    }
+
+    :global(.butterfly-wing) {
+        position: absolute;
+        width: 50%;
+        height: 80%;
+        background-color: var(--color-brand-primary);
+        border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    }
+
+    :global(.butterfly-wing.left) {
+        left: 0;
+        transform-origin: right center;
+        animation: flap-left 0.4s ease-in-out infinite alternate;
+    }
+
+    :global(.butterfly-wing.right) {
+        right: 0;
+        transform-origin: left center;
+        animation: flap-right 0.4s ease-in-out infinite alternate;
+    }
+</style>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const initTestimonialsAnimation = () => {
+        const section = document.querySelector("#depoimentos");
+        const pilar = document.querySelector(".testimonial-pilar");
+        const reveals = document.querySelectorAll(".testimonial-reveal");
+        const butterflyContainer = document.getElementById(
+            "testimonials-butterfly-container",
+        );
+
+        if (!section || !pilar) return;
+
+        // Limpar timelines e tweens anteriores
+        gsap.killTweensOf([pilar, ...Array.from(reveals)]);
+
+        // 1. Animação de Entrada
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top 75%",
+                toggleActions: "play none none none",
+                once: true,
+            },
+        });
+
+        tl.fromTo(
+            reveals,
+            { y: 30, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.15,
+                ease: "power2.out",
+            },
+        ).fromTo(
+            pilar,
+            { y: 50, opacity: 0, scale: 0.98 },
+            {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+                duration: 1,
+                ease: "power3.out",
+                clearProps: "transform,opacity",
+            },
+            "-=0.4",
+        );
+
+        // 2. Borboletas
+        if (butterflyContainer && butterflyContainer.children.length === 0) {
+            const butterflyCount = 15;
+            for (let i = 0; i < butterflyCount; i++) {
+                const b = document.createElement("div");
+                b.className = "testimonial-butterfly";
+                b.innerHTML =
+                    '<div class="butterfly-wing left"></div><div class="butterfly-wing right"></div>';
+
+                const startX = Math.random() * window.innerWidth;
+                const startY = Math.random() * (section.clientHeight || 800);
+
+                gsap.set(b, {
+                    x: startX,
+                    y: startY,
+                    scale: 0.4 + Math.random() * 0.8,
+                    rotation: Math.random() * 360,
+                });
+
+                butterflyContainer.appendChild(b);
+                gsap.to(b, {
+                    opacity: 0.1 + Math.random() * 0.15,
+                    duration: 2,
+                });
+                animateButterfly(b);
+            }
+        }
+    };
+
+    const animateButterfly = (el: HTMLElement) => {
+        gsap.to(el, {
+            x: `+=${Math.random() * 400 - 200}`,
+            y: `+=${Math.random() * 300 - 150}`,
+            rotation: `+=${Math.random() * 90 - 45}`,
+            duration: 10 + Math.random() * 10,
+            ease: "sine.inOut",
+            onComplete: () => animateButterfly(el),
+        });
+
+        gsap.to(el, {
+            opacity: 0.25,
+            duration: 2 + Math.random(),
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut",
+        });
+    };
+
+    initTestimonialsAnimation();
+    document.addEventListener("astro:after-swap", () => {
+        ScrollTrigger.refresh();
+        initTestimonialsAnimation();
+    });
+</script>
