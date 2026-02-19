@@ -548,15 +548,24 @@ import abstractBg from "../assets/profissional/banner02.svg";
                                         >Senha Segura</span
                                     >
                                     <div class="flex items-center gap-2">
-                                        <code
-                                            class="text-green-400 font-mono text-lg"
-                                            >bottesialpha</code
+                                        <div
+                                            class="bg-green-500/10 text-green-400 px-3 py-2 rounded-lg border border-green-500/20 text-xs font-bold uppercase tracking-widest flex items-center gap-2"
                                         >
+                                            <span>🔒</span> Privada e Atualizada
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="mt-6 pt-4 border-t border-slate-700">
+                            <div
+                                class="mt-6 pt-4 border-t border-slate-700 text-slate-400 text-xs leading-relaxed"
+                            >
+                                <p class="mb-3">
+                                    <strong>Nota de Segurança:</strong> Por questões
+                                    de segurança, as credenciais de acesso foram ocultadas
+                                    desta documentação pública após sua atualização
+                                    pessoal.
+                                </p>
                                 <a
                                     href="https://gmail.com"
                                     target="_blank"
@@ -564,11 +573,6 @@ import abstractBg from "../assets/profissional/banner02.svg";
                                 >
                                     Acessar Gmail Agora ↗
                                 </a>
-                                <p class="text-slate-400 text-xs mt-3">
-                                    *Recomendamos que você acesse e altere a
-                                    senha ou adicione um e-mail de recuperação
-                                    pessoal para maior segurança.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -1050,11 +1054,165 @@ import abstractBg from "../assets/profissional/banner02.svg";
                                             >
                                         </td>
                                     </tr>
+                                    <tr
+                                        class="bg-white hover:bg-slate-50 transition-colors"
+                                    >
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-brand-text/40"
+                                            >19/02/2026</td
+                                        >
+                                        <td
+                                            class="px-6 py-4 text-brand-text/80"
+                                        >
+                                            <strong
+                                                >Segurança e Privacidade:</strong
+                                            > Ocultação das credenciais de acesso
+                                            no manual e atualização do protocolo de
+                                            segurança de dados.
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                                                >Concluído</span
+                                            >
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+
+                <!-- Seção para IA (Pesquisa) -->
+                <div
+                    class="bg-gradient-to-br from-brand-primary via-brand-primary/90 to-brand-secondary rounded-3xl shadow-2xl p-8 md:p-12 mb-8 relative overflow-hidden group border border-white/10"
+                >
+                    <!-- Container exclusivo para borboletas nesta seção -->
+                    <div
+                        id="ai-section-butterflies"
+                        class="absolute inset-0 pointer-events-none opacity-40"
+                    >
+                    </div>
+
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div
+                                class="w-12 h-12 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-2xl border border-white/20 shadow-inner"
+                            >
+                                🤖
+                            </div>
+                            <div>
+                                <h2
+                                    class="text-2xl font-bold text-white leading-none mb-1"
+                                >
+                                    Resumo para IA
+                                </h2>
+                                <p
+                                    class="text-white/60 text-xs uppercase tracking-[0.2em]"
+                                >
+                                    Copiar e Pesquisar
+                                </p>
+                            </div>
+                        </div>
+
+                        <p
+                            class="text-white/80 mb-8 text-sm leading-relaxed max-w-xl"
+                        >
+                            Ana, use este resumo técnico para conversar com
+                            ferramentas como <strong class="text-white"
+                                >ChatGPT ou Gemini</strong
+                            >. Isso ajudará você a entender a fundo os
+                            benefícios das melhorias realizadas e planejar os
+                            próximos passos.
+                        </p>
+
+                        <div
+                            class="bg-black/20 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-white/10 relative overflow-hidden"
+                        >
+                            <!-- Efeito de brilho no fundo -->
+                            <div
+                                class="absolute -top-24 -right-24 w-48 h-48 bg-brand-secondary/20 rounded-full blur-[80px]"
+                            >
+                            </div>
+
+                            <pre
+                                id="ai-copy-text"
+                                class="text-xs md:text-sm text-blue-100/90 whitespace-pre-wrap font-sans leading-relaxed italic mb-6 relative z-10">"Eu sou Ana Bottesi, psicanalista. Recentemente, meu site passou por uma otimização profunda de SEO e performance focada no mercado de São Paulo. Aqui estão os detalhes técnicos do que foi feito para análise:
+- SEO Local: Criadas 4 páginas geolocalizadas (Terapia Online, Psicanálise para Mulheres, Ansiedade e Autoestima) para São Paulo.
+- SEO On-Page: Título principal (H1) otimizado para 'Psicanalista Online em São Paulo para Mulheres'.
+- SEO Técnico: Implementação de Schemas JSON-LD (Person, LocalBusiness, FAQPage, Review), sitemaps dinâmicos e robots.txt.
+- Conversão (CRO): Adição de Sticky CTA (WhatsApp fixo mobile) e nova seção de depoimentos animada.
+- Performance: Otimização de Web Vitals, carregamento assíncrono de fontes e imagens.
+Com base nisso, analise os impactos no meu ranqueamento orgânico e sugira estratégias de conteúdo."</pre>
+
+                            <button
+                                onclick="copyAndNotify()"
+                                class="w-full py-4 bg-white text-brand-primary font-bold rounded-xl hover:bg-brand-secondary hover:text-white transition-all shadow-lg flex items-center justify-center gap-3 group/btn relative z-10"
+                            >
+                                <span
+                                    class="text-xl group-hover/btn:scale-125 transition-transform"
+                                    >📋</span
+                                >
+                                Copiar Texto para IA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toast de Notificação Customizado -->
+                <div
+                    id="copy-toast"
+                    class="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] pointer-events-none opacity-0 scale-95 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]"
+                >
+                    <div class="relative group">
+                        <!-- Brilho externo pulsante -->
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"
+                        >
+                        </div>
+
+                        <div
+                            class="relative bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-8 py-5 rounded-2xl shadow-2xl flex items-center gap-5 backdrop-blur-2xl border border-white/30 overflow-hidden"
+                        >
+                            <!-- Efeito de luz varrendo -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"
+                            >
+                            </div>
+
+                            <div
+                                class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl relative shadow-inner border border-white/20"
+                            >
+                                🦋
+                            </div>
+                            <div class="text-left">
+                                <p
+                                    class="font-bold text-base leading-tight text-white m-0"
+                                >
+                                    Resumo Copiado!
+                                </p>
+                                <p
+                                    class="text-[10px] text-white/80 uppercase tracking-[0.2em] mt-1 font-medium m-0"
+                                >
+                                    Pronto para a Transformação
+                                </p>
+                            </div>
+                            <div
+                                class="ml-4 w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-xs text-white border border-white/20"
+                            >
+                                ✨
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    @keyframes shimmer {
+                        100% {
+                            transform: translateX(100%);
+                        }
+                    }
+                </style>
 
                 <!-- Suporte -->
                 <div
@@ -1136,6 +1294,20 @@ import abstractBg from "../assets/profissional/banner02.svg";
             animation: flap-right 0.4s ease-in-out infinite alternate;
         }
 
+        /* Estilo específico para borboletas da seção IA - mais destacadas */
+        :global(.ai-butterfly) {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        :global(.ai-butterfly .butterfly-wing) {
+            background-color: rgba(255, 255, 255, 0.8) !important;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
         @keyframes flap-left {
             from {
                 transform: rotateY(0deg);
@@ -1159,59 +1331,93 @@ import abstractBg from "../assets/profissional/banner02.svg";
         import { gsap } from "gsap";
 
         // Função para criar borboletas
-        const createButterflies = () => {
-            const container = document.getElementById(
-                "manual-butterfly-container",
-            );
+        const createButterflies = (
+            containerId: string,
+            count: number,
+            className = "manual-butterfly",
+            opacity = 0.15,
+        ) => {
+            const container = document.getElementById(containerId);
             if (!container) return;
 
             // Se já tiver filhas, não recria
             if (container.children.length > 0) return;
 
-            const count = 10;
             for (let i = 0; i < count; i++) {
                 const butterfly = document.createElement("div");
-                butterfly.className = "manual-butterfly";
+                butterfly.className = className;
                 butterfly.innerHTML = `
                 <div class="butterfly-wing left"></div>
                 <div class="butterfly-wing right"></div>
             `;
 
-                const startX = Math.random() * window.innerWidth;
-                const startY = Math.random() * window.innerHeight;
+                const rect = container.getBoundingClientRect();
+                const startX = Math.random() * rect.width;
+                const startY = Math.random() * rect.height;
 
                 gsap.set(butterfly, {
                     x: startX,
                     y: startY,
-                    scale: 0.5 + Math.random() * 0.5,
+                    scale: 0.4 + Math.random() * 0.6,
                     rotation: Math.random() * 360,
+                    opacity: opacity,
                 });
 
                 container.appendChild(butterfly);
-                animateButterfly(butterfly);
+                animateButterfly(butterfly, rect.width, rect.height, opacity);
             }
         };
 
-        const animateButterfly = (el: HTMLElement) => {
+        const animateButterfly = (
+            el: HTMLElement | Element,
+            maxX: number,
+            maxY: number,
+            baseOpacity: number,
+        ) => {
             gsap.to(el, {
-                x: `+=${Math.random() * 300 - 150}`,
-                y: `+=${Math.random() * 300 - 150}`,
-                rotation: `+=${Math.random() * 90 - 45}`,
-                duration: 8 + Math.random() * 8,
+                x: Math.random() * maxX,
+                y: Math.random() * maxY,
+                rotation: `+=${Math.random() * 180 - 90}`,
+                duration: 10 + Math.random() * 10,
                 ease: "sine.inOut",
-                onComplete: () => animateButterfly(el),
+                onComplete: () => animateButterfly(el, maxX, maxY, baseOpacity),
             });
 
             gsap.to(el, {
-                opacity: 0.15,
-                duration: 3,
+                opacity: baseOpacity * 0.5,
+                duration: 2 + Math.random() * 2,
                 repeat: -1,
                 yoyo: true,
             });
         };
 
         const init = () => {
-            createButterflies();
+            // Borboletas de fundo do manual
+            createButterflies("manual-butterfly-container", 12);
+
+            // Borboletas destacadas da seção IA
+            createButterflies("ai-section-butterflies", 6, "ai-butterfly", 0.6);
+        };
+
+        // Função Global para Copiar e Notificar
+        (window as any).copyAndNotify = () => {
+            const pre = document.getElementById("ai-copy-text");
+            if (!pre) return;
+
+            navigator.clipboard.writeText(pre.innerText).then(() => {
+                const toast = document.getElementById("copy-toast");
+                if (!toast) return;
+
+                // Reset e Animação de entrada
+                toast.classList.remove("opacity-0", "translate-y-10");
+                toast.classList.add("opacity-100", "translate-y-0");
+
+                // Animação de saída
+                setTimeout(() => {
+                    toast.classList.add("opacity-0", "translate-y-10");
+                    toast.classList.remove("opacity-100", "translate-y-0");
+                }, 3000);
+            });
         };
 
         // Inicializa quando o DOM estiver pronto
