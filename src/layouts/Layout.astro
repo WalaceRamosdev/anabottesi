@@ -11,7 +11,7 @@ interface Props {
 
 const {
 	title,
-	description = "Psicanalista online em São Paulo especializada em terapia para mulheres. Atendimento online para ansiedade, autoestima e relacionamentos. Agende sua sessão.",
+	description = "Psicanálise online para mulheres em São Paulo. Acolhimento humanizado para ansiedade, autoestima e relacionamentos. Espaço seguro para mulheres cis, trans e diversidade.",
 	canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 	ogImage = "/og-image.jpg",
 } = Astro.props;
@@ -27,7 +27,15 @@ const schemaData = {
 			url: "https://anabottesi.com.br",
 			sameAs: ["https://www.instagram.com/ana.bottesi.psicanalista/"],
 			description:
-				"Psicanalista online especializada no atendimento de mulheres, com foco em ansiedade, autoestima e relacionamentos.",
+				"Psicanalista online especializada no atendimento de mulheres, com um olhar inclusivo para a diversidade (mulheres cis, trans e comunidade LGBTQIAPN+).",
+			knowsAbout: [
+				"Psicanálise para Mulheres",
+				"Saúde Mental Inclusiva",
+				"Acolhimento LGBTQIAPN+",
+				"Terapia para Diversidade de Gênero",
+				"Ansiedade e Autoestima",
+				"Relacionamentos",
+			],
 		},
 		{
 			"@type": "LocalBusiness",
@@ -52,6 +60,11 @@ const schemaData = {
 				name: "São Paulo",
 			},
 			priceRange: "$$",
+			audience: {
+				"@type": "Audience",
+				audienceType:
+					"Mulheres, incluindo mulheres cis e trans, e comunidade lésbica/bissexual",
+			},
 		},
 	],
 };
@@ -87,6 +100,14 @@ const schemaData = {
 			name="google-site-verification"
 			content="6SyPFZnpHwRZmFyM8rWx3Y6BP3Z63uTw16_Adtu7mow"
 		/>
+		<meta
+			name="target-audience"
+			content="Mulheres, incluindo mulheres cis, mulheres trans, lésbicas, bissexuais, comunidade LGBTQIAPN+, que buscam acolhimento psicanalítico online."
+		/>
+		<meta
+			name="keywords"
+			content="psicanalista online, terapia para mulheres, acolhimento lésbicas, psicanalista inclusiva SP, terapia afirmativa, saúde mental para mulheres trans, psicanálise diversidade, ana bottesi"
+		/>
 
 		<!-- Open Graph / Redes Sociais -->
 		<meta property="og:type" content="website" />
@@ -112,8 +133,14 @@ const schemaData = {
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
+		/>
+
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 		/>
 	</head>
 

@@ -1,22 +1,22 @@
 ---
 const specialties = [
     {
-        title: "Dependência Emocional",
+        title: "Relacionamentos que te pesam",
         description:
-            "Liberte-se da necessidade constante de validação externa e construa uma relação saudável consigo mesma.",
-        icon: "🤝",
+            "Vamos, juntas, desatar esses nós? Liberte-se da necessidade constante de validação e construa uma relação saudável consigo mesma.",
+        icon: "fa-solid fa-hands-holding",
     },
     {
-        title: "Exaustão Mental",
+        title: "O cansaço que o sono não cura",
         description:
-            "Aprenda a lidar com o burnout emocional e a exaustão que vem de tentar dar conta de tudo sozinha.",
-        icon: "🧘‍♀️",
+            "A exaustão que vem de tentar dar conta de tudo sozinha. Encontre um espaço para respirar e se reencontrar.",
+        icon: "fa-solid fa-battery-quarter",
     },
     {
-        title: "Relacionamentos Abusivos",
+        title: "Reconstruir-se após um amor que doía",
         description:
-            "Identifique padrões prejudiciais, reconstrua sua autoestima e encontre o caminho de volta para sua liberdade.",
-        icon: "🔒",
+            "Identifique padrões, cure as feridas e encontre o caminho de volta para sua própria liberdade e segurança.",
+        icon: "fa-solid fa-dove",
     },
 ];
 ---
@@ -44,8 +44,8 @@ const specialties = [
             {
                 specialties.map((item) => (
                     <div class="spec-card group bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-brand-primary/10 hover:shadow-xl transition-all duration-500 flex flex-col h-full">
-                        <div class="w-16 h-16 bg-brand-secondary/10 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-brand-primary group-hover:text-white transition-all duration-500 shrink-0">
-                            {item.icon}
+                        <div class="w-16 h-16 bg-brand-secondary/10 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:bg-brand-primary group-hover:text-white transition-all duration-500 shrink-0">
+                            <i class={item.icon} />
                         </div>
                         <h4 class="text-xl font-bold mb-4 text-brand-text group-hover:text-brand-primary transition-colors">
                             {item.title}
@@ -58,7 +58,7 @@ const specialties = [
                             data-topic={item.title}
                             class="contact-trigger inline-flex items-center gap-2 text-brand-primary font-bold text-sm tracking-wide uppercase group-hover:gap-3 transition-all shrink-0"
                         >
-                            Iniciar análise <span class="text-lg">→</span>
+                            Quero um acolhimento <span class="text-lg">→</span>
                         </a>
                     </div>
                 ))
