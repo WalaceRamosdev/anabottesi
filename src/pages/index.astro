@@ -21,10 +21,10 @@ import Footer from "../components/Footer.astro";
 		<!-- As seções são carregadas em ordem de funil de vendas -->
 		<Hero />
 		<About />
-		<Testimonials />
-		<HowItWorks />
-		<Contact />
-		<Specialties />
+		<Testimonials client:visible />
+		<HowItWorks client:visible />
+		<Contact client:visible />
+		<Specialties client:visible />
 		<Banner />
 		<BlogPreview />
 	</main>

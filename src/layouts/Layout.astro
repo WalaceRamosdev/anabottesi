@@ -132,16 +132,34 @@ const schemaData = {
 		<!-- Fontes do Google -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<!-- Pré-carregamento da fonte crítica para LCP (H1) -->
+		<link
+			rel="preload"
+			as="font"
+			href="https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_hg9GnM.ttf"
+			type="font/ttf"
+			crossorigin
+		/>
+
 		<link
 			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
 
-		<!-- Font Awesome -->
+		<!-- Font Awesome - Carregamento Assíncrono para não bloquear a renderização -->
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+			media="print"
+			onload="this.media='all'"
 		/>
+		<noscript>
+			<link
+				rel="stylesheet"
+				href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+			/>
+		</noscript>
 	</head>
 
 	<body>
@@ -152,7 +170,30 @@ const schemaData = {
 			import { gsap } from "gsap";
 			import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-			gsap.registerPlugin(ScrollTrigger);
+			// Mitigação de Reflow Forçado: Inicializamos o GSAP após o cálculo inicial de layout
+			const initGSAP = () => {
+				gsap.registerPlugin(ScrollTrigger);
+
+				// Configurações globais para performance
+				ScrollTrigger.config({
+					limitCallbacks: true,
+					ignoreMobileResize: true,
+				});
+
+				// Refresh do ScrollTrigger após um pequeno delay para garantir estabilidade do DOM
+				setTimeout(() => {
+					ScrollTrigger.refresh();
+				}, 100);
+			};
+
+			if (document.readyState === "complete") {
+				initGSAP();
+			} else {
+				window.addEventListener("load", initGSAP);
+			}
+
+			// Gerenciamento de troca de página no Astro
+			document.addEventListener("astro:after-swap", initGSAP);
 		</script>
 	</body>
 </html>

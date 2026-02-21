@@ -80,27 +80,7 @@ import anaPortrait from "../assets/profissional/anaBottesi1.svg";
                 <a href="#sobre" class="btn-secondary"> Vamos conversar? </a>
             </div>
 
-            <div class="mt-8 flex items-center gap-3">
-                <!--<div class="flex -space-x-2">
-                    <div
-                        class="w-8 h-8 rounded-full border-2 border-white bg-slate-200"
-                    >
-                    </div>
-                    <div
-                        class="w-8 h-8 rounded-full border-2 border-white bg-slate-300"
-                    >
-                    </div>
-                    <div
-                        class="w-8 h-8 rounded-full border-2 border-white bg-slate-400"
-                    >
-                    </div>
-                </div>
-                 <p class="text-sm text-brand-text/60">
-                    Mais de <span
-                        class="font-bold text-brand-text">500 mulheres</span
-                    > transformadas
-                </p> -->
-            </div>
+            <div class="mt-8 flex items-center gap-3"></div>
         </div>
 
         <div class="relative" id="hero-image">
@@ -136,6 +116,23 @@ import anaPortrait from "../assets/profissional/anaBottesi1.svg";
 </section>
 
 <style>
+    /* Otimização de LCP: Animação em CSS Puro para evitar atraso do JS */
+    #hero-content {
+        animation: heroFadeInUp 1s ease-out forwards;
+        opacity: 0;
+    }
+
+    @keyframes heroFadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     /* Estilos para as borboletas voadoras */
     :global(.hero-butterfly) {
         position: absolute;
@@ -189,34 +186,27 @@ import anaPortrait from "../assets/profissional/anaBottesi1.svg";
     import { gsap } from "gsap";
 
     const initHeroAnimation = () => {
-        const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+        // Reduzimos o escopo do GSAP no Hero para não afetar o LCP (H1)
+        const tl = gsap.timeline({
+            defaults: { ease: "power4.out" },
+            delay: 0.2, // Pequeno delay para garantir que o CSS já iniciou
+        });
 
-        tl.from("#hero-content > *", {
-            y: 50,
+        tl.from("#hero-image", {
+            x: 50,
             opacity: 0,
-            stagger: 0.1,
             duration: 1.2,
-        })
-            .from(
-                "#hero-image",
-                {
-                    x: 100,
-                    opacity: 0,
-                    duration: 1.5,
-                },
-                "-=1",
-            )
-            .from(
-                "#hero-floating-card",
-                {
-                    scale: 0,
-                    opacity: 0,
-                    duration: 0.8,
-                },
-                "-=0.5",
-            );
+        }).from(
+            "#hero-floating-card",
+            {
+                scale: 0,
+                opacity: 0,
+                duration: 0.8,
+            },
+            "-=0.6",
+        );
 
-        // Inicia efeito de borboletas
+        // Inicia efeito de borboletas de forma secundária
         createButterflies();
     };
 
@@ -266,5 +256,10 @@ import anaPortrait from "../assets/profissional/anaBottesi1.svg";
         });
     };
 
-    window.addEventListener("load", initHeroAnimation);
+    // Garantimos que a execução não bloqueie o carregamento crítico
+    if (document.readyState === "complete") {
+        initHeroAnimation();
+    } else {
+        window.addEventListener("load", initHeroAnimation);
+    }
 </script>
