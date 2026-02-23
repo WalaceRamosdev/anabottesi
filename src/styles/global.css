@@ -9,10 +9,12 @@
     --color-brand-accent: #6B705C;
     --color-brand-bg: #F5EFEB;
     /* Fundo mais escuro/cremoso para melhor contraste */
-    --color-brand-text: #2D2D2D;
+    --color-brand-text: #333333;
+    --color-brand-text-soft: #2A2A2A;
 
     --font-serif: "Cormorant Garamond", serif;
     --font-sans: "Inter", system-ui, sans-serif;
+    --font-nunito: "Nunito", sans-serif;
     --font-handwriting: "Dancing Script", cursive;
 }
 
@@ -22,7 +24,10 @@
         @apply bg-brand-bg text-brand-text font-sans selection:bg-brand-secondary selection:text-white;
     }
 
-    h1,
+    h1 {
+        @apply font-nunito font-medium text-[#2A2A2A] tracking-wide leading-tight;
+    }
+
     h2,
     h3,
     h4,
