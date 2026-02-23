@@ -10,7 +10,7 @@ import abstractBg from "../assets/profissional/banner02.svg";
     description="Documentação e guia de uso do site institucional."
 >
     <main
-        class="min-h-screen py-20 relative overflow-hidden bg-slate-50"
+        class="min-h-screen py-10 md:py-20 relative overflow-hidden bg-slate-50"
         style={`background-image: url(${abstractBg.src}); background-size: cover; background-position: center; background-attachment: fixed;`}
     >
         <!-- Overlay suave para legibilidade -->
@@ -25,7 +25,7 @@ import abstractBg from "../assets/profissional/banner02.svg";
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Cabeçalho do Manual -->
             <div
-                class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+                class="bg-white rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/10"
             >
                 <div class="flex items-center gap-4 mb-6">
                     <div class="w-16 h-16">
@@ -66,16 +66,16 @@ import abstractBg from "../assets/profissional/banner02.svg";
 
             <!-- Guia de Edição Rápida (NOVO) -->
             <div
-                class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+                class="bg-white rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/10"
             >
                 <h2
-                    class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                    class="text-xl md:text-2xl font-bold text-brand-primary mb-6 flex items-start md:items-center gap-3"
                 >
                     <span
-                        class="w-8 h-8 rounded-full bg-brand-secondary/20 flex items-center justify-center text-sm"
+                        class="w-8 h-8 shrink-0 rounded-full bg-brand-secondary/20 flex items-center justify-center text-xs md:text-sm"
                         >✏️</span
                     >
-                    Guia de Edição Rápida
+                    <span class="flex-1">Guia de Edição Rápida</span>
                 </h2>
                 <p class="text-brand-text/70 mb-6">
                     Para facilitar sua vida, aqui está um mapa de onde cada
@@ -85,83 +85,165 @@ import abstractBg from "../assets/profissional/banner02.svg";
                 </p>
 
                 <div
-                    class="overflow-hidden rounded-2xl border border-slate-100"
+                    class="rounded-2xl border border-slate-100 overflow-hidden"
                 >
-                    <table class="w-full text-left text-sm">
-                        <thead
-                            class="bg-slate-50 text-brand-text/60 uppercase tracking-widest text-[10px] font-bold"
+                    <!-- Tabela para Desktop -->
+                    <div class="hidden md:block">
+                        <table class="w-full text-left text-sm">
+                            <thead
+                                class="bg-slate-50 text-brand-text/60 uppercase tracking-widest text-[10px] font-bold"
+                            >
+                                <tr>
+                                    <th class="px-6 py-4"
+                                        >O que você quer mudar</th
+                                    >
+                                    <th class="px-6 py-4">Componente/Arquivo</th
+                                    >
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr>
+                                    <td
+                                        class="px-6 py-4 font-bold text-brand-text"
+                                        >Frase de Impacto Inicial</td
+                                    >
+                                    <td class="px-6 py-4 text-brand-text/60"
+                                        >Hero.astro</td
+                                    >
+                                </tr>
+                                <tr>
+                                    <td
+                                        class="px-6 py-4 font-bold text-brand-text"
+                                        >Texto "Sobre Mim"</td
+                                    >
+                                    <td class="px-6 py-4 text-brand-text/60"
+                                        >About.astro</td
+                                    >
+                                </tr>
+                                <tr>
+                                    <td
+                                        class="px-6 py-4 font-bold text-brand-text"
+                                        >Serviços e Especialidades</td
+                                    >
+                                    <td class="px-6 py-4 text-brand-text/60"
+                                        >Specialties.astro</td
+                                    >
+                                </tr>
+                                <tr>
+                                    <td
+                                        class="px-6 py-4 font-bold text-brand-text"
+                                        >Seus Depoimentos</td
+                                    >
+                                    <td class="px-6 py-4 text-brand-text/60"
+                                        >Testimonials.astro</td
+                                    >
+                                </tr>
+                                <tr>
+                                    <td
+                                        class="px-6 py-4 font-bold text-brand-text"
+                                        >E-mail e Localização</td
+                                    >
+                                    <td class="px-6 py-4 text-brand-text/60"
+                                        >Contact.astro / Footer.astro</td
+                                    >
+                                </tr>
+                                <tr>
+                                    <td
+                                        class="px-6 py-4 font-bold text-brand-text"
+                                        >Artigos do Blog</td
+                                    >
+                                    <td class="px-6 py-4 text-brand-text/60"
+                                        >Pasta: src/content/posts</td
+                                    >
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Listagem para Mobile -->
+                    <div class="md:hidden divide-y divide-slate-100">
+                        <div
+                            class="p-4 bg-white flex justify-between items-center gap-4"
                         >
-                            <tr>
-                                <th class="px-6 py-4">O que você quer mudar</th>
-                                <th class="px-6 py-4">Componente/Arquivo</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr>
-                                <td class="px-6 py-4 font-bold text-brand-text"
-                                    >Frase de Impacto Inicial</td
-                                >
-                                <td class="px-6 py-4 text-brand-text/60"
-                                    >Hero.astro</td
-                                >
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 font-bold text-brand-text"
-                                    >Texto "Sobre Mim"</td
-                                >
-                                <td class="px-6 py-4 text-brand-text/60"
-                                    >About.astro</td
-                                >
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 font-bold text-brand-text"
-                                    >Serviços e Especialidades</td
-                                >
-                                <td class="px-6 py-4 text-brand-text/60"
-                                    >Specialties.astro</td
-                                >
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 font-bold text-brand-text"
-                                    >Seus Depoimentos</td
-                                >
-                                <td class="px-6 py-4 text-brand-text/60"
-                                    >Testimonials.astro</td
-                                >
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 font-bold text-brand-text"
-                                    >E-mail e Localização</td
-                                >
-                                <td class="px-6 py-4 text-brand-text/60"
-                                    >Contact.astro / Footer.astro</td
-                                >
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 font-bold text-brand-text"
-                                    >Artigos do Blog</td
-                                >
-                                <td class="px-6 py-4 text-brand-text/60"
-                                    >Pasta: src/content/posts</td
-                                >
-                            </tr>
-                        </tbody>
-                    </table>
+                            <span class="text-xs font-bold text-brand-text"
+                                >Frase de Impacto</span
+                            >
+                            <span
+                                class="text-[10px] bg-slate-100 px-2 py-1 rounded text-brand-text/60"
+                                >Hero.astro</span
+                            >
+                        </div>
+                        <div
+                            class="p-4 bg-white flex justify-between items-center gap-4"
+                        >
+                            <span class="text-xs font-bold text-brand-text"
+                                >Texto "Sobre Mim"</span
+                            >
+                            <span
+                                class="text-[10px] bg-slate-100 px-2 py-1 rounded text-brand-text/60"
+                                >About.astro</span
+                            >
+                        </div>
+                        <div
+                            class="p-4 bg-white flex justify-between items-center gap-4"
+                        >
+                            <span class="text-xs font-bold text-brand-text"
+                                >Serviços</span
+                            >
+                            <span
+                                class="text-[10px] bg-slate-100 px-2 py-1 rounded text-brand-text/60"
+                                >Specialties.astro</span
+                            >
+                        </div>
+                        <div
+                            class="p-4 bg-white flex justify-between items-center gap-4"
+                        >
+                            <span class="text-xs font-bold text-brand-text"
+                                >Depoimentos</span
+                            >
+                            <span
+                                class="text-[10px] bg-slate-100 px-2 py-1 rounded text-brand-text/60"
+                                >Testimonials.astro</span
+                            >
+                        </div>
+                        <div
+                            class="p-4 bg-white flex justify-between items-center gap-4"
+                        >
+                            <span class="text-xs font-bold text-brand-text"
+                                >Contato/Rodapé</span
+                            >
+                            <span
+                                class="text-[10px] bg-slate-100 px-2 py-1 rounded text-brand-text/60"
+                                >Contact / Footer</span
+                            >
+                        </div>
+                        <div
+                            class="p-4 bg-white flex justify-between items-center gap-4"
+                        >
+                            <span class="text-xs font-bold text-brand-text"
+                                >Artigos Blog</span
+                            >
+                            <span
+                                class="text-[10px] bg-slate-100 px-2 py-1 rounded text-brand-text/60"
+                                >src/content/posts</span
+                            >
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Como o Site Funciona -->
             <div
-                class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+                class="bg-white rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/10"
             >
                 <h2
-                    class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                    class="text-xl md:text-2xl font-bold text-brand-primary mb-6 flex items-start md:items-center gap-3"
                 >
                     <span
-                        class="w-8 h-8 rounded-full bg-brand-secondary/20 flex items-center justify-center text-sm"
+                        class="w-8 h-8 shrink-0 rounded-full bg-brand-secondary/20 flex items-center justify-center text-xs md:text-sm"
                         >1</span
                     >
-                    A Experiência do Paciente
+                    <span class="flex-1">A Experiência do Paciente</span>
                 </h2>
                 <div class="space-y-6 text-brand-text/70">
                     <div>
@@ -245,17 +327,17 @@ import abstractBg from "../assets/profissional/banner02.svg";
 
             <!-- Coletando Avaliações (NOVO) -->
             <div
-                class="bg-brand-primary/5 rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/20 relative overflow-hidden"
+                class="bg-brand-primary/5 rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/20 relative overflow-hidden"
             >
                 <div class="relative z-10">
                     <h2
-                        class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                        class="text-xl md:text-2xl font-bold text-brand-primary mb-6 flex items-start md:items-center gap-3"
                     >
                         <span
-                            class="w-8 h-8 rounded-full bg-brand-primary text-white flex items-center justify-center text-sm"
+                            class="w-8 h-8 shrink-0 rounded-full bg-brand-primary text-white flex items-center justify-center text-xs md:text-sm"
                             >2</span
                         >
-                        Aumentando sua Autoridade
+                        <span class="flex-1">Aumentando sua Autoridade</span>
                     </h2>
                     <div class="space-y-6 text-brand-text/80">
                         <div>
@@ -295,16 +377,16 @@ import abstractBg from "../assets/profissional/banner02.svg";
                 </div>
                 <!-- Google Search Console (NOVO) -->
                 <div
-                    class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+                    class="bg-white rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/10"
                 >
                     <h2
-                        class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                        class="text-xl md:text-2xl font-bold text-brand-primary mb-6 flex items-start md:items-center gap-3"
                     >
                         <span
-                            class="w-8 h-8 rounded-full bg-brand-secondary/20 flex items-center justify-center text-sm"
+                            class="w-8 h-8 shrink-0 rounded-full bg-brand-secondary/20 flex items-center justify-center text-xs md:text-sm"
                             >3</span
                         >
-                        Sua Visibilidade no Google
+                        <span class="flex-1">Sua Visibilidade no Google</span>
                     </h2>
                     <div class="space-y-6 text-brand-text/70">
                         <div>
@@ -426,7 +508,7 @@ import abstractBg from "../assets/profissional/banner02.svg";
 
                 <!-- Configuração de Robôs (Novo) -->
                 <div
-                    class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+                    class="bg-white rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/10"
                 >
                     <div class="flex items-center gap-4 mb-6">
                         <div
@@ -459,16 +541,16 @@ import abstractBg from "../assets/profissional/banner02.svg";
 
                 <!-- Gestão do Blog (Novo) -->
                 <div
-                    class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+                    class="bg-white rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/10"
                 >
                     <h2
-                        class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                        class="text-xl md:text-2xl font-bold text-brand-primary mb-6 flex items-start md:items-center gap-3"
                     >
                         <span
-                            class="w-8 h-8 rounded-full bg-brand-secondary/20 flex items-center justify-center text-sm"
+                            class="w-8 h-8 shrink-0 rounded-full bg-brand-secondary/20 flex items-center justify-center text-xs md:text-sm"
                             >4</span
                         >
-                        Área do Blog
+                        <span class="flex-1">Área do Blog</span>
                     </h2>
 
                     <div class="space-y-6 text-brand-text/70">
@@ -567,17 +649,19 @@ import abstractBg from "../assets/profissional/banner02.svg";
 
                 <!-- Acesso ao E-mail (NOVO) -->
                 <div
-                    class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+                    class="bg-white rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/10"
                 >
                     <div class="flex items-center gap-4 mb-6">
                         <div
-                            class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-green-600 text-2xl"
+                            class="w-12 h-12 shrink-0 bg-green-50 rounded-full flex items-center justify-center text-green-600 text-2xl"
                         >
                             📧
                         </div>
-                        <h2 class="text-2xl font-bold text-brand-primary">
+                        <h2
+                            class="text-xl md:text-2xl font-bold text-brand-primary flex-1"
+                        >
                             <span
-                                class="w-8 h-8 rounded-full bg-brand-secondary/20 inline-flex items-center justify-center text-sm mr-2 align-middle"
+                                class="w-8 h-8 shrink-0 rounded-full bg-brand-secondary/20 inline-flex items-center justify-center text-xs md:text-sm mr-2 align-middle"
                                 >5</span
                             >
                             Acesso ao E-mail Profissional
@@ -666,17 +750,19 @@ import abstractBg from "../assets/profissional/banner02.svg";
 
                 <!-- Humanização e Inclusão (NOVO 20/02/2026) -->
                 <div
-                    class="bg-brand-secondary/5 rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/20 relative overflow-hidden"
+                    class="bg-brand-secondary/5 rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/20 relative overflow-hidden"
                 >
                     <div class="relative z-10">
                         <h2
-                            class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                            class="text-xl md:text-2xl font-bold text-brand-primary mb-6 flex items-start md:items-center gap-3"
                         >
                             <span
-                                class="w-8 h-8 rounded-full bg-brand-primary text-white flex items-center justify-center text-sm"
+                                class="w-8 h-8 shrink-0 rounded-full bg-brand-primary text-white flex items-center justify-center text-xs md:text-sm"
                                 >6</span
                             >
-                            Humanização e Inclusão (Nova Copy)
+                            <span class="flex-1"
+                                >Humanização e Inclusão (Nova Copy)</span
+                            >
                         </h2>
                         <div class="space-y-6 text-brand-text/80">
                             <div>
@@ -735,16 +821,18 @@ import abstractBg from "../assets/profissional/banner02.svg";
 
                 <!-- Dados Técnicos -->
                 <div
-                    class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+                    class="bg-white rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/10"
                 >
                     <h2
-                        class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                        class="text-xl md:text-2xl font-bold text-brand-primary mb-6 flex items-start md:items-center gap-3"
                     >
                         <span
-                            class="w-8 h-8 rounded-full bg-brand-secondary/20 flex items-center justify-center text-sm"
+                            class="w-8 h-8 shrink-0 rounded-full bg-brand-secondary/20 flex items-center justify-center text-xs md:text-sm"
                             >7</span
                         >
-                        Área Técnica (Para Desenvolvedores)
+                        <span class="flex-1"
+                            >Área Técnica (Para Desenvolvedores)</span
+                        >
                     </h2>
                     <div class="space-y-6 text-brand-text/70">
                         <p>
@@ -810,7 +898,7 @@ import abstractBg from "../assets/profissional/banner02.svg";
 
                 <!-- Parabéns pela Aquisição -->
                 <div
-                    class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl shadow-2xl p-8 md:p-12 mb-12 relative overflow-hidden border border-slate-700"
+                    class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl shadow-2xl p-6 md:p-12 mb-12 relative overflow-hidden border border-slate-700"
                 >
                     <!-- Efeito de brilho -->
                     <div
@@ -1127,16 +1215,18 @@ import abstractBg from "../assets/profissional/banner02.svg";
 
                 <!-- Histórico de Melhorias e Manutenção -->
                 <div
-                    class="bg-white rounded-3xl shadow-sm p-8 md:p-12 mb-8 border border-brand-primary/10"
+                    class="bg-white rounded-3xl shadow-sm p-6 md:p-12 mb-8 border border-brand-primary/10"
                 >
                     <h2
-                        class="text-2xl font-bold text-brand-primary mb-6 flex items-center gap-3"
+                        class="text-xl md:text-2xl font-bold text-brand-primary mb-6 flex items-start md:items-center gap-3"
                     >
                         <span
-                            class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-sm"
+                            class="w-8 h-8 shrink-0 rounded-full bg-slate-100 flex items-center justify-center text-xs md:text-sm"
                             >9</span
                         >
-                        Pedidos de Manutenção e Melhorias
+                        <span class="flex-1"
+                            >Pedidos de Manutenção e Melhorias</span
+                        >
                     </h2>
                     <div class="space-y-6">
                         <p class="text-brand-text/70">
@@ -1147,145 +1237,332 @@ import abstractBg from "../assets/profissional/banner02.svg";
                         </p>
 
                         <div
-                            class="overflow-hidden rounded-2xl border border-slate-100"
+                            class="rounded-2xl border border-slate-100 overflow-hidden"
                         >
-                            <table class="w-full text-left text-sm">
-                                <thead
-                                    class="bg-slate-50 text-brand-text/60 uppercase tracking-wider text-[10px] font-bold"
-                                >
-                                    <tr>
-                                        <th class="px-6 py-4">Data</th>
-                                        <th class="px-6 py-4"
-                                            >Serviço / Melhoria</th
-                                        >
-                                        <th class="px-6 py-4 text-right"
-                                            >Status</th
-                                        >
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-100 italic">
-                                    <tr
-                                        class="bg-white hover:bg-slate-50 transition-colors"
+                            <!-- Tabela para Desktop -->
+                            <div class="hidden md:block">
+                                <table class="w-full text-left text-sm">
+                                    <thead
+                                        class="bg-slate-50 text-brand-text/60 uppercase tracking-wider text-[10px] font-bold"
                                     >
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-brand-primary font-bold"
-                                            >23/02/2026</td
-                                        >
-                                        <td
-                                            class="px-6 py-4 text-brand-text/80"
-                                        >
-                                            <strong
-                                                >Slider Dinâmico de Depoimentos:</strong
+                                        <tr>
+                                            <th class="px-6 py-4">Data</th>
+                                            <th class="px-6 py-4"
+                                                >Serviço / Melhoria</th
                                             >
-                                            Transformação da seção de depoimentos
-                                            em um slider interativo premium. Implementação
-                                            de animação de "explosão de borboletas"
-                                            sincronizada com a transição de slides.
-                                            Inclusão de novo depoimento (G.R.) conforme
-                                            protocolo ético de iniciais.
-                                        </td>
-                                        <td class="px-6 py-4 text-right">
-                                            <span
-                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
-                                                >Concluído</span
+                                            <th class="px-6 py-4 text-right"
+                                                >Status</th
                                             >
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white hover:bg-slate-50 transition-colors"
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="divide-y divide-slate-100 italic"
                                     >
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-brand-text/40"
-                                            >20/02/2026</td
+                                        <tr
+                                            class="bg-white hover:bg-slate-50 transition-colors"
                                         >
-                                        <td
-                                            class="px-6 py-4 text-brand-text/80"
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-brand-primary font-bold"
+                                                >23/02/2026</td
+                                            >
+                                            <td
+                                                class="px-6 py-4 text-brand-text/80"
+                                            >
+                                                <strong
+                                                    >Imagem de Visualização
+                                                    (Open Graph):</strong
+                                                > Configuração da imagem de prévia
+                                                para compartilhamento em redes sociais
+                                                e WhatsApp. Extração da foto profissional
+                                                e integração com as meta tags globais
+                                                de SEO.
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <span
+                                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                                                    >Concluído</span
+                                                >
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            class="bg-white hover:bg-slate-50 transition-colors"
                                         >
-                                            <strong
-                                                >Humanização e Narrativa:</strong
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-brand-primary font-bold"
+                                                >23/02/2026</td
                                             >
-                                            Atualização profunda da copy para maior
-                                            acolhimento, implementação de nova tipografia
-                                            premium e inclusão afirmativa. Reorganização
-                                            técnica do manual e suporte Alpha Code.
-                                        </td>
-                                        <td class="px-6 py-4 text-right">
-                                            <span
-                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
-                                                >Concluído</span
+                                            <td
+                                                class="px-6 py-4 text-brand-text/80"
                                             >
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white hover:bg-slate-50 transition-colors"
+                                                <strong
+                                                    >Slider Dinâmico de
+                                                    Depoimentos:</strong
+                                                > Transformação da seção de depoimentos
+                                                em um slider interativo premium. Implementação
+                                                de animação de "explosão de borboletas"
+                                                sincronizada com a transição de slides.
+                                                Inclusão de novo depoimento (G.R.)
+                                                conforme protocolo ético de iniciais.
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <span
+                                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                                                    >Concluído</span
+                                                >
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            class="bg-white hover:bg-slate-50 transition-colors"
+                                        >
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-brand-text/40"
+                                                >20/02/2026</td
+                                            >
+                                            <td
+                                                class="px-6 py-4 text-brand-text/80"
+                                            >
+                                                <strong
+                                                    >Humanização e Narrativa:</strong
+                                                > Atualização profunda da copy para
+                                                maior acolhimento, implementação de
+                                                nova tipografia premium e inclusão
+                                                afirmativa. Reorganização técnica
+                                                do manual e suporte Alpha Code.
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <span
+                                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                                                    >Concluído</span
+                                                >
+                                            </td>
+                                        </tr>
+                                        <!-- ... (outras linhas omitidas para brevidade na substituição, mas serão mantidas no código final se eu usar um replace mais preciso) ... -->
+                                        <tr
+                                            class="bg-white hover:bg-slate-50 transition-colors"
+                                        >
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-brand-text/40"
+                                                >19/02/2026</td
+                                            >
+                                            <td
+                                                class="px-6 py-4 text-brand-text/80"
+                                            >
+                                                <strong>SEO Local Power:</strong
+                                                > Criação de páginas estruturais para
+                                                São Paulo, implementação de Schema
+                                                Markup e otimização de performance.
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <span
+                                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                                                    >Concluído</span
+                                                >
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            class="bg-white hover:bg-slate-50 transition-colors"
+                                        >
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-brand-text/40"
+                                                >19/02/2026</td
+                                            >
+                                            <td
+                                                class="px-6 py-4 text-brand-text/80"
+                                            >
+                                                <strong
+                                                    >Depoimentos e Conversão:</strong
+                                                > Implementação da nova seção de depoimentos
+                                                com animações, ajuste de links e adição
+                                                do botão de WhatsApp fixo no mobile.
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <span
+                                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                                                    >Concluído</span
+                                                >
+                                            </td>
+                                        </tr>
+                                        <tr
+                                            class="bg-white hover:bg-slate-50 transition-colors"
+                                        >
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-brand-text/40"
+                                                >19/02/2026</td
+                                            >
+                                            <td
+                                                class="px-6 py-4 text-brand-text/80"
+                                            >
+                                                <strong
+                                                    >Segurança e Privacidade:</strong
+                                                > Ocultação das credenciais de acesso
+                                                no manual e atualização do protocolo
+                                                de segurança de dados.
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <span
+                                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                                                    >Concluído</span
+                                                >
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Listagem para Mobile -->
+                            <div
+                                class="md:hidden divide-y divide-slate-100 italic"
+                            >
+                                <div class="p-5 bg-white space-y-3">
+                                    <div
+                                        class="flex justify-between items-center"
                                     >
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-brand-text/40"
-                                            >19/02/2026</td
+                                        <span
+                                            class="text-xs font-bold text-brand-primary"
+                                            >23/02/2026</span
                                         >
-                                        <td
-                                            class="px-6 py-4 text-brand-text/80"
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-green-100 text-green-800"
+                                            >Concluído</span
                                         >
-                                            <strong>SEO Local Power:</strong> Criação
-                                            de páginas estruturais para São Paulo,
-                                            implementação de Schema Markup e otimização
-                                            de performance.
-                                        </td>
-                                        <td class="px-6 py-4 text-right">
-                                            <span
-                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
-                                                >Concluído</span
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white hover:bg-slate-50 transition-colors"
+                                    </div>
+                                    <p
+                                        class="text-sm text-brand-text/80 leading-relaxed"
                                     >
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-brand-text/40"
-                                            >19/02/2026</td
+                                        <strong class="block mb-1"
+                                            >Imagem de Visualização (Open Graph)</strong
                                         >
-                                        <td
-                                            class="px-6 py-4 text-brand-text/80"
-                                        >
-                                            <strong
-                                                >Depoimentos e Conversão:</strong
-                                            > Implementação da nova seção de depoimentos
-                                            com animações, ajuste de links e adição
-                                            do botão de WhatsApp fixo no mobile.
-                                        </td>
-                                        <td class="px-6 py-4 text-right">
-                                            <span
-                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
-                                                >Concluído</span
-                                            >
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white hover:bg-slate-50 transition-colors"
+                                        Configuração da imagem de prévia para compartilhamento
+                                        em redes sociais e WhatsApp. Extração da foto
+                                        profissional e integração com as meta tags
+                                        globais de SEO.
+                                    </p>
+                                </div>
+                                <div class="p-5 bg-white space-y-3">
+                                    <div
+                                        class="flex justify-between items-center"
                                     >
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-brand-text/40"
-                                            >19/02/2026</td
+                                        <span
+                                            class="text-xs font-bold text-brand-primary"
+                                            >23/02/2026</span
                                         >
-                                        <td
-                                            class="px-6 py-4 text-brand-text/80"
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-green-100 text-green-800"
+                                            >Concluído</span
                                         >
-                                            <strong
-                                                >Segurança e Privacidade:</strong
-                                            > Ocultação das credenciais de acesso
-                                            no manual e atualização do protocolo de
-                                            segurança de dados.
-                                        </td>
-                                        <td class="px-6 py-4 text-right">
-                                            <span
-                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
-                                                >Concluído</span
-                                            >
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                    </div>
+                                    <p
+                                        class="text-sm text-brand-text/80 leading-relaxed"
+                                    >
+                                        <strong class="block mb-1"
+                                            >Slider Dinâmico de Depoimentos</strong
+                                        >
+                                        Transformação da seção de depoimentos em um
+                                        slider interativo premium. Implementação de
+                                        animação de "explosão de borboletas" sincronizada
+                                        com a transição de slides. Inclusão de novo
+                                        depoimento (G.R.) conforme protocolo ético
+                                        de iniciais.
+                                    </p>
+                                </div>
+                                <div class="p-5 bg-white space-y-3">
+                                    <div
+                                        class="flex justify-between items-center"
+                                    >
+                                        <span
+                                            class="text-xs font-bold text-brand-text/40"
+                                            >20/02/2026</span
+                                        >
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-green-100 text-green-800"
+                                            >Concluído</span
+                                        >
+                                    </div>
+                                    <p
+                                        class="text-sm text-brand-text/80 leading-relaxed"
+                                    >
+                                        <strong class="block mb-1"
+                                            >Humanização e Narrativa</strong
+                                        >
+                                        Atualização profunda da copy para maior acolhimento,
+                                        implementação de nova tipografia premium e
+                                        inclusão afirmativa. Reorganização técnica
+                                        do manual e suporte Alpha Code.
+                                    </p>
+                                </div>
+                                <div class="p-5 bg-white space-y-3">
+                                    <div
+                                        class="flex justify-between items-center"
+                                    >
+                                        <span
+                                            class="text-xs font-bold text-brand-text/40"
+                                            >19/02/2026</span
+                                        >
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-green-100 text-green-800"
+                                            >Concluído</span
+                                        >
+                                    </div>
+                                    <p
+                                        class="text-sm text-brand-text/80 leading-relaxed"
+                                    >
+                                        <strong class="block mb-1"
+                                            >SEO Local Power</strong
+                                        >
+                                        Criação de páginas estruturais para São Paulo,
+                                        implementação de Schema Markup e otimização
+                                        de performance.
+                                    </p>
+                                </div>
+                                <div class="p-5 bg-white space-y-3">
+                                    <div
+                                        class="flex justify-between items-center"
+                                    >
+                                        <span
+                                            class="text-xs font-bold text-brand-text/40"
+                                            >19/02/2026</span
+                                        >
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-green-100 text-green-800"
+                                            >Concluído</span
+                                        >
+                                    </div>
+                                    <p
+                                        class="text-sm text-brand-text/80 leading-relaxed"
+                                    >
+                                        <strong class="block mb-1"
+                                            >Depoimentos e Conversão</strong
+                                        >
+                                        Implementação da nova seção de depoimentos
+                                        com animações, ajuste de links e adição do
+                                        botão de WhatsApp fixo no mobile.
+                                    </p>
+                                </div>
+                                <div class="p-5 bg-white space-y-3">
+                                    <div
+                                        class="flex justify-between items-center"
+                                    >
+                                        <span
+                                            class="text-xs font-bold text-brand-text/40"
+                                            >19/02/2026</span
+                                        >
+                                        <span
+                                            class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-green-100 text-green-800"
+                                            >Concluído</span
+                                        >
+                                    </div>
+                                    <p
+                                        class="text-sm text-brand-text/80 leading-relaxed"
+                                    >
+                                        <strong class="block mb-1"
+                                            >Segurança e Privacidade</strong
+                                        >
+                                        Ocultação das credenciais de acesso no manual
+                                        e atualização do protocolo de segurança de
+                                        dados.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1423,7 +1700,7 @@ Com base nisso, analise os impactos no meu ranqueamento orgânico e sugira estra
 
                 <!-- Suporte -->
                 <div
-                    class="bg-brand-primary text-white rounded-3xl shadow-2xl p-10 md:p-16 text-center relative overflow-hidden group border border-white/20"
+                    class="bg-brand-primary text-white rounded-3xl shadow-2xl p-6 md:p-16 text-center relative overflow-hidden group border border-white/20"
                 >
                     <!-- Elementos Decorativos -->
                     <div
