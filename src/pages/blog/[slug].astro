@@ -7,7 +7,11 @@ import Footer from "../../components/Footer.astro";
 // Gera os caminhos estáticos para cada post
 export async function getStaticPaths() {
     const posts = await getCollection("posts");
-    return posts.map((post) => ({
+    const now = new Date();
+    // Apenas gera a página se a data de publicação for <= hoje/agora
+    const publishedPosts = posts.filter((post) => post.data.publishDate <= now);
+
+    return publishedPosts.map((post) => ({
         params: { slug: post.slug },
         props: { post },
     }));
@@ -22,8 +26,14 @@ const { Content } = await post.render();
     description={post.data.description}
 >
     <Header />
-    <main class="pt-32 pb-24 bg-white min-h-screen">
-        <article class="max-w-4xl mx-auto px-4 md:px-8">
+    <main class="pt-32 pb-24 bg-white min-h-screen relative overflow-hidden">
+        <!-- Partículas de Borboletas -->
+        <div
+            id="blog-butterfly-container"
+            class="absolute inset-0 pointer-events-none z-0"
+        >
+        </div>
+        <article class="max-w-4xl mx-auto px-4 md:px-8 relative z-10">
             <header class="mb-12 text-center">
                 <div
                     class="inline-block bg-brand-secondary/20 text-brand-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
@@ -58,6 +68,76 @@ const { Content } = await post.render();
                 <Content />
             </div>
 
+            <!-- Botões de Interação e Compartilhamento -->
+            <div
+                class="mt-16 flex flex-col md:flex-row items-center justify-between border-t border-b border-brand-primary/10 py-8 gap-8"
+            >
+                <!-- Avaliação -->
+                <div class="flex items-center gap-4">
+                    <span
+                        class="text-brand-text/70 font-bold uppercase tracking-widest text-xs md:text-sm"
+                        >O artigo foi útil?</span
+                    >
+                    <button
+                        id="btn-like"
+                        aria-label="Gostei"
+                        class="w-12 h-12 rounded-full bg-brand-bg border border-brand-primary/20 flex items-center justify-center text-brand-primary hover:bg-brand-primary hover:text-white transition-all shadow-sm"
+                    >
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </button>
+                    <button
+                        id="btn-dislike"
+                        aria-label="Não gostei"
+                        class="w-12 h-12 rounded-full bg-brand-bg border border-brand-primary/20 flex items-center justify-center text-brand-primary hover:bg-red-500 hover:text-white hover:border-red-500 transition-all shadow-sm"
+                    >
+                        <i class="fa-solid fa-thumbs-down"></i>
+                    </button>
+                    <span
+                        id="feedback-msg"
+                        class="text-sm font-bold text-brand-primary opacity-0 transition-opacity"
+                        >Obrigado!</span
+                    >
+                </div>
+
+                <!-- Compartilhamento Social -->
+                <div class="flex items-center gap-4">
+                    <span
+                        class="text-brand-text/70 font-bold uppercase tracking-widest text-xs md:text-sm"
+                        >Compartilhe</span
+                    >
+                    <a
+                        id="share-wa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Compartilhar no WhatsApp"
+                        class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm cursor-pointer"
+                    >
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a
+                        id="share-fb"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Compartilhar no Facebook"
+                        class="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm cursor-pointer"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <button
+                        id="share-copy"
+                        aria-label="Copiar link"
+                        class="w-10 h-10 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center hover:bg-brand-primary hover:text-white hover:scale-110 transition-all shadow-sm cursor-pointer relative"
+                    >
+                        <i class="fa-solid fa-link"></i>
+                        <span
+                            id="copy-tooltip"
+                            class="absolute -top-10 bg-brand-primary text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity whitespace-nowrap pointer-events-none font-sans font-medium tracking-normal"
+                            >Copiado!</span
+                        >
+                    </button>
+                </div>
+            </div>
+
             <!-- Seção de CTA final do Artigo -->
             <div
                 class="mt-20 p-12 bg-brand-bg rounded-3xl border border-brand-primary/10 text-center"
@@ -75,8 +155,208 @@ const { Content } = await post.render();
     <Footer />
 </Layout>
 
+<script>
+    import { gsap } from "gsap";
+
+    const setupButterflies = () => {
+        const container = document.getElementById("blog-butterfly-container");
+        if (!container) return;
+
+        if (container.children.length > 0) return; // Prevent duplicates
+
+        const count = 35; // Aumentado para 35 borboletas
+
+        for (let i = 0; i < count; i++) {
+            const butterfly = document.createElement("div");
+            butterfly.className = "blog-butterfly";
+            butterfly.innerHTML = `
+                <div class="blog-butterfly-wing left"></div>
+                <div class="blog-butterfly-wing right"></div>
+            `;
+
+            const startX = Math.random() * window.innerWidth;
+            // Pegar a altura total máxima da página para distribuí-las perfeitamente
+            const pageHeight = Math.max(
+                document.body.scrollHeight,
+                document.documentElement.scrollHeight,
+            );
+            const startY =
+                Math.random() *
+                (pageHeight > 0 ? pageHeight : window.innerHeight * 3);
+
+            gsap.set(butterfly, {
+                x: startX,
+                y: startY,
+                scale: 0.3 + Math.random() * 0.7,
+                rotation: Math.random() * 360,
+                opacity: 0,
+            });
+
+            container.appendChild(butterfly);
+
+            // Fade in gently
+            gsap.to(butterfly, {
+                opacity: 0.15,
+                duration: 2 + Math.random() * 2,
+            });
+
+            animateButterfly(butterfly);
+        }
+    };
+
+    const animateButterfly = (el: HTMLElement) => {
+        gsap.to(el, {
+            x: `+=${Math.random() * 400 - 200}`,
+            y: `+=${Math.random() * 400 - 200}`,
+            rotation: `+=${Math.random() * 90 - 45}`,
+            duration: 8 + Math.random() * 7,
+            ease: "sine.inOut",
+            onComplete: () => animateButterfly(el),
+        });
+
+        gsap.to(el, {
+            opacity: 0.1 + Math.random() * 0.1,
+            duration: 2 + Math.random(),
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut",
+        });
+    };
+
+    const setupInteractions = () => {
+        // Obter URL e título
+        const url = encodeURIComponent(window.location.href);
+        const title = encodeURIComponent(document.title);
+
+        // Configurar links de compartilhamento
+        const wa = document.getElementById("share-wa") as HTMLAnchorElement;
+        const fb = document.getElementById("share-fb") as HTMLAnchorElement;
+
+        if (wa) wa.href = `https://wa.me/?text=${title}%20-%20${url}`;
+        if (fb) fb.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+
+        // Lógica de Avaliação (Like / Dislike)
+        const btnLike = document.getElementById("btn-like");
+        const btnDislike = document.getElementById("btn-dislike");
+        const feedbackMsg = document.getElementById("feedback-msg");
+
+        const handleFeedback = (type: "like" | "dislike") => {
+            if (btnLike && btnDislike && feedbackMsg) {
+                // Restaura os botões
+                btnLike.classList.remove("bg-brand-primary", "text-white");
+                btnDislike.classList.remove(
+                    "bg-red-500",
+                    "text-white",
+                    "border-red-500",
+                );
+
+                // Aplica a cor no botão selecionado
+                if (type === "like") {
+                    btnLike.classList.add("bg-brand-primary", "text-white");
+                } else {
+                    btnDislike.classList.add(
+                        "bg-red-500",
+                        "text-white",
+                        "border-red-500",
+                    );
+                }
+
+                // Mostra a mensagem de agradecimento temporária
+                feedbackMsg.classList.remove("opacity-0");
+                setTimeout(() => {
+                    feedbackMsg.classList.add("opacity-0");
+                }, 3000);
+            }
+        };
+
+        if (btnLike)
+            btnLike.addEventListener("click", () => handleFeedback("like"));
+        if (btnDislike)
+            btnDislike.addEventListener("click", () =>
+                handleFeedback("dislike"),
+            );
+
+        // Logica de Copiar Link
+        const copyBtn = document.getElementById("share-copy");
+        const copyTooltip = document.getElementById("copy-tooltip");
+
+        if (copyBtn && copyTooltip) {
+            copyBtn.addEventListener("click", () => {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    copyTooltip.classList.remove("opacity-0");
+                    setTimeout(() => {
+                        copyTooltip.classList.add("opacity-0");
+                    }, 2000);
+                });
+            });
+        }
+    };
+
+    const initAll = () => {
+        setupInteractions();
+        setupButterflies();
+    };
+
+    // Suporte às ViewTransitions do Astro
+    document.addEventListener("astro:page-load", initAll);
+
+    // Inicialização direta caso não use ViewTransitions
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initAll);
+    } else {
+        initAll();
+    }
+</script>
+
 <style is:global>
     @reference "../../styles/global.css";
+
+    /* Partículas de Borboletas do Blog */
+    .blog-butterfly {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .blog-butterfly-wing {
+        position: absolute;
+        width: 15px;
+        height: 20px;
+        background-color: var(--color-brand-primary);
+        border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    }
+
+    .blog-butterfly-wing.left {
+        left: 0;
+        transform-origin: right center;
+        animation: flap-left 0.4s ease-in-out infinite alternate;
+    }
+
+    .blog-butterfly-wing.right {
+        right: 0;
+        transform-origin: left center;
+        animation: flap-right 0.4s ease-in-out infinite alternate;
+    }
+
+    @keyframes flap-left {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(70deg);
+        }
+    }
+
+    @keyframes flap-right {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(-70deg);
+        }
+    }
 
     /* Estilos básicos de tipografia (prose) caso não usem o plugin oficial */
     .prose h2 {
