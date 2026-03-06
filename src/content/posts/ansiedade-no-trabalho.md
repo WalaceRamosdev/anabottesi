@@ -1,7 +1,7 @@
 ---
 title: "Ansiedade no Trabalho: O Papel da Psicanálise na Sobrecarga Feminina"
 description: "Entenda como a pressão corporativa afeta a saúde mental das mulheres, os sinais da ansiedade no ambiente profissional e de que forma o processo analítico pode ser uma ferramenta de libertação e resgate do equilíbrio."
-publishDate: 2026-03-05T09:30:00-03:00
+publishDate: 2026-03-07T09:30:00-03:00
 image: "/images/blog/ansiedade-no-trabalho.svg"
 tags: ["ansiedade", "trabalho", "esgotamento", "psicanálise", "saúde mental"]
 ---

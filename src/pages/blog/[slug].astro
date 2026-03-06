@@ -26,7 +26,7 @@ const { Content } = await post.render();
     description={post.data.description}
 >
     <Header />
-    <main class="pt-32 pb-24 bg-white min-h-screen relative overflow-hidden">
+    <main class="pt-32 pb-24 bg-brand-bg min-h-screen relative overflow-hidden">
         <!-- Partículas de Borboletas -->
         <div
             id="blog-butterfly-container"
@@ -68,73 +68,100 @@ const { Content } = await post.render();
                 <Content />
             </div>
 
+            <!-- Créditos Alpha Code -->
+            <div
+                class="mt-12 pt-6 border-t border-brand-primary/10 flex flex-col sm:flex-row items-center justify-between text-brand-text/70 text-sm"
+            >
+                <p class="mt-2 sm:mt-0">
+                    Gerenciamento de conteúdo por
+                    <a
+                        href="https://www.sitesalphacode.com.br/solucoes/psicologos"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-brand-primary font-bold hover:underline transition-all"
+                    >
+                        Sites Alpha Code
+                    </a>
+                </p>
+            </div>
+
             <!-- Botões de Interação e Compartilhamento -->
             <div
                 class="mt-16 flex flex-col md:flex-row items-center justify-between border-t border-b border-brand-primary/10 py-8 gap-8"
             >
                 <!-- Avaliação -->
-                <div class="flex items-center gap-4">
+                <div
+                    class="flex flex-col sm:flex-row items-center gap-3 sm:gap-6"
+                >
                     <span
                         class="text-brand-text/70 font-bold uppercase tracking-widest text-xs md:text-sm"
                         >O artigo foi útil?</span
                     >
-                    <button
-                        id="btn-like"
-                        aria-label="Gostei"
-                        class="w-12 h-12 rounded-full bg-brand-bg border border-brand-primary/20 flex items-center justify-center text-brand-primary hover:bg-brand-primary hover:text-white transition-all shadow-sm"
-                    >
-                        <i class="fa-solid fa-thumbs-up"></i>
-                    </button>
-                    <button
-                        id="btn-dislike"
-                        aria-label="Não gostei"
-                        class="w-12 h-12 rounded-full bg-brand-bg border border-brand-primary/20 flex items-center justify-center text-brand-primary hover:bg-red-500 hover:text-white hover:border-red-500 transition-all shadow-sm"
-                    >
-                        <i class="fa-solid fa-thumbs-down"></i>
-                    </button>
-                    <span
-                        id="feedback-msg"
-                        class="text-sm font-bold text-brand-primary opacity-0 transition-opacity"
-                        >Obrigado!</span
-                    >
+                    <div class="flex items-center gap-4 relative">
+                        <button
+                            id="btn-like"
+                            aria-label="Gostei"
+                            class="px-4 h-12 rounded-full bg-brand-bg border border-brand-primary/20 flex items-center justify-center gap-2 text-brand-primary hover:bg-brand-primary hover:text-white transition-all shadow-sm"
+                        >
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span id="like-count" class="font-bold">--</span>
+                        </button>
+                        <button
+                            id="btn-dislike"
+                            aria-label="Não gostei"
+                            class="px-4 h-12 rounded-full bg-brand-bg border border-brand-primary/20 flex items-center justify-center gap-2 text-brand-primary hover:bg-red-500 hover:text-white hover:border-red-500 transition-all shadow-sm"
+                        >
+                            <i class="fa-solid fa-thumbs-down"></i>
+                            <span id="dislike-count" class="font-bold">--</span>
+                        </button>
+                        <span
+                            id="feedback-msg"
+                            class="text-sm font-bold text-brand-primary opacity-0 transition-opacity absolute -bottom-6 left-1/2 -translate-x-1/2 sm:static sm:translate-x-0 whitespace-nowrap"
+                            >Obrigado!</span
+                        >
+                    </div>
                 </div>
 
                 <!-- Compartilhamento Social -->
-                <div class="flex items-center gap-4">
+                <div
+                    class="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 mt-6 md:mt-0"
+                >
                     <span
                         class="text-brand-text/70 font-bold uppercase tracking-widest text-xs md:text-sm"
                         >Compartilhe</span
                     >
-                    <a
-                        id="share-wa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Compartilhar no WhatsApp"
-                        class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm cursor-pointer"
-                    >
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                    <a
-                        id="share-fb"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Compartilhar no Facebook"
-                        class="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm cursor-pointer"
-                    >
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <button
-                        id="share-copy"
-                        aria-label="Copiar link"
-                        class="w-10 h-10 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center hover:bg-brand-primary hover:text-white hover:scale-110 transition-all shadow-sm cursor-pointer relative"
-                    >
-                        <i class="fa-solid fa-link"></i>
-                        <span
-                            id="copy-tooltip"
-                            class="absolute -top-10 bg-brand-primary text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity whitespace-nowrap pointer-events-none font-sans font-medium tracking-normal"
-                            >Copiado!</span
+                    <div class="flex items-center gap-4">
+                        <a
+                            id="share-wa"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Compartilhar no WhatsApp"
+                            class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm cursor-pointer"
                         >
-                    </button>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a
+                            id="share-fb"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Compartilhar no Facebook"
+                            class="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm cursor-pointer"
+                        >
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <button
+                            id="share-copy"
+                            aria-label="Copiar link"
+                            class="w-10 h-10 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center hover:bg-brand-primary hover:text-white hover:scale-110 transition-all shadow-sm cursor-pointer relative"
+                        >
+                            <i class="fa-solid fa-link"></i>
+                            <span
+                                id="copy-tooltip"
+                                class="absolute -top-10 bg-brand-primary text-white text-[10px] px-2 py-1 rounded opacity-0 transition-opacity whitespace-nowrap pointer-events-none font-sans font-medium tracking-normal"
+                                >Copiado!</span
+                            >
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -164,7 +191,7 @@ const { Content } = await post.render();
 
         if (container.children.length > 0) return; // Prevent duplicates
 
-        const count = 35; // Aumentado para 35 borboletas
+        const count = 40; // Aumentado para 40 borboletas
 
         for (let i = 0; i < count; i++) {
             const butterfly = document.createElement("div");
@@ -197,7 +224,7 @@ const { Content } = await post.render();
             // Fade in gently
             gsap.to(butterfly, {
                 opacity: 0.15,
-                duration: 2 + Math.random() * 2,
+                duration: 4 + Math.random() * 2,
             });
 
             animateButterfly(butterfly);
@@ -215,7 +242,7 @@ const { Content } = await post.render();
         });
 
         gsap.to(el, {
-            opacity: 0.1 + Math.random() * 0.1,
+            opacity: 0.3 + Math.random() * 0.3,
             duration: 2 + Math.random(),
             repeat: -1,
             yoyo: true,
@@ -239,34 +266,69 @@ const { Content } = await post.render();
         const btnLike = document.getElementById("btn-like");
         const btnDislike = document.getElementById("btn-dislike");
         const feedbackMsg = document.getElementById("feedback-msg");
+        const likeCountSpan = document.getElementById("like-count");
+        const dislikeCountSpan = document.getElementById("dislike-count");
 
-        const handleFeedback = (type: "like" | "dislike") => {
-            if (btnLike && btnDislike && feedbackMsg) {
-                // Restaura os botões
-                btnLike.classList.remove("bg-brand-primary", "text-white");
-                btnDislike.classList.remove(
+        // Valores zerados para todos os artigos
+        const baseLikes = 0;
+        const baseDislikes = 0;
+        const storageKey = `vote_${url}`;
+        let currentVote = localStorage.getItem(storageKey) as
+            | "like"
+            | "dislike"
+            | null;
+
+        const updateUI = () => {
+            if (!btnLike || !btnDislike || !likeCountSpan || !dislikeCountSpan)
+                return;
+
+            let displayLikes = baseLikes;
+            let displayDislikes = baseDislikes;
+
+            if (currentVote === "like") displayLikes++;
+            if (currentVote === "dislike") displayDislikes++;
+
+            likeCountSpan.textContent = displayLikes.toString();
+            dislikeCountSpan.textContent = displayDislikes.toString();
+
+            btnLike.classList.remove("bg-brand-primary", "text-white");
+            btnDislike.classList.remove(
+                "bg-red-500",
+                "text-white",
+                "border-red-500",
+            );
+
+            if (currentVote === "like") {
+                btnLike.classList.add("bg-brand-primary", "text-white");
+            } else if (currentVote === "dislike") {
+                btnDislike.classList.add(
                     "bg-red-500",
                     "text-white",
                     "border-red-500",
                 );
+            }
+        };
 
-                // Aplica a cor no botão selecionado
-                if (type === "like") {
-                    btnLike.classList.add("bg-brand-primary", "text-white");
-                } else {
-                    btnDislike.classList.add(
-                        "bg-red-500",
-                        "text-white",
-                        "border-red-500",
-                    );
-                }
+        const handleFeedback = (type: "like" | "dislike") => {
+            if (!feedbackMsg) return;
 
-                // Mostra a mensagem de agradecimento temporária
+            if (currentVote === type) {
+                // Tirar o voto
+                currentVote = null;
+                localStorage.removeItem(storageKey);
+            } else {
+                // Novo voto ou mudar o voto
+                currentVote = type;
+                localStorage.setItem(storageKey, type);
+
+                // Mostra a mensagem
                 feedbackMsg.classList.remove("opacity-0");
                 setTimeout(() => {
                     feedbackMsg.classList.add("opacity-0");
                 }, 3000);
             }
+
+            updateUI();
         };
 
         if (btnLike)
@@ -275,6 +337,8 @@ const { Content } = await post.render();
             btnDislike.addEventListener("click", () =>
                 handleFeedback("dislike"),
             );
+
+        updateUI();
 
         // Logica de Copiar Link
         const copyBtn = document.getElementById("share-copy");
