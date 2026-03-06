@@ -101,18 +101,16 @@ const { Content } = await post.render();
                         <button
                             id="btn-like"
                             aria-label="Gostei"
-                            class="px-4 h-12 rounded-full bg-brand-bg border border-brand-primary/20 flex items-center justify-center gap-2 text-brand-primary hover:bg-brand-primary hover:text-white transition-all shadow-sm"
+                            class="px-5 h-12 rounded-full bg-brand-bg border border-brand-primary/20 flex items-center justify-center text-brand-primary hover:bg-brand-primary hover:text-white transition-all shadow-sm"
                         >
                             <i class="fa-solid fa-thumbs-up"></i>
-                            <span id="like-count" class="font-bold">--</span>
                         </button>
                         <button
                             id="btn-dislike"
                             aria-label="Não gostei"
-                            class="px-4 h-12 rounded-full bg-brand-bg border border-brand-primary/20 flex items-center justify-center gap-2 text-brand-primary hover:bg-red-500 hover:text-white hover:border-red-500 transition-all shadow-sm"
+                            class="px-5 h-12 rounded-full bg-brand-bg border border-brand-primary/20 flex items-center justify-center text-brand-primary hover:bg-red-500 hover:text-white hover:border-red-500 transition-all shadow-sm"
                         >
                             <i class="fa-solid fa-thumbs-down"></i>
-                            <span id="dislike-count" class="font-bold">--</span>
                         </button>
                         <span
                             id="feedback-msg"
@@ -266,12 +264,7 @@ const { Content } = await post.render();
         const btnLike = document.getElementById("btn-like");
         const btnDislike = document.getElementById("btn-dislike");
         const feedbackMsg = document.getElementById("feedback-msg");
-        const likeCountSpan = document.getElementById("like-count");
-        const dislikeCountSpan = document.getElementById("dislike-count");
 
-        // Valores zerados para todos os artigos
-        const baseLikes = 0;
-        const baseDislikes = 0;
         const storageKey = `vote_${url}`;
         let currentVote = localStorage.getItem(storageKey) as
             | "like"
@@ -279,17 +272,7 @@ const { Content } = await post.render();
             | null;
 
         const updateUI = () => {
-            if (!btnLike || !btnDislike || !likeCountSpan || !dislikeCountSpan)
-                return;
-
-            let displayLikes = baseLikes;
-            let displayDislikes = baseDislikes;
-
-            if (currentVote === "like") displayLikes++;
-            if (currentVote === "dislike") displayDislikes++;
-
-            likeCountSpan.textContent = displayLikes.toString();
-            dislikeCountSpan.textContent = displayDislikes.toString();
+            if (!btnLike || !btnDislike) return;
 
             btnLike.classList.remove("bg-brand-primary", "text-white");
             btnDislike.classList.remove(
