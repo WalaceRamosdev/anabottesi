@@ -1,7 +1,7 @@
 ---
 title: "Exaustão Emocional e a Carga Mental Invisível: Por Que Nos Sentimos Tão Cansadas?"
 description: "Cansaço que o sono não cura? Entenda o burnout emocional feminino, o impacto da carga mental e como a psicanálise pode devolver sua vitalidade."
-publishDate: 2026-01-20
+publishDate: 2026-02-20
 image: "/images/blog/exaustao.svg"
 tags: ["exaustão", "saúde mental", "mulher", "burnout"]
 ---
