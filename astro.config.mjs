@@ -8,10 +8,10 @@ import vercel from '@astrojs/vercel';
 
 // Documentação: https://astro.build/config
 export default defineConfig({
-  output: 'hybrid',
   adapter: vercel(),
   
   vite: {
+
     plugins: [tailwindcss()]
   },
 
