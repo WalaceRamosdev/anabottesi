@@ -1,25 +1,28 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 
-// Gera os caminhos estáticos para cada post
-export async function getStaticPaths() {
-    const posts = await getCollection("posts");
-    const now = new Date();
-    // Apenas gera a página se a data de publicação for <= hoje/agora
-    const publishedPosts = posts.filter((post) => post.data.publishDate <= now);
+export const prerender = false;
 
-    return publishedPosts.map((post) => ({
-        params: { slug: post.slug },
-        props: { post },
-    }));
+const { slug } = Astro.params;
+if (!slug) return Astro.redirect("/404");
+
+const post = await getEntry("posts", slug);
+
+if (!post) {
+    return Astro.redirect("/404");
 }
 
-const { post } = Astro.props;
+const now = new Date();
+if (post.data.publishDate > now) {
+    return Astro.redirect("/404");
+}
+
 const { Content } = await post.render();
 ---
+
 
 <Layout
     title={`${post.data.title} | Ana Bottesi`}
