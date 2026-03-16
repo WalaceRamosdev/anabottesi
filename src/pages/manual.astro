@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import logo from "../assets/profissional/logo.svg";
-import abstractBg from "../assets/profissional/banner02.svg";
+import logo from "../assets/profissional/logo.webp";
+import abstractBg from "../assets/profissional/banner02.webp";
 ---
 
 <Layout
@@ -29,8 +29,8 @@ import abstractBg from "../assets/profissional/banner02.svg";
             >
                 <div class="flex items-center gap-4 mb-6">
                     <div class="w-16 h-16">
-                        <Image
-                            src={logo}
+                        <img
+                            src={logo.src}
                             alt="Logo Ana Bottesi"
                             class="w-full h-full object-contain"
                         />

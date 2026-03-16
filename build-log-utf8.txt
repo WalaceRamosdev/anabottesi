@@ -1,0 +1,68 @@
+﻿
+> peaceful-proxima@0.0.1 build
+> astro build
+
+[2m10:14:06[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m10:14:07[22m [34m[content][39m Syncing content
+[2m10:14:07[22m [34m[content][39m Astro config changed
+[2m10:14:07[22m [34m[content][39m Astro version changed
+[2m10:14:07[22m [34m[content][39m Clearing content store
+[2m10:14:07[22m [34m[content][39m Synced content
+[2m10:14:07[22m [34m[types][39m Generated [2m1.87s[22m
+[2m10:14:07[22m [34m[build][39m output: [34m"static"[39m
+[2m10:14:07[22m [34m[build][39m mode: [34m"server"[39m
+[2m10:14:07[22m [34m[build][39m directory: [34mC:\Users\HP\Documents\projetos alpha code\Ana Bottesi - Psicanalista\dist\[39m
+[2m10:14:07[22m [34m[build][39m adapter: [32m@astrojs/vercel[39m
+[2m10:14:07[22m [34m[build][39m Collecting build info...
+[2m10:14:07[22m [34m[build][39m [32mÔ£ô Completed in 2.00s.[39m
+[2m10:14:07[22m [34m[build][39m Building server entrypoints...
+[2m10:14:13[22m [34m[vite][39m [32mÔ£ô built in 5.80s[39m
+[2m10:14:13[22m [34m[build][39m [32mÔ£ô Completed in 5.92s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m10:14:14[22m [34m[vite][39m transforming...
+[2m10:14:15[22m [34m[vite][39m [32mÔ£ô[39m 16 modules transformed.
+[2m10:14:15[22m [34m[vite][39m rendering chunks...
+[2m10:14:15[22m [34m[vite][39m computing gzip size...
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/About.astro_astro_type_script_index_0_lang._nZKTrzs.js         [39m[1m[2m 0.29 kB[22m[1m[22m[2m Ôöé gzip:  0.24 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/Layout.astro_astro_type_script_index_0_lang.BZ6rp6C3.js        [39m[1m[2m 0.33 kB[22m[1m[22m[2m Ôöé gzip:  0.26 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/Banner.astro_astro_type_script_index_0_lang.C-r1C1Db.js        [39m[1m[2m 1.02 kB[22m[1m[22m[2m Ôöé gzip:  0.57 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/Hero.astro_astro_type_script_index_0_lang.DfC0ARwo.js          [39m[1m[2m 1.02 kB[22m[1m[22m[2m Ôöé gzip:  0.55 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/links.astro_astro_type_script_index_0_lang.DqNU_4lS.js         [39m[1m[2m 1.29 kB[22m[1m[22m[2m Ôöé gzip:  0.65 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/Header.astro_astro_type_script_index_0_lang.Db8Pxxwy.js        [39m[1m[2m 1.45 kB[22m[1m[22m[2m Ôöé gzip:  0.68 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/manual.astro_astro_type_script_index_0_lang.R41soonN.js        [39m[1m[2m 1.47 kB[22m[1m[22m[2m Ôöé gzip:  0.72 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/Contact.astro_astro_type_script_index_0_lang.CjyId0TD.js       [39m[1m[2m 1.79 kB[22m[1m[22m[2m Ôöé gzip:  0.95 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/Specialties.astro_astro_type_script_index_0_lang.CQ4-OC9A.js   [39m[1m[2m 1.81 kB[22m[1m[22m[2m Ôöé gzip:  0.93 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/_slug_.astro_astro_type_script_index_0_lang.DtzQ9MXI.js        [39m[1m[2m 2.42 kB[22m[1m[22m[2m Ôöé gzip:  1.02 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/Testimonials.astro_astro_type_script_index_0_lang.D6gY_oT-.js  [39m[1m[2m 3.13 kB[22m[1m[22m[2m Ôöé gzip:  1.23 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/ScrollTrigger.Cv03IO65.js                                      [39m[1m[2m43.63 kB[22m[1m[22m[2m Ôöé gzip: 18.15 kB[22m
+[2m10:14:15[22m [34m[vite][39m [2mdist/client/[22m[36m_astro/index.CB87Sc6I.js                                              [39m[1m[2m70.32 kB[22m[1m[22m[2m Ôöé gzip: 27.76 kB[22m
+[2m10:14:15[22m [34m[vite][39m [32mÔ£ô built in 2.00s[39m
+
+[42m[30m prerendering static routes [39m[49m
+[2m10:14:16[22m [32mÔûÂ[39m src/pages/links.astro
+[2m10:14:16[22m   [34mÔööÔöÇ[39m [2m/links/index.html[22m [2m(+29ms)[22m 
+[2m10:14:16[22m [32mÔûÂ[39m src/pages/manual.astro
+[2m10:14:16[22m   [34mÔööÔöÇ[39m [2m/manual/index.html[22m [2m(+10ms)[22m 
+[2m10:14:16[22m [32mÔûÂ[39m src/pages/psicanalise-para-mulheres-sp.astro
+[2m10:14:16[22m   [34mÔööÔöÇ[39m [2m/psicanalise-para-mulheres-sp/index.html[22m [2m(+6ms)[22m 
+[2m10:14:16[22m [32mÔûÂ[39m src/pages/terapia-online-sao-paulo.astro
+[2m10:14:16[22m   [34mÔööÔöÇ[39m [2m/terapia-online-sao-paulo/index.html[22m [2m(+6ms)[22m 
+[2m10:14:16[22m [32mÔûÂ[39m src/pages/terapia-para-ansiedade-sp.astro
+[2m10:14:16[22m   [34mÔööÔöÇ[39m [2m/terapia-para-ansiedade-sp/index.html[22m [2m(+99ms)[22m 
+[2m10:14:16[22m [32mÔûÂ[39m src/pages/terapia-para-autoestima-sp.astro
+[2m10:14:16[22m   [34mÔööÔöÇ[39m [2m/terapia-para-autoestima-sp/index.html[22m [2m(+7ms)[22m 
+[2m10:14:16[22m [32mÔ£ô Completed in 866ms.
+[39m
+[42m[30m generating optimized images [39m[49m
+[2m10:14:16[22m   [32mÔûÂ[39m /_astro/logo.CjPsqnN2_Z1iSd9W.svg [2m(reused cache entry)[22m [2m(+28ms)[22m [2m(1/2)[22m
+[2m10:14:16[22m   [32mÔûÂ[39m /_astro/anaBottesi1.OwkCz4oC_1rKdXg.svg [2m(reused cache entry)[22m [2m(+29ms)[22m [2m(2/2)[22m
+[2m10:14:16[22m [32mÔ£ô Completed in 30ms.
+[39m
+[2m10:14:16[22m [34m[build][39m Rearranging server assets...
+[2m10:14:16[22m [34m[@astrojs/vercel][39m Bundling function ..\..\..\..\dist\server\entry.mjs
+[2m10:14:19[22m [34m[build][39m Waiting for integration [1m"@astrojs/vercel"[22m, hook [1m"astro:build:done"[22m...
+[2m10:14:21[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist\client`
+[2m10:14:21[22m [34m[@astrojs/vercel][39m Copying static files to .vercel/output/static
+[2m10:14:21[22m [34m[build][39m Server built in [1m16.29s[22m
+[2m10:14:21[22m [34m[build][39m [1mComplete![22m
