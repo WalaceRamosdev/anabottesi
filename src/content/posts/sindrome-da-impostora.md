@@ -13,7 +13,7 @@ Esse é o relato mais do que clássico de quem vive sob os ditames da **Síndrom
 ## O Medo Constante de Ser Desmascarada
 
 A síndrome da impostora afeta milhares de mulheres, sabotando conquistas e gerando exaustão emocional.
-Descubra as raízes psíquicas desse fenômeno e como a terapia pode ajudar a desconstruí-lo
+Descubra as raízes psíquicas desse fenômeno e como a terapia pode ajudar a desconstruí-lo.
 
 Quem sofre com isso costuma atribuir seus êxitos a fatores externos: sorte, ajuda valiosa dos outros, timing perfeito, ou o simples fato de terem sido benevolentes com você. O próprio mérito e a competência técnica são descartados da equação.
 
