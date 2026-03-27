@@ -10,7 +10,7 @@ tags: ["relacionamentos", "autoestima", "limites", "autocuidado", "psicanálise"
 
 É crucial evidenciar: um relacionamento não necessita manifestar violência física para que seja abusivo e destrutivo. Muito pelo contrário — as correntes e as toxidades são introduzidas pelas vias do micro-abuso invisível: o ciúme que disfarça sob o nome de cuidado, o trato silencioso para gerar ansiedade ou mesmo a desqualificação das suas crenças de forma supostamente bem humorada. O saldo desta matemática cruel é sempre pago na desidratação grave de nossa própria autoimagem e vivacidade.
 
-## A Atração do Pelo Conhecido Roteiro do Inconsciente
+## A Atração pelo Conhecido Roteiro do Inconsciente
 
 Ao contrário do que supõe o senso comum e os conselhos genéricos, as pessoas não se engajam e se deixam manter fixas em uniões tóxicas por falta de amor, inteligência ou por serem masoquistas na percepção leiga das palavras. 
 
