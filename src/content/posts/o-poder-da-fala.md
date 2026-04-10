@@ -1,5 +1,5 @@
 ---
-title: "O Poder Transformador da Fala na Clínica: Por Que 'Apenas Dizer' Desata Nós Profundos?"
+title: "O poder transformador da fala na clínica: por que 'apenas dizer' desata nós profundos?"
 description: "A curiosidade e resistência em aderir na escuta é rotineira para o início em tratamento,  descubra os pilares onde as associações livre, método analítico crucial — promovem e destravam a saúde na psique adoecida."
 publishDate: 2026-05-16T09:30:00-03:00
 image: "/images/blog/o-poder-da-fala.svg"

@@ -1,5 +1,5 @@
 ---
-title: "A Importância do Autoconhecimento na Jornada Feminina: Um Guia para a Transformação Real"
+title: "A importância do autoconhecimento na jornada feminina: um guia para a transformação real"
 description: "Descubra como o autoconhecimento profundo pode libertar você de padrões limitantes e transformar sua vida. Um olhar psicanalítico sobre a jornada feminina."
 publishDate: 2026-02-19
 image: "/images/blog/autoconhecimento.svg"

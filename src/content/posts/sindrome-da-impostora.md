@@ -1,5 +1,5 @@
 ---
-title: "A Síndrome da Impostora: Por Que Duvidamos Tanto da Nossa Capacidade?"
+title: "A síndrome da impostora: por que duvidamos tanto da nossa capacidade?"
 description: "A síndrome da impostora afeta milhares de mulheres, sabotando conquistas e gerando exaustão emocional. Descubra as raízes psíquicas desse fenômeno e como a terapia pode ajudar a desconstruí-lo."
 publishDate: 2026-03-14T09:30:00-03:00
 image: "/images/blog/sindrome-da-impostora.svg"

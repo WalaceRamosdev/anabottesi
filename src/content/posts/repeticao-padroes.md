@@ -1,5 +1,5 @@
 ---
-title: "Repetição de Padrões Familiares: Por Que Revivemos as Dores das Nossas Origens?"
+title: "Repetição de padrões familiares: por que revivemos as dores das nossas origens?"
 description: "Identifique na clínica psicanalítica e entenda profundamente o porquê de nossos inconscientes procurarem reencenar roteiros repletos de sofrimento através das transmissões transgeracionais entre membros."
 publishDate: 2026-04-11T09:30:00-03:00
 image: "/images/blog/repeticao-padroes.svg"

@@ -1,5 +1,5 @@
 ---
-title: "Luto Não é Só Diante a Morte: O Trabalho Emocional Contínuo das Múltiplas Despedidas"
+title: "Luto não é só diante a morte: o trabalho emocional contínuo das múltiplas despedidas"
 description: "A compreensão psicanalítica para elaborarmos as intensas perdas emocionais nas rupturas drásticas não fúnebres de nossa jornada e dos inúmeros pequenos fins que retiram as rotas e sentidos de nós."
 publishDate: 2026-05-09T09:30:00-03:00
 image: "/images/blog/luto-e-despedidas.svg"

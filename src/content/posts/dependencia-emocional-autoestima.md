@@ -1,5 +1,5 @@
 ---
-title: "Dependência Emocional: Como Quebrar o Ciclo e Resgatar sua Autoestima"
+title: "Dependência emocional: como quebrar o ciclo e resgatar sua autoestima"
 description: "Entenda por que buscamos validação externa, como identificar a dependência emocional e os passos práticos para reconstruir sua força interna."
 publishDate: 2026-02-20
 image: "/images/blog/dependencia.svg"

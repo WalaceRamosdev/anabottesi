@@ -1,5 +1,5 @@
 ---
-title: "Relacionamentos Tóxicos e o Preço da Autoestima: Como Quebrar o Ciclo"
+title: "Relacionamentos tóxicos e o preço da autoestima: como quebrar o ciclo"
 description: "Identifique os dinâmicas silenciosas e os padrões de afeto que aprisionam você em relacionamentos abusivos e as ferramentas terapêuticas para o fortalecimento."
 publishDate: 2026-03-21T09:30:00-03:00
 image: "/images/blog/relacionamentos-toxicos.svg"

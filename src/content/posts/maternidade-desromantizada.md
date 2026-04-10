@@ -1,5 +1,5 @@
 ---
-title: "Maternidade: Desromantizando o Cuidar Através da Psicanálise"
+title: "Maternidade: desromantizando o cuidar através da psicanálise"
 description: "Ser mãe não deve apagar as outras facetas de você. Analise com este olhar o esgotamento maternal, a culpa contemporânea e como ressignificar pressões sociais num lugar terapêutico validativo."
 publishDate: 2026-03-28T09:30:00-03:00
 image: "/images/blog/maternidade-desromantizada.svg"

@@ -1,5 +1,5 @@
 ---
-title: "Burnout Feminino: Quando o Corpo Grita por Pausa e a Mente se Recusa a Parar"
+title: "Burnout feminino: quando o corpo grita por pausa e a mente se recusa a parar"
 description: "A exaustão extrema que cala a produtividade e a urgência de parar antes que o limite do corpo chegue. Como reestruturar expectativas irreais através da escuta clínica."
 publishDate: 2026-04-18T09:30:00-03:00
 image: "/images/blog/burnout-feminino.svg"

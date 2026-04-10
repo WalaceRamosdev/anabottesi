@@ -1,5 +1,5 @@
 ---
-title: "O Silêncio como Arma: O Jogo do Gelo e a Agressão Passiva nas Relações"
+title: "O silêncio como arma: o jogo do gelo e a agressão passiva nas relações"
 description: "Por que a cruel recusa de comunicação nas discussões afeta drasticamente sua estabilidade emocional? Desconstrua as faces manipuladoras do tratamento do silêncio no setting analítico."
 publishDate: 2026-04-25T09:30:00-03:00
 image: "/images/blog/silencio-como-agressao.svg"

@@ -1,5 +1,5 @@
 ---
-title: "O Medo Fóbico de Envelhecer e a Opressão da Estética Feminina"
+title: "O medo fóbico de envelhecer e a opressão da estética feminina"
 description: "Discussões sob o pânico contemporâneo das mudanças corporais da mulher sob uma rígida e cruel ótica e escuta psicanalítica para construir os espaços libertadores das futilidades."
 publishDate: 2026-05-02T09:30:00-03:00
 image: "/images/blog/medo-de-envelhecer.svg"

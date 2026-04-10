@@ -1,5 +1,5 @@
 ---
-title: "Exaustão Emocional e a Carga Mental Invisível: Por Que Nos Sentimos Tão Cansadas?"
+title: "Exaustão emocional e a carga mental invisível: por que nos sentimos tão cansadas?"
 description: "Cansaço que o sono não cura? Entenda o burnout emocional feminino, o impacto da carga mental e como a psicanálise pode devolver sua vitalidade."
 publishDate: 2026-02-20
 image: "/images/blog/exaustao.svg"

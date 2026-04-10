@@ -1,5 +1,5 @@
 ---
-title: "A Importância do Tempo a Sós: Como Praticar a Solitude Sem os Pânicos do Vazio"
+title: "A importância do tempo a sós: como praticar a solitude sem os pânicos do vazio"
 description: "Aprenda a desvincular a angústia desesperadora nos primeiros contatos com seu próprio silêncio formador para poder enxergar nas profundezas a reconexão libertadora às suas vontades vitais em si e autêntica."
 publishDate: 2026-05-23T09:30:00-03:00
 image: "/images/blog/importancia-solitude.svg"
