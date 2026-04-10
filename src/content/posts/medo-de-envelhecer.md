@@ -3,7 +3,7 @@ title: "O medo fóbico de envelhecer e a opressão da estética feminina"
 description: "Discussões sob o pânico contemporâneo das mudanças corporais da mulher sob uma rígida e cruel ótica e escuta psicanalítica para construir os espaços libertadores das futilidades."
 publishDate: 2026-05-02T09:30:00-03:00
 image: "/images/blog/medo-de-envelhecer.svg"
-tags: ["envelhecimento", "autoestima", "mulheres", "beleza", "psicologia", "psicanálise"]
+tags: ["envelhecer", "autoestima", "mulheres", "beleza", "psicologia", "psicanálise"]
 ---
 
 "Outro dia dei me com um horror ao espelho. As linhas e fissuras ao lado do sorriso mudaram minha face, parece que num piscar me roubaram a feição que todos elogiavam ontem; me sinto defasada para sair à calçada e ser vista." 

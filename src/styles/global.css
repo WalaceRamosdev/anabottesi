@@ -53,3 +53,44 @@
 .btn-secondary {
     @apply border-2 border-brand-primary text-brand-primary px-8 py-3 rounded-full hover:bg-brand-primary hover:text-white transition-all duration-300 font-medium text-center;
 }
+
+/* Estética de Livros Antigos para Títulos do Blog */
+.title-drop-cap::first-letter {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.4em;
+    margin-right: 0.05em;
+    line-height: 1;
+    color: var(--color-brand-primary);
+    text-transform: uppercase;
+    /* Efeito de Iluminura/Relevo */
+    filter: drop-shadow(1px 1px 0px white) drop-shadow(3px 3px 0px rgba(163, 177, 138, 0.3));
+    position: relative;
+    z-index: 1;
+}
+
+.title-highlight {
+    font-family: var(--font-handwriting);
+    color: #4A3B2B; /* Marrom profundo para alto contraste e leitura fácil */
+    font-size: 1.15em;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0 0.1em;
+    position: relative;
+    z-index: 1;
+    transform: rotate(-0.5deg); /* Leve inclinação para parecer manuscrito */
+}
+
+.title-highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 35%;
+    background-color: var(--color-brand-secondary);
+    opacity: 0.25;
+    z-index: -1;
+    border-radius: 2px;
+}
+

@@ -21,6 +21,11 @@ if (post.data.publishDate > now) {
 }
 
 const { Content } = await post.render();
+
+const highlightedTitle = post.data.title.replace(
+    new RegExp(`(${post.data.tags?.[0]})`, "gi"),
+    '<span class="title-highlight">$1</span>',
+);
 ---
 
 
@@ -43,9 +48,10 @@ const { Content } = await post.render();
                 >
                     {post.data.publishDate.toLocaleDateString("pt-BR")}
                 </div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-                    {post.data.title}
-                </h1>
+                <h1
+                    class="text-4xl md:text-6xl font-bold mb-8 leading-tight title-drop-cap"
+                    set:html={highlightedTitle}
+                />
                 <p
                     class="text-xl text-brand-text/60 italic max-w-2xl mx-auto leading-relaxed"
                 >

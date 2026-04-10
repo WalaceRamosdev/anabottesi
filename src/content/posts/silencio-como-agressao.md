@@ -3,7 +3,7 @@ title: "O silêncio como arma: o jogo do gelo e a agressão passiva nas relaçõ
 description: "Por que a cruel recusa de comunicação nas discussões afeta drasticamente sua estabilidade emocional? Desconstrua as faces manipuladoras do tratamento do silêncio no setting analítico."
 publishDate: 2026-04-25T09:30:00-03:00
 image: "/images/blog/silencio-como-agressao.svg"
-tags: ["agressão passiva", "tratamento de silêncio", "abuso emocional", "psicanálise"]
+tags: ["silêncio", "tratamento de silêncio", "abuso emocional", "psicanálise"]
 ---
 
 "Se a nossa briga tivesse rendido xingamentos talvez doesse menos. Mas ele simplesmente não falou comigo a semana inteira. Não me olhou ao passar no corredor. Não respondeu as minhas perguntas triviais da casa. Fico consumida tentando imaginar onde eu errei pra merecer tamanho desprezo".
