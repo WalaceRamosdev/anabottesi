@@ -1,6 +1,6 @@
 ---
 title: "O peso do perfeccionismo na saúde mental"
-description: "Aprenda sobre como o perfeccionismo disfarçado como qualidade se transforma em sofrimento incalculável. Conheça sua intersecção psicológica e formas de suavizar a constante punição da auto-cobrança."
+description: "Entenda como o perfeccionismo, muitas vezes visto como qualidade, pode se transformar em sofrimento. Conheça seus impactos emocionais e caminhos possíveis para aliviar a autoexigência e viver com mais leveza."
 publishDate: 2026-04-04T09:30:00-03:00
 image: "/images/blog/perfeccionismo-saude-mental.svg"
 tags: ["perfeccionismo", "auto-cobrança", "esgotamento", "ansiedade", "saúde mental"]
