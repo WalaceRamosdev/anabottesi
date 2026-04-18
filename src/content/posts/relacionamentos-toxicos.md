@@ -6,28 +6,45 @@ image: "/images/blog/relacionamentos-toxicos.svg"
 tags: ["relacionamentos", "autoestima", "limites", "autocuidado", "psicanálise"]
 ---
 
-"Por que eu sempre acabo atraindo esse exato tipo de pessoa?" Muitas mulheres já se pegaram entoando essa mesma frase desgastante, repetindo narrativas parecidas em seus relacionamentos afetivos que as conduzem novamente para a oscilação ininterrupta entre a esperança temporária de melhora e o esgotamento total.
+*"Por que eu sempre acabo atraindo o mesmo tipo de pessoa?"* 
 
-É crucial evidenciar: um relacionamento não necessita manifestar violência física para que seja abusivo e destrutivo. Muito pelo contrário — as correntes e as toxidades são introduzidas pelas vias do micro-abuso invisível: o ciúme que disfarça sob o nome de cuidado, o trato silencioso para gerar ansiedade ou mesmo a desqualificação das suas crenças de forma supostamente bem humorada. O saldo desta matemática cruel é sempre pago na desidratação grave de nossa própria autoimagem e vivacidade.
+Muitas mulheres se fazem essa pergunta depois de passarem por várias relações que parecem seguir o mesmo roteiro: começa com muita esperança e termina em esgotamento total.
 
-## A Atração pelo Conhecido Roteiro do Inconsciente
+É importante saber que um relacionamento não precisa ter agressão física para ser tóxico. Muitas vezes, o estrago acontece de forma silenciosa, através de atitudes que vão minando a sua confiança e a sua alegria de viver.
 
-Ao contrário do que supõe o senso comum e os conselhos genéricos, as pessoas não se engajam e se deixam manter fixas em uniões tóxicas por falta de amor, inteligência ou por serem masoquistas na percepção leiga das palavras. 
+---
 
-Pela ótica da psicanálise freudiana e lacaniana, uma dinâmica relacional assim encontra respaldo porque o nosso próprio inconsciente detém inclinação voraz a buscar e se reconectar com afetos que pareçam "familiares". Muitas destas pacientes encontram, na relação destrutiva, as mesmas características da instabilidade das primeiras figuras vivenciadas no seio primário familiar. Repetimos a mesmíssima coreografia trágica para obter finalmente os afetos impossíveis do nosso próprio preceito passado.
+## Os sinais invisíveis do abuso
 
-É a famosa compulsão à repetição: nós reencenamos vivências de abandono, humilhação e frieza com um profundo objetivo velado na tentativa angustiada de poder, desta vez e enfim, **ser aquela quem irá transformar o tirano — controlando o incontrolável**.
+O "veneno" costuma vir disfarçado de coisas que parecem normais:
+- **O ciúme que chamam de "cuidado":** Quando o outro tenta controlar com quem você fala ou onde você vai, dizendo que é "porque te ama muito".
+- **O desprezo em forma de "brincadeira":** Piadinhas que te fazem sentir boba, incapaz ou diminuída na frente dos outros.
+- **O "gelo" emocional:** Ficar sem falar com você para te punir por algo, gerando uma ansiedade enorme.
 
-### A Progressiva Submissão Cotidiana
-Outro fator crucial nestas uniões afogadas em abuso passional é a tolerância construída. As cercas daquilo que nós julgávamos aceitáveis são derrubadas muito devagar:
-*  **Culpabilização Inversa**: Os problemas de humor e agressão da ponte amorosa sempre se transladam em responsabilidade total aos "nossos modos desajeitados em amar".
-*  **Desconexões de Rede**: Pede-se sutilmente o distanciamento de amigos pontuais, depois amparo da família ou do trabalho de maneira escalonada. 
-*  **A Recompensa Rara e Instável**: Relações baseadas em frieza seguida por chuvas repentinas, esporádicas e ruidosas de romantismo mantêm a fisiologia das mulheres inteiramente escrava do hormônio dopamina de forma que qualquer abandono as levaria à profunda abstinências biológicas.
+O resultado é que você se sente cada vez menor, mais insegura e dependente da aprovação do outro.
 
-## O Fortalecimento que Antecede a Retirada
+---
 
-Nenhum tratamento pode prescrever cortes imperiosos por decreto. Ninguém pode forçar ou ordenar ao abusado o seu rompimento e exigir de si, de um pulo a outro, a imediata salvação do vínculo violento. Romper exige tempo, suporte e reconstrução minuciosa daquilo de mais caro há: o amor ao seu reflexo íntimo — e o saber colocar limites de dignidade frente ao mundo. E esse, com sorte e árduo acompanhamento psicanalítico, consiste em um caminho paulatino.
+## Por que é tão difícil sair?
 
-Para retirar as presas dessas teias mortíferas do nosso aparelho orgânico, precisaremos investigar as causas do vazio, suportá-los e só então, parar definitivamente a entrega ilimitada. Quando assumimos onde estão as próprias bordas, construímos a couraça de limites protetivos. Retira-se a oferta irrestrita a partir de uma construção clínica amparada por acolhimento e escuta qualificada — sem julgamentos — gerando amplo campo e morada e a recuperação em direção a laços calcados em realidades plenas e repletas do tão requisitado desejo mutuo. 
+Ao contrário do que muita gente pensa, não é falta de inteligência. A psicanálise mostra que a gente tem uma tendência a buscar o que é "familiar". Se a gente viveu relações instáveis lá atrás, nossa mente pode buscar esse mesmo "ritmo" na vida adulta, tentando, sem saber, consertar o passado.
 
-*Sentir dor crônica por amor não deve ser confundido como prova de pureza. Restabeleça o olhar com você num ambiente sigiloso. É a verdadeira escolha de partilha afetiva.*
+É a esperança de que, dessa vez, você vai conseguir "mudar" o outro ou fazê-lo te amar do jeito que você precisa. Mas essa é uma armadilha que só gera mais dor.
+
+---
+
+## 🚩 Como quebrar esse ciclo
+
+Sair de uma relação tóxica exige tempo, apoio e, principalmente, recuperar o amor por você mesma. Não é algo que se faz do dia para a noite.
+
+A terapia ajuda você a:
+1.  **Enxergar a realidade:** Parar de dar desculpas para o comportamento do outro.
+2.  **Entender os seus limites:** Aprender a dizer "até aqui eu aceito, daqui para frente não".
+3.  **Descobrir por que você aceitou tão pouco:** Investigar as causas desse vazio para não precisar mais preenchê-lo com migalhas.
+
+---
+
+**Sentir dor por amor não é prova de que o sentimento é verdadeiro.** O amor deve ser um lugar de paz, não um campo de batalha. 
+
+[Você sente que está vivendo uma relação que te faz mal?](/contato) Vamos conversar em um ambiente seguro e sem julgamentos. Você merece um amor que te impulsione, não um que te sufoque.
+

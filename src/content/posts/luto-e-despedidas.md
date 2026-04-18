@@ -6,15 +6,40 @@ image: "/images/blog/luto-e-despedidas.svg"
 tags: ["luto", "perdas", "términos", "cura emocional", "apego", "fases"]
 ---
 
-"A pior parte de ter perdido aquela minha ligação não foi simplesmente não possuir mais aquela presença familiar que partilhávamos todo santo fim da janta nos feriados ensolarados. Foi ver a impossibilidade absurda de como minha própria essência acordou repentinamente esvaziada por isso tudo; mas sem que me dessem o aval sequer de que eu estava num funeral chorando. Eu preciso engolir na goela a mágoa e de ter que simplesmente prosseguir minhas lidas num escritório de bom tom no dia após como uma perda mundana fosse".
+Quando ouvimos a palavra **"Luto"**, logo pensamos em morte. Mas, na verdade, vivemos pequenos e grandes lutos o tempo todo.
 
-Quando falamos de forma restrita e imediata a palavra *"Luto"*; paira por cima nas convicções culturais a visão restrita do choroso e solene pêsames, da terra caída nas valas de nossos amados irremediáveis defuntos, o preto caindo pelas indumentárias no velório! Contudo a verdade do processo contínuo no espectro inconscientes humanos para nós analistas — revela abismos onde luto comumente e esmagadoramente avassaladoras afetam silenciosamente vidas muitas vezes não ostentando um caixão sequer para justificar o lamento na choradeira de nossas horas aflições diárias do rompimento da matéria subjetiva das pessoas que habitavam os afetos e espaços de sustentabilidade no cerne da convivência do sujeito. 
+Pode ser o fim de um relacionamento, uma amizade de anos que esfriou ou até a perda de um emprego onde você se sentia em casa. São situações onde uma parte da nossa vida "morre" e a gente se sente perdida, sem saber quem somos sem aquilo.
 
-## As Rupturas Não Validadas Que Levam ao Nosso Exílio Interior 
-Passar na ruptura perante a amizade mais duradoura das nossas juventudes, da convivências abruptas ao desamparo perante num rompimento conjugal, o choque por um término numa demissão num ambiente onde nos províamos todo esteio nos contornos vitais dos propósitos no espelhamento à pessoa laboriosa aos moldes do mérito corporativo daquele ambiente da rotina onde pisávamos! Estes grandes abalos representam traumas muitas da mesma carga psíquica de desorganização perante o ego; causadores das rupturas das estabilizações as fundações dos próprios referencias ao redor a quem a mulher era: o seu chão da segurança desabou; se retirou um suporte central que gerava "eu".
+---
 
-Nós caímos inevitavelmente com perdas afetivas abruptas deste calibre nos processos das clássicas fases atreladas em todas dores que os manuais contam  em negação do processo da irrealidades trágicas dolorosas, sentimentos de profunda irritações à revolta descabida de nosso Deus à perca dos injustos  ou os mergulhões vertiginoso no depressivo não aceitamento perante um vácuo no amanhã sem os pedaços daquele tempo a se reaver. Causa muita comoções extras pela incompreensão severa nos amigos bem entencionados dos lugares comuns da contemporanidade para empurrar que as faltas se arrumem "preenchendo-se vazios rapidamente ao aglomero em coisas novas e seguir em frente" — sem validações da espera no processar luto íntimo não atado em laudos e papéis funerários mas nas carne vivas imensurável da nossa histórias extirpadas! 
+## O luto que ninguém vê
 
-### Elaborar Como Remédio Das Passagens Sobre as Faltas Da Vida
-Na travessia no analítico nas confissões não estamos nas fáceis tentativas fugazes em se arranjarem apaziguamento passageiros na pressa para "ser melhor e superar depressa" numa alegria maníaca toxica num tempo inorgânicos nas curas do relógio do desespero perante os furos causados em nosso tecido social-íntimo.
-Permiti-se ser e acolher pela escuta das passagens angustiantes à se confessar atabalhoada nas lágrimas contínuas onde validamos ao defrontarmos no precipício imenso por termos doado nosso pilar por nós mesmos. Luteamos para que a travessia atenta possa criar nos processos de sofrimentos da fala — o reconhecimento total; onde, vencer o baque agudo a perda vivida das dores não consiste comutar do zero que a saudade ou a chaga vai cessa sua fálta nas ausência irreparável! Vencer se processará ativamente se a reconstruções permitir conviver, saber no luto os nossos passos das construções novas sobre nossas ausências integrando em si que foi perdido; tornando o espaço dos que se retiraram com sua doída perda de sentido à se construir uma memória viável vivificante de quem restou na retomada da autoria na narrativa de um novo trajeto no seu perene existir maduro!
+Muitas vezes, a gente sofre por uma perda que não envolve um funeral, e as pessoas ao redor não entendem. Elas dizem frases como: *"Ah, esquece isso, parte para outra!"* ou *"Ocupe sua mente com coisas novas"*.
+
+Mas o coração não funciona no ritmo do relógio. Esses rompimentos mexem com o nosso "chão". Quando perdemos alguém ou algo que era central na nossa rotina, é como se tirassem um pedaço de nós. E tudo bem chorar, sentir raiva ou ficar sem chão. Isso faz parte do processo.
+
+---
+
+## 🚩 As fases da dor
+
+Embora cada pessoa sofra de um jeito, é comum passarmos por alguns estágios:
+- **Negação:** Quando parece que aquilo não está acontecendo de verdade.
+- **Raiva:** Uma vontade de brigar com o mundo ou com o destino por aquela injustiça.
+- **Tristeza profunda:** Onde o vazio aparece com força e o amanhã parece cinza.
+
+---
+
+## Como a terapia ajuda a reconstruir o caminho
+
+Na terapia, a gente não vai tentar te fazer "superar rápido" para você voltar a ser produtiva logo. O objetivo é dar espaço para a sua dor ser ouvida e validada.
+
+Lá, você pode:
+- Chorar sem ser julgada.
+- Entender o que aquela pessoa ou situação representava na sua vida.
+- Aprender a conviver com a ausência, transformando a dor em uma memória que você consegue carregar com mais leveza.
+
+---
+
+**Vencer um luto não é esquecer o que passou.** É conseguir construir uma nova história, honrando o que você viveu, mas voltando a ser a protagonista da sua própria vida.
+
+[Se você está passando por uma despedida difícil, vamos conversar?](/contato) Você não precisa atravessar esse deserto sozinha.

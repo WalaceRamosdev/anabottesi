@@ -6,17 +6,35 @@ image: "/images/blog/importancia-solitude.svg"
 tags: ["solitude", "solidão", "autocuidado", "tempo a sós", "saúde mental"]
 ---
 
-Se te solicitassem subitamente na agenda da próxima tarde para passar precisamente 4 rotineiras horas puras sozinhas dentro numa praça sem acessos as infinitas redes conectivas as conversas ininterruptas no digital, na companhia nua simplesmente  frente a frente apenas nos seus ecos  mentais de seus afazeres em meditação. O primeiro pensamento virou calafrio ou pânico avassalador diante os bocejos em entediamentos? A maioria relata esmagadora asco a sensação descritiva disto!
+Imagine que você tem a tarde livre e decide passar 4 horas em uma praça, sem celular, sem redes sociais e sem ninguém para conversar. Só você e seus pensamentos.
 
-Evitar na íntegra a perseguição na hora nas moradas com o contato assombroso diante da própria psique formadora tem de ser um principal refúgio das mais extremadas saídas perante a exaustão emocional ou pânicos nos sujeitos atuais com sintomas das ansiedades. O encharcamento incessível do dia produtivo com dezenove funções, festivas ou trabalho insalubre serve brilhantemente de entorpecimento e afasta do desvencilhar vital de ouvir na ausência de ruídos da aprovação externa que a mulher não quer defrontar e por tal varre seus monólogos nos escombros na tentativa sem exito; pois em nada aniquila ao calar de dores ou temores latente das falhas.
+Qual seria a sua reação? Um calafrio? Um pânico de ficar "no tédio"?
 
-## O Encontro Assustador (E Crucial) Consigo Mesma
+Para muita gente, a ideia de ficar sozinha é assustadora. Mas fugir do silêncio o tempo todo pode ser um dos motivos do nosso cansaço emocional. Encher o dia com mil tarefas e barulho muitas vezes serve apenas para "entorpecer" a nossa mente e nos afastar do que realmente estamos sentindo.
 
-Poder tolerar o não interagir social em fuga; possuir a habilidade para passar longos estágios em desfrutes puros de solidão não dolorosas  da sua presenças formadoras caracterizam o limite limiar tênue crucial na diferenciação profunda ao casso opressivo dos estágios da solitude para a famigerada da melancólica e aterrorizante afecção da pessoa aprisionadas em desoladas à uma solidão como condenação social. Mães abnegadas por exemplos, ou parceiras hiper alertas ao relacionamento que buscam incessantemente a validações contiguas do seio no ninho e em todos parceiros nos afetivos — perdem as bases elementares nas fronteiras quem são (aonde termina à pessoa individual do "ela", pros infortúnio  em se aglutinar apenas "aos outros do eles"). 
+---
 
-Quando o desmame de absolutismos nas certezas advém da escuta no espaço dos retiros internos num convívio harmonizando seu autênticos preceitos e convicções! 
+## O encontro (que dá medo, mas é necessário) com você mesma
 
-### Estabelecendo Na Solitude à Passagem Das Forças Curadoras 
-Tornar habitável e confortável ao investimento ao se relacionar no prazer do silêncio; aprender e começar apreciando genuinamente na  sua morada solitárias de seus  próprios impasses, dos próprios temores esquisitos e pensamentos controversos, à de fato legitimar e referendar os furos íntimo com amizade a nós, não caracteriza atos isolacionista com fobia sociais perantes as pessoas! Apenas denota as atuações para curas de não deposita nos outros do amor externo as salvaguardas infinitas das obrigações por preencher fendas insuportáveis das solidão num dependente relacional. Em psicanálise o desenvolvimento rumo as maturidades nos relacionamos ao estabelecimento à diálogo compassivos da  paz existencial onde nos depara ser das próprias vidas como boas donas nos convívios libertos das necessidades sem limites nas presenças atadas às perdas!
+Existe uma diferença enorme entre estar sozinha por falta de opção (**solidão**) e escolher estar sozinha para se curtir (**solitude**).
 
-*E se a companhia mais fascinante, complexa e amorosa para curar as velhas fraturas e criar contorno fortes que lhe negaram for verdadeiramente e primeiramente os ecos silenciosos do espaço da mulher refletida sobre seu próprio olhar genuíno perante as descobertas? Você precisaria e deseja falar dessa solidão incômoda perante análise das faltas? Entre num chamado com nós nos abriremos à jornada e espaços únicos em São Paulo pra mergulhos interiores com amparo contíguo!*
+Muitas mulheres, especialmente as mães ou quem está em relacionamentos muito intensos, acabam perdendo a noção de onde elas terminam e onde o outro começa. Elas vivem tanto para os outros que esquecem quem são quando estão sozinhas.
+
+Saber ficar a sós é um sinal de maturidade emocional. É quando você para de buscar a aprovação dos outros o tempo todo e começa a ouvir a sua própria voz.
+
+---
+
+## Transformando o silêncio em um aliado
+
+Aprender a gostar da sua própria companhia não é ser "antissocial". É, na verdade, uma forma de se curar. Quando você para de colocar no outro a obrigação de te fazer feliz ou de preencher os seus vazios, suas relações ficam muito mais leves.
+
+Na terapia, trabalhamos para que você:
+- Consiga conviver com seus próprios medos e incertezas sem desespero.
+- Aprenda a apreciar o silêncio.
+- Deixe de ser dependente da presença constante de alguém para se sentir bem.
+
+---
+
+**E se a companhia mais fascinante e amorosa da sua vida for, justamente, você mesma?** 
+
+Se essa ideia te causa estranhamento ou se você sente que nunca tem tempo para silenciar o mundo lá fora, talvez a análise possa te abrir esse espaço. [Vamos conversar?](/contato) Descubra o prazer de habitar a sua própria pele com tranquilidade.

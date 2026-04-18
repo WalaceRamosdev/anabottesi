@@ -6,19 +6,38 @@ image: "/images/blog/medo-de-envelhecer.svg"
 tags: ["envelhecer", "autoestima", "mulheres", "beleza", "psicologia", "psicanálise"]
 ---
 
-"Outro dia dei me com um horror ao espelho. As linhas e fissuras ao lado do sorriso mudaram minha face, parece que num piscar me roubaram a feição que todos elogiavam ontem; me sinto defasada para sair à calçada e ser vista." 
-A idade, seus reflexos biológicos nas feições como pequenas rugas, mudanças incontornáveis num metabolismo menos frenético ou um punhado das pequenas listras grisalhas no couro do cabelo. Em condições sãs, seriam corriqueiras partes do privilégio inestimável em viver; apenas e estritamente isso: o atestar e marca de que seguimos na jornada onde nos é permitida de atuar. Mas em virtude de sérios vetores culturais imbricados no universo e cerne na engrenagem social feminina — cada mísera marca desse avançar temporal pode irromper uma dor pungente na subjetividade da autoimagem.
+Você já se olhou no espelho e levou um susto com uma linha nova no rosto ou um fio de cabelo branco que não estava lá antes? Para muitas mulheres, esses sinais do tempo parecem um roubo da beleza e da juventude.
 
-## A Obsessão Cruel com o Vencimento do Prazo
+Envelhecer deveria ser visto como um privilégio — o sinal de que a gente continua aqui, vivendo a nossa história. Mas no mundo de hoje, parece que a mulher tem um "prazo de validade", e isso gera uma angústia enorme.
 
-Diferentemente do que assola o referencial do homem frente a ruga que socialmente costura e reforça-se ao imaginário os mitos charmosos pela bagagem na virilidade do patriarcalismo maduro; a ditadura em volta da estética cobram da constante beleza irretocável da figura de jovens mancebias como se estipulasse a data impenhorável e cruel para com os prazos biológicos dos vencimento e aceitacão as mulheres! A pressão implacável à juventude impõe à mente uma punitiva sensação e luto velado pela supostamente "perda constante dos valores utilitários no panteão visual das rodas sociais." 
+---
 
-Na clínica notamos as nefastas irrupções à fobia perante das inevitabilidades ao envelhecer nas mídias de beleza com mulheres sãs com suas peles irretocáveis dispostas cirurgicamente aos métodos exaustantes. Nossos pânicos se desenfreia paralizando e boicotando a espontaneidades dos pequenos deleites íntimos; cancelando passeios prazerosos em vestuários ou encontros ao sol de quem não permite se notar aos alheios suas transformações por medo visceral das invalidações dolorosas onde há de repousar e rechaçar sua beleza como sujeito integral amada!
+## A pressão para ser jovem para sempre
 
-## Porque Entregamos Tanta Força Num Espelho Limite?
+Diferente dos homens, que muitas vezes são chamados de "charmosos" quando os cabelos ficam grisalhos, nós somos cobradas a estar sempre impecáveis e sem marcas. É uma ditadura da estética que tenta nos congelar no tempo.
 
-Nos recortes das vivências nas sessões buscam-se evidências num caminho singular percorrido: O que representava para aquela pequena sua beleza antes frente às atitudes perante no amor filial familiar? Era ela apenas premiada de bons adjetivos amados pelas figuras parentais unicamente na graciosidade que irradiava no ambiente? Muitas fixam sua aceitação de pertencimento atrelada como mercadoria num pilar frouxo.
+Essa pressão faz com que muitas mulheres deixem de aproveitar a vida: deixem de ir a passeios, evitam fotos ou se sentem "desatualizadas". O medo de não ser mais admirada pelo olhar do outro vira uma prisão.
 
-### Construindo Valor Duradouro  
+---
 
-Ressignificar este espanto na psique - com amparo das ferramentais nos suportes dos percursos subjetivos ao trabalho constante aos porões traumático numa análise; constrói os deslocamentos e amadurecimentos emocionais primordiais à desmistificações para resgates das autonomias. Entendermos que há pulsões criativas, sedutoras nos vínculos de erotismo perfeitamente duradouras muito mais além  do fetiche inancissável pelas perfeccionismos corporais midiáticos plásticos encurtados de vida útil nas angústias infindáveis e insalubres! A desvinculações psíquicas de se valer somente "de que quem se era" (baseado puramente as aprovações e imagens outorgados pelos vereditos visuais que recebemos de outro sujeito que nada de fato acrescentam nosso eixo); permite finalmente nos habitar na moradia amigável no corpo confortável ao amadurecer os percursos; onde o se viver seja leve em se apaziguar as ansiedades às plenas aceitabilidade  na singular diferença do belo aos anos a nossa frente!
+## Por que damos tanto poder ao espelho?
+
+Na terapia, a gente busca entender de onde vem esse medo. Muitas vezes, a nossa autoestima foi construída apenas em cima da nossa aparência. É como se, ao mudar o corpo, a gente perdesse o nosso valor como pessoa.
+
+Mas a verdade é que você é muito mais do que a sua imagem.
+
+---
+
+## 🌱 Construindo um valor que não envelhece
+
+O objetivo da análise não é fazer você "aceitar tudo" de forma forçada, mas sim te ajudar a:
+- Descobrir novas formas de se sentir bonita e atraente, muito além dos padrões das redes sociais.
+- Se libertar da dependência da aprovação visual dos outros.
+- Habitar o seu corpo com mais conforto e amizade.
+
+A vida pode ser muito leve quando a gente para de brigar com o tempo e começa a valorizar a mulher incrível e cheia de experiências que nos tornamos.
+
+---
+
+**O seu valor não tem data de validade.** Vamos conversar sobre como amadurecer com mais leveza e menos cobrança? [Agende uma sessão aqui](/contato) e descubra a beleza de cada fase da sua vida.
+
