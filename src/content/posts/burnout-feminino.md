@@ -1,7 +1,7 @@
 ---
 title: "Burnout feminino: por que estamos tão exaustas?"
 description: "O esgotamento profissional atinge as mulheres de forma única. Saiba como identificar os sinais do Burnout e a importância do acolhimento psicanalítico."
-publishDate: 2026-02-12
+publishDate: 2026-04-18
 image: "/images/blog/burnout-feminino.svg"
 tags: ["burnout", "exaustão", "trabalho", "mulheres", "psicanálise"]
 ---
