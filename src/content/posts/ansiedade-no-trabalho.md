@@ -1,7 +1,7 @@
 ---
 title: "Ansiedade no trabalho: o peso da performance na saúde mental feminina"
 description: "Entenda como a pressão por produtividade e perfeccionismo afetam a saúde mental das mulheres e descubra caminhos para o equilíbrio através da psicanálise."
-publishDate: 2026-03-07
+publishDate: 2026-03-07T09:30:00-03:00
 image: "/images/blog/ansiedade-no-trabalho.svg"
 tags: ["ansiedade", "trabalho", "performance", "perfeccionismo", "saúde mental"]
 ---

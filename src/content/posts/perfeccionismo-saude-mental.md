@@ -1,7 +1,7 @@
 ---
 title: "O custo do perfeccionismo: como a busca pela excelência adoece a mulher"
 description: "O perfeccionismo pode ser uma prisão silenciosa. Entenda como essa busca incessante afeta sua saúde mental e como a psicanálise ajuda a transitar para uma vida mais leve."
-publishDate: 2026-02-26
+publishDate: 2026-02-26T09:30:00-03:00
 image: "/images/blog/perfeccionismo-saude-mental.svg"
 tags: ["perfeccionismo", "ansiedade", "saúde mental", "mulheres", "psicanálise"]
 ---

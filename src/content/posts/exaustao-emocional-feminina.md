@@ -1,7 +1,7 @@
 ---
 title: "Exaustão emocional feminina: quando o cansaço vira sintoma"
 description: "Você se sente esgotada mesmo após uma noite de sono? Entenda as raízes da exaustão emocional na mulher e como a psicanálise pode oferecer um caminho de escuta e cura."
-publishDate: 2026-04-04
+publishDate: 2026-04-04T09:30:00-03:00
 image: "/images/blog/exaustao.svg"
 tags: ["exaustão emocional", "cansaço", "saúde mental", "feminino", "psicanálise"]
 ---

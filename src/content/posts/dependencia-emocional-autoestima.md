@@ -1,7 +1,7 @@
 ---
 title: "Dependência emocional e autoestima: o caminho para a autonomia"
 description: "Entenda os ciclos da dependência emocional e como o fortalecimento da autoestima através da psicanálise pode libertar você de relações sufocantes."
-publishDate: 2026-03-05
+publishDate: 2026-03-05T09:30:00-03:00
 image: "/images/blog/dependencia.svg"
 tags: ["dependência emocional", "autoestima", "autonomia", "relacionamentos", "psicanálise"]
 ---
