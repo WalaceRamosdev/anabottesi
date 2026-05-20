@@ -367,6 +367,20 @@ const highlightedTitle = post.data.title.replace(
 <style is:global>
     @reference "../../styles/global.css";
 
+    /* Suavização estética do título do artigo */
+    article h1.title-drop-cap {
+        color: #3a2e22 !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.03em !important;
+        font-size: calc(2.25rem * 0.95) !important; /* -5% de 2.25rem (text-4xl) = 2.1375rem */
+    }
+
+    @media (min-width: 768px) {
+        article h1.title-drop-cap {
+            font-size: calc(3.75rem * 0.95) !important; /* -5% de 3.75rem (text-6xl) = 3.5625rem */
+        }
+    }
+
     /* Partículas de Borboletas do Blog */
     .blog-butterfly {
         position: absolute;
