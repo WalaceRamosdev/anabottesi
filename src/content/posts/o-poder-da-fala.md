@@ -1,6 +1,6 @@
 ---
 title: "O poder transformador da fala na clínica: por que 'apenas dizer' desata nós profundos?"
-description: "No início do processo, é natural que muitas pessoas sintam dúvidas ou dificuldade em falar sobre si mesmas, descubra os pilares onde as associações livre, método analítico crucial — promovem e ajudam a compreender emoções, conflitos e padrões que causam sofrimento."
+description: "No início do processo, é natural que muitas pessoas sintam dúvidas ou dificuldade em falar sobre si mesmas. Descubra os pilares onde a associação livre, método analítico crucial promove e ajuda a compreender emoções, conflitos e padrões que causam sofrimento."
 publishDate: 2026-05-16T09:30:00-03:00
 image: "/images/blog/o-poder-da-fala.svg"
 tags: ["poder da fala", "associação livre", "psicanálise", "escuta", "cura através da fala"]
@@ -14,18 +14,18 @@ Essa dúvida é normal. No mundo de hoje, parece que tudo precisa de uma fórmul
 
 ## O que é essa tal de "Associação Livre"?
 
-Na terapia, o convite é para que você diga tudo o que vier à cabeça, sem filtros e sem o medo de ser julgada. Sabe aquelas coisas que a gente não conta nem para a melhor amiga por vergonha ou medo de parecer "bobagem"? É exatamente aí que mora a chave para o que você está sentindo.
+Na análise, o convite é para que você diga tudo o que vier à cabeça, sem filtros e sem o medo de ser julgada. Sabe aquelas coisas que a gente não conta nem para a melhor amiga por vergonha ou medo de parecer "bobagem"? É exatamente aí que mora a chave para o que você está sentindo.
 
-Diferente de uma conversa de café, onde a gente tenta manter a pose e a lógica, na terapia você pode:
+Diferente de uma conversa de café, onde a gente tenta manter a pose e a lógica, na análise você pode:
 - Falar coisas sem pé nem cabeça.
 - Confessar medos que parecem ridículos.
-- Deixar as palavras saírem sem precisar ser educada ou correta.
+- Deixar as palavras saírem sem se preocupar com julgamentos.
 
 ---
 
 ## A mágica de ouvir a própria voz
 
-Quando você fala livremente, acontecem os famosos "estalos" ou momentos em que algumas coisas começam a fazer sentido!. Você começa a perceber:
+Quando você fala livremente, acontecem os famosos "insights" ou momentos em que algumas coisas começam a fazer sentido!. Você começa a perceber:
 - *"Nossa, eu sempre repito esse mesmo comportamento e nunca tinha notado."*
 - *"Aquele medo que eu sinto hoje tem tudo a ver com o que eu vivi lá atrás."*
 
