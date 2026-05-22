@@ -14,12 +14,13 @@ Essa dúvida é normal. No mundo de hoje, parece que tudo precisa de uma fórmul
 
 ## O que é essa tal de "Associação Livre"?
 
-Na análise, o convite é para que você diga tudo o que vier à cabeça, sem filtros e sem o medo de ser julgada. Sabe aquelas coisas que a gente não conta nem para a melhor amiga por vergonha ou medo de parecer "bobagem"? É exatamente aí que mora a chave para o que você está sentindo.
+Na análise, você não precisa chegar com tudo entendido. Aos poucos, aquilo que estava confuso começa a ganhar sentido.
 
 Diferente de uma conversa de café, onde a gente tenta manter a pose e a lógica, na análise você pode:
-- Falar coisas sem pé nem cabeça.
-- Confessar medos que parecem ridículos.
-- Deixar as palavras saírem sem se preocupar com julgamentos.
+- Falar sobre as dores que foram guardadas por muito tempo.
+- Colocar em palavras sentimentos difíceis de explicar.
+- Compartilhar pensamentos sem medo de julgamento.
+- Se ouvir de uma forma mais profunda e verdadeira.
 
 ---
 
