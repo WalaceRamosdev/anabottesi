@@ -14,14 +14,14 @@ Essa dúvida é normal. No mundo de hoje, parece que tudo precisa de uma fórmul
 
 ## O que é essa tal de "Associação Livre"?
 
-Na análise, você não precisa chegar com tudo entendido. Aos poucos, aquilo que estava confuso começa a ganhar sentido.
+Diferente das conversas do dia a dia, na análise existe um espaço onde você pode falar com liberdade, sem precisar medir cada palavra ou tentar “dar conta” de tudo sozinha.
+Ao falar livremente, sentimentos, lembranças e questões que estavam guardadas começam a surgir, permitindo uma compreensão mais profunda sobre si mesma.
 
 Diferente de uma conversa de café, onde a gente tenta manter a pose e a lógica, na análise você pode:
-- Falar sobre as dores que foram guardadas por muito tempo.
+- Falar sobre dores que foram guardadas por muito tempo.
 - Colocar em palavras sentimentos difíceis de explicar.
 - Compartilhar pensamentos sem medo de julgamento.
 - Se ouvir de uma forma mais profunda e verdadeira.
-
 ---
 
 ## A mágica de ouvir a própria voz
