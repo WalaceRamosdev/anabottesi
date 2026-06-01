@@ -1,5 +1,5 @@
 ---
-title: "A importância do tempo a sós e da reconexão consigo mesma"
+title: "Quando o silêncio deixa de assustar: a experiência da solitude"
 description: "Estar consigo mesma nem sempre é fácil. O silêncio e os momentos a sós podem despertar desconfortos, principalmente para quem vive sempre ocupada, cercada de estímulos ou voltada para as necessidades dos outros. Mas, aos poucos, esse espaço também pode se tornar um momento de escuta, reconexão e maior compreensão sobre si mesma."
 publishDate: 2026-05-23T09:30:00-03:00
 image: "/images/blog/importancia-solitude.svg"
