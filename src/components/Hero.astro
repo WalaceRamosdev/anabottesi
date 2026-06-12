@@ -26,7 +26,7 @@ import anaPortrait from "../assets/profissional/anaBottesi1.webp";
     <div
         class="section-padding relative z-10 grid md:grid-cols-2 gap-12 items-center"
     >
-        <div id="hero-content">
+        <div id="hero-content" class="order-2 md:order-1">
             <div
                 class="inline-flex items-center gap-2 px-3 py-1 bg-brand-secondary/20 text-brand-accent rounded-full text-xs font-semibold mb-6 uppercase tracking-wider"
             >
@@ -43,8 +43,7 @@ import anaPortrait from "../assets/profissional/anaBottesi1.webp";
             <p
                 class="text-xl md:text-2xl font-nunito font-normal text-[#333333] mb-6 max-w-xl leading-relaxed"
             >
-                Psicanálise online para mulheres que desejam se priorizar e
-                reconstruir sua autoestima.
+                Aqui você encontra um lugar seguro para falar sobre suas dores, compreender sua história e cuidar de si mesma.
             </p>
             <p
                 class="text-base md:text-lg font-nunito font-normal text-[#333333]/80 mb-10 max-w-lg leading-relaxed"
@@ -67,7 +66,7 @@ import anaPortrait from "../assets/profissional/anaBottesi1.webp";
             <div class="mt-8 flex items-center gap-3"></div>
         </div>
 
-        <div class="relative" id="hero-image">
+        <div class="relative order-1 md:order-2" id="hero-image">
             <div
                 class="absolute inset-0 bg-brand-primary/10 rounded-2xl rotate-3 transform"
             >
@@ -83,18 +82,7 @@ import anaPortrait from "../assets/profissional/anaBottesi1.webp";
                 />
             </div>
 
-            <!-- Card Flutuante de Destaque -->
-            <div
-                class="absolute -bottom-6 -left-6 glass p-6 rounded-xl shadow-xl max-w-[200px]"
-                id="hero-floating-card"
-            >
-                <p class="text-brand-primary font-bold text-3xl mb-1">95%</p>
-                <p
-                    class="text-xs text-brand-text/70 uppercase tracking-tighter font-semibold"
-                >
-                    Nota de satisfação das pacientes
-                </p>
-            </div>
+
         </div>
     </div>
 </section>
@@ -180,15 +168,7 @@ import anaPortrait from "../assets/profissional/anaBottesi1.webp";
             x: 50,
             opacity: 0,
             duration: 1.2,
-        }).from(
-            "#hero-floating-card",
-            {
-                scale: 0,
-                opacity: 0,
-                duration: 0.8,
-            },
-            "-=0.6",
-        );
+        });
 
         // Inicia efeito de borboletas de forma secundária
         createButterflies();
