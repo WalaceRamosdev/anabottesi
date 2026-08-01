@@ -1,5 +1,6 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection } from "astro:content"
+import anaPortrait from "../assets/profissional/newAnaBlog.jpg";
 
 const allPosts = await getCollection("posts");
 const now = new Date();
@@ -24,8 +25,7 @@ import abstractImg from "../assets/abstract-psychology.svg";
                     Blog
                 </h2>
                 <h3 class="text-4xl md:text-5xl font-bold">
-                    Textos para você ler no seu tempo, como um café quente e uma
-                    conversa boa.
+                    Um café, uma pausa e algumas reflexões.
                 </h3>
             </div>
             <a
