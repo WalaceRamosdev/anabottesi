@@ -62,4 +62,3 @@ O trabalho deve ser uma **parte** da sua vida, não a sua vida inteira.
 ---
 
 **Você se sente esgotada com a rotina do trabalho?** O primeiro passo para mudar é conversar sobre isso. [Agende uma sessão](/contato) e vamos, juntas, entender como trazer mais leveza para o seu dia a dia.
-lio qualitativo. [Agende uma sessão](/contato) e inicie hoje o seu processo de escuta e acolhimento em psicanálise.*

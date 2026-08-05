@@ -18,7 +18,7 @@ Para algumas pessoas, ficar sozinha pode despertar ansiedade, desconforto ou at�
 
 ---
 
-## Gostar da própria companhia é saudável. 
+## Gostar da própria companhia é saudável
 
 Aprender a estar consigo mesma pode fortalecer a autonomia emocional e ajudar a construir relações mais leves e conscientes.
 
@@ -36,7 +36,7 @@ Esse processo pode ajudar a:
 
 ---
 
-## A solitude necessária.
+## A solitude necessária
 
 Muitas vezes, a dificuldade de estar consigo mesma está ligada a dores emocionais, inseguranças ou experiências que nunca puderam ser elaboradas com cuidado.
 
