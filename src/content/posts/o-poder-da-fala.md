@@ -20,5 +20,3 @@ Não porque alguém diga o que você deve fazer, mas porque, aos poucos, você p
 
 ---
 
-**As palavras têm o poder de curar o que o silêncio adoeceu.** Você sente que tem coisas presas na garganta que precisam sair? [Vamos conversar.](/contato) O divã é o lugar seguro para você desatar esses nós e voltar a respirar com liberdade.
-

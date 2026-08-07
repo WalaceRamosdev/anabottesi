@@ -16,7 +16,7 @@ Envelhecer deveria ser visto como um privilégio — o sinal de que a gente cont
 
 Diferente dos homens, que muitas vezes são chamados de "charmosos" quando os cabelos ficam grisalhos, nós somos cobradas a estar sempre impecáveis e sem marcas. É uma ditadura da estética que tenta nos congelar no tempo.
 
-Essa pressão faz com que muitas mulheres deixem de aproveitar a vida: deixem de ir a passeios, evitam fotos ou se sentem "desatualizadas". O medo de não ser mais admirada pelo olhar do outro vira uma prisão.
+Essa pressão faz com que muitas mulheres deixem de aproveitar a vida: deixem de ir a passeios, evitam fotos ou se sintam "desatualizadas". O medo de não ser mais admirada pelo olhar do outro vira uma prisão.
 
 ---
 
